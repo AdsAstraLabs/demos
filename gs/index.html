@@ -86,14 +86,34 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 @media(max-height:700px) and (min-width:961px){.hmeta{display:none}}
 @media(max-width:960px){.hero .w{padding:88px 0 28px}.hero h1{font-size:clamp(2.1rem,9.6vw,2.6rem)}.hero p{font-size:.95rem;margin-bottom:1.2rem}.ctas .btn{flex:1 1 100%;padding:.95rem 1.2rem}.hmeta{display:none}
 .sticky{transform:translateY(140%);transition:transform .3s}.sticky.on{transform:none}}
+/* logo treatment: white transparent logo, prominent in hero */
+html,body{overflow-x:clip}
+header .lg{background:none;padding:0;height:auto;border-radius:0}header .lg img{height:50px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}
+.hlogo{display:block;width:clamp(260px,30vw,460px);height:auto;max-height:19vh;object-fit:contain;object-position:left;margin:0 0 1rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.5))}
+.hero video{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;z-index:0}.hero:after{z-index:1;background:linear-gradient(90deg,rgba(8,14,10,.72) 0%,rgba(8,14,10,.38) 55%,rgba(8,14,10,.1) 100%),linear-gradient(0deg,rgba(8,14,10,.7),transparent 40%)!important}
+@media(max-width:960px){header .lg img{height:38px}.hero .w{padding-top:76px}.hlogo{width:64vw;height:auto;max-height:none;margin:0 auto .8rem;object-position:center}.hero .w{text-align:center}.hero .rate{margin:0 auto}.hero p{margin-left:auto;margin-right:auto}}
+/* airy body v1: smaller headings, more whitespace (Luke feedback) */
+.w{width:min(1200px,90%)}
+section{padding:7.5rem 0}section[id],[id]{scroll-margin-top:96px}
+h2{font-size:clamp(1.9rem,3.2vw,2.9rem);line-height:1.05;margin-bottom:1rem}
+h3{font-size:1.35rem}.card h3{font-size:1.35rem}
+.head{margin-bottom:3.5rem;gap:3rem}.head p,.about p,.story p{font-size:1rem;line-height:1.7}
+.sv{gap:1.6rem}.card{min-height:360px}.card p{font-size:.93rem}
+.stat b{font-size:clamp(2.2rem,3.6vw,3.2rem)}
+.story,.qt{gap:5rem}.ar{gap:4rem}
+.about{gap:6rem;grid-template-columns:1fr 1.2fr}.ph img.m{aspect-ratio:4/4.2;max-height:520px}
+.tl li{padding-bottom:1rem}.tl b{font-size:1rem}
+.rv{gap:1.6rem}.r{background:#fff;border:1px solid #efe9de;box-shadow:none;padding:1.8rem 1.9rem;gap:.9rem}.r p{font-size:.93rem;line-height:1.65;color:#3b4740}
+#map{min-height:380px}.gal{grid-auto-rows:100px;gap:1rem}
+@media(max-width:960px){section{padding:4.5rem 0}h2{font-size:clamp(1.65rem,7vw,2.1rem)}.about,.story,.ar,.qt{gap:2.2rem}.ph img.m{aspect-ratio:4/3.4}.card{min-height:300px}#map{min-height:280px}.rv,.sv{gap:1rem}.r{padding:1.4rem}.gal{grid-auto-rows:120px}}
 </style></head><body>
-<header id="hd"><div class="w"><a href="#top" class="lg" aria-label="G's Tree Service home"><img src="img/logo.webp" alt="G's Tree Service: Certified Arborist, Licensed and Insured" width="829" height="354"></a>
+<header id="hd"><div class="w"><a href="#top" class="lg" aria-label="G's Tree Service home"><img src="img/logo-white.webp" alt="G's Tree Service: Certified Arborist, Licensed and Insured" width="1630" height="687"></a>
 <nav><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Paul</a><a href="#reviews">Reviews</a><a href="#areas">Service Area</a></nav>
 <div class="hc"><a class="btn bo" href="#quote">Free Estimate</a><a class="btn bp" href="tel:+12048480424">☎ 204-848-0424</a></div></div></header>
 
 <section class="hero" id="top" style="padding:0">
 <video id="hv" autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg"><source src="media/hero-720.mp4" type="video/mp4" media="(max-width:760px)"><source src="media/hero.mp4" type="video/mp4"></video>
-<div class="w"><span class="rate"><b>5.0</b><span class="st">★★★★★</span> 32+ Google reviews</span>
+<div class="w"><img class="hlogo" src="img/logo-white.webp" alt="" aria-hidden="true" width="1630" height="687" fetchpriority="high"><span class="rate"><b>5.0</b><span class="st">★★★★★</span> 32+ Google reviews</span>
 <h1>Trees down <span class="hl">safely.</span><br>Yard left clean.</h1>
 <p>ISA Certified Arborist Paul Goldstone and the G's Tree Service crew handle tough removals near cabins, decks and hydro lines, plus pruning, fire mitigation and planting across Western Manitoba.</p>
 <div class="ctas"><a class="btn bp" href="#quote">Get a Free Estimate →</a><a class="btn bo" href="tel:+12048480424">Call 204-848-0424</a></div>
@@ -159,7 +179,7 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 <div id="map" class="rv-up" role="img" aria-label="Map of G's Tree Service area in Western Manitoba"></div></div></section>
 
 <section class="lt" id="quote"><div class="w qt"><div class="rv-up"><span class="eb">Free estimate</span><h2>Tell us about <span class="hl">your trees.</span></h2><p style="color:var(--mut)">Call, text, email or send the form, and a member of the team will follow up as soon as possible.</p>
-<div class="ci"><a href="tel:+12048480424"><i>☎</i><div>204-848-0424<small>Call or text</small></div></a><a href="mailto:gstreeservicemb@gmail.com"><i>✉</i><div>gstreeservicemb@gmail.com<small>Email</small></div></a><div><i>⌖</i><div>Onanole, MB<small>Serving Western Manitoba</small></div></div><div><i>◷</i><div>Mon–Sat, 7am–8pm<small>On call for emergency work</small></div></div></div>
+<div class="ci"><a href="tel:+12048480424"><i>☎</i><div>204-848-0424<small>Call or text</small></div></a><a href="mailto:gstreeservicemb@gmail.com"><i>✉</i><div>gstreeservicemb@gmail.com<small>Email</small></div></a><div><i>⌖</i><div>Onanole, MB<small>Serving Western Manitoba</small></div></div><div><i>◷</i><div>Mon to Sat, 7am to 8pm<small>On call for emergency work</small></div></div></div>
 <details><summary>Do you handle emergencies?</summary><p>Yes. 24/7 emergency service is available. Call 204-848-0424.</p></details>
 <details><summary>Are you certified and insured?</summary><p>Paul is an ISA Certified Arborist (#PR-5550A), TRAQ qualified and a Certified CAGC Faller (#4224141). G's Tree Service is licensed and insured.</p></details>
 <details><summary>My town isn't listed. Can you still help?</summary><p>Likely. We serve communities across Western Manitoba. Just ask.</p></details>
@@ -174,7 +194,7 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 
 <footer class="ft"><div class="w"><div class="fg"><div><span class="lg"><img src="img/logo.webp" alt="G's Tree Service" loading="lazy" width="829" height="354"></span><p>ISA Certified Arborist serving Onanole, Harrison Park and Western Manitoba since 2011.</p></div>
 <div><h4>Contact</h4><ul><li><a href="tel:+12048480424">204-848-0424</a></li><li><a href="mailto:gstreeservicemb@gmail.com">gstreeservicemb@gmail.com</a></li><li>Onanole, MB</li></ul></div>
-<div><h4>Hours</h4><ul><li>Mon–Sat 7am–8pm</li><li>Emergency: on call 24/7</li></ul></div>
+<div><h4>Hours</h4><ul><li>Mon to Sat 7am to 8pm</li><li>Emergency: on call 24/7</li></ul></div>
 <div><h4>Follow</h4><ul><li><a href="https://www.facebook.com/gstreeservice/" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/gstree_service/" rel="noopener">Instagram</a></li></ul></div></div>
 <p class="cr">© G's Tree Service Ltd. · Demo concept by Ads Astra Labs</p></div></footer>
 
