@@ -86,14 +86,34 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 @media(max-height:700px) and (min-width:961px){.hmeta{display:none}}
 @media(max-width:960px){.hero .w{padding:88px 0 28px}.hero h1{font-size:clamp(2.1rem,9.6vw,2.6rem)}.hero p{font-size:.95rem;margin-bottom:1.2rem}.ctas .btn{flex:1 1 100%;padding:.95rem 1.2rem}.hmeta{display:none}
 .sticky{transform:translateY(140%);transition:transform .3s}.sticky.on{transform:none}}
+/* logo treatment: white transparent logo, prominent in hero */
+html,body{overflow-x:clip}
+header .lg{background:none;padding:0;height:auto;border-radius:0}header .lg img{height:62px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}
+.hlogo{display:block;width:auto;height:clamp(120px,24vh,260px);object-fit:contain;object-position:left;margin:0 0 1rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.5))}
+.hero video{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;z-index:0}.hero:after{z-index:1;background:linear-gradient(90deg,rgba(8,14,10,.72) 0%,rgba(8,14,10,.38) 55%,rgba(8,14,10,.1) 100%),linear-gradient(0deg,rgba(8,14,10,.7),transparent 40%)!important}
+@media(max-width:960px){header .lg img{height:50px}.hero .w{padding-top:76px}.hlogo{width:auto;height:min(46vw,24svh);margin:0 auto .8rem;object-position:center}.hero .w{text-align:center}.hero .rate{margin:0 auto}.hero p{margin-left:auto;margin-right:auto}}
+/* airy body v1: smaller headings, more whitespace (Luke feedback) */
+.w{width:min(1200px,90%)}
+section{padding:7.5rem 0}section[id],[id]{scroll-margin-top:96px}
+h2{font-size:clamp(1.9rem,3.2vw,2.9rem);line-height:1.05;margin-bottom:1rem}
+h3{font-size:1.35rem}.card h3{font-size:1.35rem}
+.head{margin-bottom:3.5rem;gap:3rem}.head p,.about p,.story p{font-size:1rem;line-height:1.7}
+.sv{gap:1.6rem}.card{min-height:360px}.card p{font-size:.93rem}
+.stat b{font-size:clamp(2.2rem,3.6vw,3.2rem)}
+.story,.qt{gap:5rem}.ar{gap:4rem}
+.about{gap:6rem;grid-template-columns:1fr 1.2fr}.ph img.m{aspect-ratio:4/4.2;max-height:520px}
+.tl li{padding-bottom:1rem}.tl b{font-size:1rem}
+.rv{gap:1.6rem}.r{background:#fff;border:1px solid #efe9de;box-shadow:none;padding:1.8rem 1.9rem;gap:.9rem}.r p{font-size:.93rem;line-height:1.65;color:#3b4740}
+#map{min-height:380px}.gal{grid-auto-rows:100px;gap:1rem}
+@media(max-width:960px){section{padding:4.5rem 0}h2{font-size:clamp(1.65rem,7vw,2.1rem)}.about,.story,.ar,.qt{gap:2.2rem}.ph img.m{aspect-ratio:4/3.4}.card{min-height:300px}#map{min-height:280px}.rv,.sv{gap:1rem}.r{padding:1.4rem}.gal{grid-auto-rows:120px}}
 </style></head><body>
-<header id="hd"><div class="w"><a href="#top" class="lg" aria-label="Cinerea Urban Forestry Services home"><img src="img/logo.webp" alt="Cinerea Urban Forestry Services logo" width="456" height="500"><span style="font-family:var(--hf);font-weight:800;text-transform:uppercase;font-size:.9rem;line-height:1.05;margin-left:.6rem;color:#14281d">Cinerea<br><span style="font-weight:600;font-size:.68rem;letter-spacing:.08em">Urban Forestry</span></span></a>
+<header id="hd"><div class="w"><a href="#top" class="lg" aria-label="Cinerea Urban Forestry Services home"><img src="img/logo-white.webp" alt="Cinerea Urban Forestry Services logo" width="797" height="890"></a>
 <nav><a href="#services">Services</a><a href="#process">Permit Process</a><a href="#work">Our Work</a><a href="#about">About Mark</a><a href="#reviews">Reviews</a></nav>
 <div class="hc"><a class="btn bo" href="#quote">Get a Quote</a><a class="btn bp" href="tel:+19057155921">☎ 905-715-5921</a></div></div></header>
 
 <section class="hero" id="top" style="padding:0">
 <video autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg"><source src="media/hero-720.mp4" type="video/mp4" media="(max-width:760px)"><source src="media/hero.mp4" type="video/mp4"></video>
-<div class="w"><span class="rate"><b>5.0</b><span class="st">★★★★★</span> 14 Google reviews</span>
+<div class="w"><img class="hlogo" src="img/logo-white.webp" alt="" aria-hidden="true" width="797" height="890" fetchpriority="high"><span class="rate"><b>5.0</b><span class="st">★★★★★</span> 14 Google reviews</span>
 <h1>Tree permits, <span class="hl">without the runaround.</span></h1>
 <p>Arborist reports, tree protection plans and permit applications for GTA homeowners and builders, prepared by ISA Board Certified Master Arborist Mark Ellis. Building a garden suite, addition or new home? Start here.</p>
 <div class="ctas"><a class="btn bp" href="#quote">Get a Quote →</a><a class="btn bo" href="tel:+19057155921">Call 905-715-5921</a></div>
@@ -155,7 +175,7 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 <div id="map" class="rv-up" role="img" aria-label="Map of the 100 km service radius around Toronto"></div></div></section>
 
 <section class="lt" id="quote"><div class="w qt"><div class="rv-up"><span class="eb">Get a quote</span><h2>Tell us about <span class="hl">your project.</span></h2><p style="color:var(--mut)">Send your address and project details, and we'll tell you what your municipality will require.</p>
-<div class="ci"><a href="tel:+19057155921"><i>☎</i><div>905-715-5921<small>Call</small></div></a><a href="mailto:cinerea.ufs@gmail.com"><i>✉</i><div>cinerea.ufs@gmail.com<small>Email</small></div></a><div><i>⌖</i><div>Keswick, ON<small>Serving within 100 km of Toronto</small></div></div><div><i>◷</i><div>Mon–Fri 8am–6pm<small>Saturday by appointment</small></div></div></div>
+<div class="ci"><a href="tel:+19057155921"><i>☎</i><div>905-715-5921<small>Call</small></div></a><a href="mailto:cinerea.ufs@gmail.com"><i>✉</i><div>cinerea.ufs@gmail.com<small>Email</small></div></a><div><i>⌖</i><div>Keswick, ON<small>Serving within 100 km of Toronto</small></div></div><div><i>◷</i><div>Mon to Fri 8am to 6pm<small>Saturday by appointment</small></div></div></div>
 <details><summary>Can you get me a permit to cut down a City tree?</summary><p>City/Town trees are generally only permitted for removal if they impede as-of-right construction, or if they're hazardous or in poor condition. Mark will tell you honestly where you stand.</p></details>
 <details><summary>What chance do I have of getting a removal permit?</summary><p>It depends mostly on the tree's overall condition. Some species, like Manitoba maple and Siberian elm, have excellent chances; others are fair.</p></details>
 <details><summary>Is that your best price?</summary><p>Yes. Jobs are quoted on the total expected work. The first price is the best price and the final price.</p></details>
@@ -171,7 +191,7 @@ form{background:#fff;border-radius:26px;padding:2.4rem;box-shadow:0 40px 80px -4
 
 <footer class="ft"><div class="w"><div class="fg"><div><span class="lg"><img src="img/logo.webp" alt="Cinerea Urban Forestry Services" loading="lazy" width="456" height="500"></span><p>Arborist reports, tree permits and urban forestry services across the GTA. ISA Board Certified Master Arborist ON-1686BM.</p></div>
 <div><h4>Contact</h4><ul><li><a href="tel:+19057155921">905-715-5921</a></li><li><a href="mailto:cinerea.ufs@gmail.com">cinerea.ufs@gmail.com</a></li><li>Keswick, ON</li></ul></div>
-<div><h4>Hours</h4><ul><li>Mon–Fri 8am–6pm</li><li>Sat by appointment</li><li>Sun closed</li></ul></div>
+<div><h4>Hours</h4><ul><li>Mon to Fri 8am to 6pm</li><li>Sat by appointment</li><li>Sun closed</li></ul></div>
 <div><h4>Watch</h4><ul><li><a href="https://www.youtube.com/channel/UCUJKKQjxUUowvmeMNKMeRSA" rel="noopener">YouTube</a></li></ul></div></div>
 <p class="cr">© Cinerea Urban Forestry Services · Demo concept by Ads Astra Labs</p></div></footer>
 <div class="sticky"><a class="btn bp" href="tel:+19057155921">☎ Call Now</a><a class="btn q" href="#quote">Get a Quote</a></div>
