@@ -1,0 +1,32 @@
+{
+  "eyebrow": {
+    "en": "Bulletin &&nbsp;news",
+    "fr": "Feuillet et&nbsp;nouvelles"
+  },
+  "heading": {
+    "en": "The parish&nbsp;bulletin",
+    "fr": "Le feuillet&nbsp;paroissial"
+  },
+  "photo": {
+    "src": "img/missal-pad-900.webp",
+    "srcset": "img/missal-pad-600.webp 600w, img/missal-pad-900.webp 900w, img/missal-pad-1400.webp 1400w, img/missal-pad-2000.webp 2000w",
+    "w": "900",
+    "h": "694",
+    "alt": {
+      "en": "An open Missale Romanum with red ribbons",
+      "fr": "Un Missale Romanum ouvert, aux signets rouges"
+    }
+  },
+  "stay_heading": {
+    "en": "Stay in touch",
+    "fr": "Restez informé"
+  },
+  "stay_lead": {
+    "en": "Parish Flocknote emails: schedule changes, news and&nbsp;events.",
+    "fr": "Les courriels Flocknote de la paroisse&nbsp;: changements d’horaire, nouvelles et&nbsp;activités."
+  },
+  "flocknote": {
+    "en": "Subscribe on Flocknote",
+    "fr": "S’abonner sur Flocknote"
+  }
+}

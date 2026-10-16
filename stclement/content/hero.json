@@ -1,0 +1,372 @@
+{
+  "slides": [
+    {
+      "img": {
+        "src": "img/hs-hero-1600.webp",
+        "srcset": "img/hs-hero-1600.webp 1600w, img/hs-hero-2400.webp 2400w, img/hs-hero-2880.webp 2880w",
+        "w": "2400",
+        "h": "1397",
+        "alt": {
+          "en": "The candlelit nave of St. Anne Church at night, votive lights along the pews and the high altar glowing beyond",
+          "fr": "La nef de l’église Sainte-Anne la nuit, à la lueur des lampions, le maître-autel illuminé au fond"
+        }
+      },
+      "mimg": {
+        "src": "img/hs-hero-m-700.webp",
+        "srcset": "img/hs-hero-m-700.webp 700w, img/hs-hero-m-1000.webp 1000w",
+        "w": "1000",
+        "h": "1778",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "pos": "64% 45%",
+      "pan": "50% 50%",
+      "pan_m": "50% 50%"
+    },
+    {
+      "pos": "50% 62%",
+      "pan": "50% 50%",
+      "pan_m": "50% 50%",
+      "mimg": {
+        "src": "img/hs-sanctuary-m-700.webp",
+        "srcset": "img/hs-sanctuary-m-700.webp 700w, img/hs-sanctuary-m-1000.webp 1000w",
+        "w": "700",
+        "h": "1244",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "img": {
+        "src": "img/hs-sanctuary-1600.webp",
+        "srcset": "img/hs-sanctuary-1600.webp 1600w, img/hs-sanctuary-2400.webp 2400w, img/hs-sanctuary-2880.webp 2880w",
+        "w": "1600",
+        "h": "999",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "pos": "50% 45%",
+      "pan": "50% 50%",
+      "pan_m": "50% 50%",
+      "mimg": {
+        "src": "img/hs-nave-m-700.webp",
+        "srcset": "img/hs-nave-m-700.webp 700w, img/hs-nave-m-1000.webp 1000w",
+        "w": "700",
+        "h": "1244",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "img": {
+        "src": "img/hs-nave-1600.webp",
+        "srcset": "img/hs-nave-1600.webp 1600w, img/hs-nave-2400.webp 2400w, img/hs-nave-2880.webp 2880w",
+        "w": "1600",
+        "h": "972",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "pos": "45% 40%",
+      "pan": "50% 50%",
+      "pan_m": "50% 50%",
+      "mimg": {
+        "src": "img/hs-procession-m-700.webp",
+        "srcset": "img/hs-procession-m-700.webp 700w, img/hs-procession-m-1000.webp 1000w",
+        "w": "700",
+        "h": "1244",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "img": {
+        "src": "img/hs-procession-1600.webp",
+        "srcset": "img/hs-procession-1600.webp 1600w, img/hs-procession-2400.webp 2400w, img/hs-procession-2880.webp 2880w",
+        "w": "1600",
+        "h": "1080",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "pos": "51% 25%",
+      "pan": "50% 50%",
+      "pan_m": "50% 50%",
+      "mimg": {
+        "src": "img/hs-exterior-m-700.webp",
+        "srcset": "img/hs-exterior-m-700.webp 700w, img/hs-exterior-m-1000.webp 1000w",
+        "w": "700",
+        "h": "1245",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "img": {
+        "src": "img/hs-exterior-1600.webp",
+        "srcset": "img/hs-exterior-1600.webp 1600w, img/hs-exterior-2400.webp 2400w, img/hs-exterior-2880.webp 2880w",
+        "w": "1600",
+        "h": "1063",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    }
+  ],
+  "kicker": [
+    {
+      "en": "Traditional Latin&nbsp;Mass",
+      "fr": "Messe traditionnelle en&nbsp;latin"
+    },
+    {
+      "en": "Ottawa",
+      "fr": ""
+    },
+    {
+      "en": "FSSP",
+      "fr": ""
+    }
+  ],
+  "title": {
+    "en": "Saint Clement Parish",
+    "fr": "Paroisse <span class=\"nw\">Saint-Clément</span>"
+  },
+  "subtitle": {
+    "en": "at St. Anne Church",
+    "fr": "à l’église Sainte-Anne"
+  },
+  "lead": {
+    "en": "Mass and the Sacraments in the traditional Roman Rite, served by the Priestly Fraternity of Saint Peter, in the Archdiocese of Ottawa‑Cornwall.",
+    "fr": "La messe et les sacrements selon le rite romain traditionnel, assurés par la Fraternité Sacerdotale Saint-Pierre, au sein de l’Archidiocèse d’Ottawa‑Cornwall."
+  },
+  "buttons": [
+    {
+      "style": "bg",
+      "url": "#mass",
+      "newtab": false,
+      "icon": "clock",
+      "label": {
+        "en": "Mass & confession&nbsp;times",
+        "fr": "Messes et&nbsp;confessions"
+      }
+    },
+    {
+      "style": "bo",
+      "url": "https://www.google.com/maps/dir/?api=1&destination=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa,+ON",
+      "newtab": true,
+      "icon": "gmap",
+      "label": {
+        "en": "Get&nbsp;directions",
+        "fr": "Itinéraire"
+      }
+    }
+  ],
+  "rating": {
+    "en": "4.9 on Google · 134&nbsp;reviews",
+    "fr": "4,9 sur Google · 134&nbsp;avis"
+  },
+  "logos": [
+    {
+      "url": "https://www.kofc.org/",
+      "newtab": true,
+      "title": {
+        "en": "Knights of Columbus",
+        "fr": "Chevaliers de Colomb"
+      },
+      "sizes": "(max-width:759px) 31px, 46px",
+      "img": {
+        "src": "img/logos/kofc-160.webp",
+        "srcset": "img/logos/kofc-80.webp 80w, img/logos/kofc-160.webp 160w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gb",
+      "h": "46px"
+    },
+    {
+      "url": "https://www.livemass.net/",
+      "newtab": true,
+      "title": {
+        "en": "LiveMass.net",
+        "fr": ""
+      },
+      "sizes": "(max-width:759px) 93px, 119px",
+      "img": {
+        "src": "img/logos/livemass-160.webp",
+        "srcset": "img/logos/livemass-80.webp 280w, img/logos/livemass-160.webp 559w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "wm",
+      "h": "34px"
+    },
+    {
+      "url": "https://ottawacornwall.ca/",
+      "newtab": true,
+      "title": {
+        "en": "Archdiocese of Ottawa-Cornwall",
+        "fr": "Archidiocèse d’Ottawa-Cornwall"
+      },
+      "sizes": "(max-width:759px) 120px, 154px",
+      "img": {
+        "src": "img/logos/archdiocese-160.webp",
+        "srcset": "img/logos/archdiocese-80.webp 343w, img/logos/archdiocese-160.webp 686w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "wm",
+      "h": "36px"
+    },
+    {
+      "url": "#history",
+      "newtab": false,
+      "title": {
+        "en": "Saint Clement, pope and martyr",
+        "fr": "Saint Clément, pape et martyr"
+      },
+      "sizes": "(max-width:759px) 25px, 36px",
+      "img": {
+        "src": "img/logos/st-clement-160.webp",
+        "srcset": "img/logos/st-clement-80.webp 81w, img/logos/st-clement-160.webp 163w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gb",
+      "h": "36px"
+    },
+    {
+      "url": "#history",
+      "newtab": false,
+      "title": {
+        "en": "Saint Anne",
+        "fr": "Sainte Anne"
+      },
+      "sizes": "(max-width:759px) 27px, 40px",
+      "img": {
+        "src": "img/logos/st-anne-160.webp",
+        "srcset": "img/logos/st-anne-80.webp 85w, img/logos/st-anne-160.webp 175w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "ga",
+      "h": "38px"
+    },
+    {
+      "url": "https://www.vatican.va/",
+      "newtab": true,
+      "title": {
+        "en": "The Holy See (Vatican)",
+        "fr": "Le Saint-Siège (Vatican)"
+      },
+      "sizes": "(max-width:759px) 22px, 33px",
+      "img": {
+        "src": "img/logos/vatican-160.webp",
+        "srcset": "img/logos/vatican-80.webp 58w, img/logos/vatican-160.webp 115w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gb",
+      "h": "46px"
+    },
+    {
+      "url": "https://www.fssp.org/en/",
+      "newtab": true,
+      "title": {
+        "en": "Priestly Fraternity of St. Peter (FSSP)",
+        "fr": "Fraternité Sacerdotale Saint-Pierre (FSSP)"
+      },
+      "sizes": "(max-width:759px) 25px, 37px",
+      "img": {
+        "src": "img/logos/fssp-160.webp",
+        "srcset": "img/logos/fssp-80.webp 64w, img/logos/fssp-160.webp 129w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gs",
+      "h": "46px"
+    },
+    {
+      "url": "#groups",
+      "newtab": false,
+      "title": {
+        "en": "Legion of Mary",
+        "fr": "Légion de Marie"
+      },
+      "sizes": "(max-width:759px) 27px, 40px",
+      "img": {
+        "src": "img/logos/legion-of-mary-disc-160.webp",
+        "srcset": "img/logos/legion-of-mary-disc-80.webp 80w, img/logos/legion-of-mary-disc-160.webp 160w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gb",
+      "h": "40px"
+    },
+    {
+      "url": "#groups",
+      "newtab": false,
+      "title": {
+        "en": "Saint Clement Young Adults Group",
+        "fr": "Groupe des jeunes adultes de Saint-Clément"
+      },
+      "sizes": "(max-width:759px) 27px, 40px",
+      "img": {
+        "src": "img/logos/young-adults-160.webp",
+        "srcset": "img/logos/young-adults-80.webp 80w, img/logos/young-adults-160.webp 160w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gb",
+      "h": "40px"
+    }
+  ]
+}

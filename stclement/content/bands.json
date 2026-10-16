@@ -1,0 +1,58 @@
+{
+  "intro": {
+    "label": "Introibo ad altare Dei",
+    "mimg": {
+      "src": "img/band-m.jpg",
+      "srcset": "img/band-m.jpg 1000w, img/band-m-1900.webp 1900w",
+      "w": "",
+      "h": "",
+      "alt": {
+        "en": "",
+        "fr": ""
+      }
+    },
+    "img": {
+      "src": "img/band.jpg",
+      "srcset": "",
+      "w": "2400",
+      "h": "1100",
+      "alt": {
+        "en": "The sanctuary at night: candles on the high altar beneath the ring of stained-glass windows",
+        "fr": "Le sanctuaire la nuit&nbsp;: cierges sur le maître-autel sous la couronne de vitraux"
+      }
+    },
+    "latin": "Introibo ad altare&nbsp;Dei.",
+    "translation": {
+      "en": "“I will go in unto the altar of God.” Psalm 42, from the prayers at the foot of the&nbsp;altar",
+      "fr": "«&nbsp;Je m’approcherai de l’autel de Dieu.&nbsp;» Psaume 42, prière au bas de&nbsp;l’autel"
+    }
+  },
+  "motto": {
+    "label": "Una voce dicentes",
+    "mimg": {
+      "src": "img/bnd-nave-m.webp",
+      "srcset": "img/bnd-nave-m.webp 900w, img/bnd-nave-m-1300.webp 1300w",
+      "w": "900",
+      "h": "1125",
+      "alt": {
+        "en": "",
+        "fr": ""
+      }
+    },
+    "img": {
+      "src": "img/bnd-nave.webp",
+      "srcset": "",
+      "w": "2400",
+      "h": "1100",
+      "alt": {
+        "en": "The sanctuary of St. Anne Church beneath its half-dome of stained-glass windows, with the white high altar and a glass chandelier",
+        "fr": "Le sanctuaire de l’église Sainte-Anne sous sa demi-coupole de vitraux, avec le maître-autel blanc et un lustre de verre"
+      }
+    },
+    "latin": "Una voce dicentes.",
+    "translation": {
+      "en": "“Saying with one voice.” The parish motto, from the Preface of the Holy Trinity",
+      "fr": "«&nbsp;Disant d’une seule voix.&nbsp;» Devise de la paroisse, tirée de la préface de la Sainte Trinité"
+    }
+  }
+}

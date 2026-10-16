@@ -1,0 +1,151 @@
+{
+  "arms_alt": {
+    "en": "Saint Clement Parish coat of arms",
+    "fr": "Armoiries de la paroisse Saint-Clément"
+  },
+  "name1": {
+    "en": "Saint Clement Parish",
+    "fr": "Paroisse Saint-Clément"
+  },
+  "name2": {
+    "en": "at St. Anne Church",
+    "fr": "à l’église Sainte-Anne"
+  },
+  "since1": {
+    "en": "St. Anne Church since 1873",
+    "fr": "L’église Sainte-Anne depuis 1873"
+  },
+  "since2": {
+    "en": "Saint Clement Parish since&nbsp;1968",
+    "fr": "La paroisse Saint-Clément depuis&nbsp;1968"
+  },
+  "tagline": {
+    "en": "The Traditional Latin Mass in the heart of Ottawa.",
+    "fr": "La messe latine traditionnelle au cœur d’Ottawa."
+  },
+  "visit_heading": {
+    "en": "Visit",
+    "fr": "Visiter"
+  },
+  "parish_heading": {
+    "en": "Parish",
+    "fr": "La paroisse"
+  },
+  "parish": [
+    {
+      "url": "#mass",
+      "newtab": false,
+      "label": {
+        "en": "Mass times",
+        "fr": "Horaire"
+      }
+    },
+    {
+      "url": "#new",
+      "newtab": false,
+      "label": {
+        "en": "First visit",
+        "fr": "Première visite"
+      }
+    },
+    {
+      "url": "#sacraments",
+      "newtab": false,
+      "label": {
+        "en": "Sacraments",
+        "fr": "Sacrements"
+      }
+    },
+    {
+      "url": "#life",
+      "newtab": false,
+      "label": {
+        "en": "Parish life",
+        "fr": "Vie paroissiale"
+      }
+    },
+    {
+      "url": "#watch",
+      "newtab": false,
+      "label": {
+        "en": "Livestream",
+        "fr": "Messe en direct"
+      }
+    },
+    {
+      "url": "https://www.divinumofficium.com/cgi-bin/missa/missa.pl",
+      "newtab": true,
+      "label": {
+        "en": "Today’s readings",
+        "fr": "Lectures du jour"
+      }
+    },
+    {
+      "url": "#bulletin",
+      "newtab": false,
+      "label": {
+        "en": "Bulletin",
+        "fr": "Feuillet"
+      }
+    },
+    {
+      "url": "#history",
+      "newtab": false,
+      "label": {
+        "en": "History",
+        "fr": "Histoire"
+      }
+    },
+    {
+      "url": "https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/",
+      "newtab": true,
+      "label": {
+        "en": "Donate",
+        "fr": "Faire un don"
+      }
+    }
+  ],
+  "links_heading": {
+    "en": "Links",
+    "fr": "Liens"
+  },
+  "links": [
+    {
+      "url": "https://ottawacornwall.ca/",
+      "newtab": true,
+      "label": {
+        "en": "Archdiocese of&nbsp;Ottawa‑Cornwall",
+        "fr": "Archidiocèse d’Ottawa‑Cornwall"
+      }
+    }
+  ],
+  "fssp_alt": {
+    "en": "FSSP emblem",
+    "fr": "Emblème de la FSSP"
+  },
+  "fssp_name": {
+    "en": "Priestly Fraternity of St.&nbsp;Peter",
+    "fr": "Fraternité Sacerdotale Saint-Pierre"
+  },
+  "fssp_small": "FSSP Canada",
+  "fssp_links": [
+    {
+      "url": "https://www.fssp.ca/",
+      "url_fr": "",
+      "label": "fssp.ca"
+    },
+    {
+      "url": "https://www.fssp.org/en/",
+      "url_fr": "https://www.fssp.org/fr/",
+      "label": "fssp.org"
+    }
+  ],
+  "copyright": {
+    "en": "© 2026 Saint Clement Parish · Ottawa",
+    "fr": "© 2026 Paroisse Saint-Clément · Ottawa"
+  },
+  "top": {
+    "en": "Back to top ↑",
+    "fr": "Haut de page ↑"
+  }
+}

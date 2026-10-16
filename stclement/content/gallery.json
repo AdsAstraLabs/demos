@@ -1,0 +1,187 @@
+{
+  "eyebrow": {
+    "en": "The parish in&nbsp;pictures",
+    "fr": "La paroisse en&nbsp;images"
+  },
+  "heading": {
+    "en": "The beauty of the liturgy, the life of a&nbsp;parish",
+    "fr": "La beauté de la liturgie, la vie d’une&nbsp;paroisse"
+  },
+  "photos": [
+    {
+      "layout": "w2 w2l t2l",
+      "full": "img/altar-christmas-1600.webp",
+      "sizes": "(min-width:1340px) 594px, (min-width:900px) 44.3vw, 90vw",
+      "img": {
+        "src": "img/altar-christmas-800.webp",
+        "srcset": "img/altar-christmas-600.webp 600w, img/altar-christmas-800.webp 800w, img/altar-christmas-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "The high altar decorated for Christmas",
+          "fr": "Le maître-autel décoré pour Noël"
+        }
+      },
+      "caption": {
+        "en": "The high altar at&nbsp;Christmas",
+        "fr": "Le maître-autel à&nbsp;Noël"
+      }
+    },
+    {
+      "layout": "t2 t2l",
+      "full": "img/blue-hour-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/blue-hour-800.webp",
+        "srcset": "img/blue-hour-400.webp 400w, img/blue-hour-800.webp 600w, img/blue-hour-1600.webp 1200w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "St. Anne Church at dusk with its lit steeple cross",
+          "fr": "L’église Sainte-Anne au crépuscule, la croix du clocher illuminée"
+        }
+      },
+      "caption": {
+        "en": "St. Anne at&nbsp;dusk",
+        "fr": "Sainte-Anne au&nbsp;crépuscule"
+      }
+    },
+    {
+      "layout": "",
+      "full": "img/organ-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/organ-800.webp",
+        "srcset": "img/organ-400.webp 400w, img/organ-800.webp 800w, img/organ-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "The choir loft and pipe organ under the chandelier",
+          "fr": "La tribune et l’orgue sous le lustre"
+        }
+      },
+      "caption": {
+        "en": "The choir loft and&nbsp;organ",
+        "fr": "La tribune et&nbsp;l’orgue"
+      }
+    },
+    {
+      "layout": "",
+      "full": "img/nativity-creche-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/nativity-creche-800.webp",
+        "srcset": "img/nativity-creche-400.webp 400w, img/nativity-creche-800.webp 800w, img/nativity-creche-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "The Christmas crèche",
+          "fr": "La crèche de Noël"
+        }
+      },
+      "caption": {
+        "en": "The Christmas&nbsp;crèche",
+        "fr": "La crèche de&nbsp;Noël"
+      }
+    },
+    {
+      "layout": "t2 t2l",
+      "full": "img/snow-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/snow-800.webp",
+        "srcset": "img/snow-400.webp 400w, img/snow-800.webp 600w, img/snow-1600.webp 1200w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "St. Anne Church in falling snow",
+          "fr": "L’église Sainte-Anne sous la neige"
+        }
+      },
+      "caption": {
+        "en": "St. Anne in the&nbsp;snow",
+        "fr": "Sainte-Anne sous la&nbsp;neige"
+      }
+    },
+    {
+      "layout": "w2 w2l",
+      "full": "img/first-communion-1600.webp",
+      "sizes": "(min-width:1340px) 594px, (min-width:900px) 44.3vw, 90vw",
+      "img": {
+        "src": "img/first-communion-800.webp",
+        "srcset": "img/first-communion-600.webp 600w, img/first-communion-800.webp 800w, img/first-communion-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "First Communicants with clergy and servers in the sanctuary",
+          "fr": "Les premiers communiants avec le clergé et les servants dans le sanctuaire"
+        }
+      },
+      "caption": {
+        "en": "First Communions,&nbsp;2024",
+        "fr": "Premières communions,&nbsp;2024"
+      }
+    },
+    {
+      "layout": "t2 t2l",
+      "full": "img/passion-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/passion-800.webp",
+        "srcset": "img/passion-400.webp 400w, img/passion-800.webp 638w, img/passion-1600.webp 1277w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "Altar servers in procession on Passion Sunday",
+          "fr": "Servants en procession le dimanche de la Passion"
+        }
+      },
+      "caption": {
+        "en": "Passion&nbsp;Sunday",
+        "fr": "Dimanche de la&nbsp;Passion"
+      }
+    },
+    {
+      "layout": "",
+      "full": "img/corpus-canopy-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/corpus-canopy-800.webp",
+        "srcset": "img/corpus-canopy-400.webp 400w, img/corpus-canopy-800.webp 800w, img/corpus-canopy-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "Corpus Christi procession under a gold canopy",
+          "fr": "Procession de la Fête-Dieu sous un dais doré"
+        }
+      },
+      "caption": {
+        "en": "Corpus Christi procession,&nbsp;2024",
+        "fr": "Procession de la Fête-Dieu,&nbsp;2024"
+      }
+    },
+    {
+      "layout": "",
+      "full": "img/nave-1600.webp",
+      "sizes": "(min-width:1350px) 290px, (min-width:900px) 21.5vw, 44.5vw",
+      "img": {
+        "src": "img/nave-800.webp",
+        "srcset": "img/nave-400.webp 400w, img/nave-800.webp 800w, img/nave-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "The nave and high altar beneath the dome",
+          "fr": "La nef et le maître-autel sous la coupole"
+        }
+      },
+      "caption": {
+        "en": "The nave and high&nbsp;altar",
+        "fr": "La nef et le&nbsp;maître-autel"
+      }
+    }
+  ],
+  "instagram": {
+    "en": "More on Instagram <b>@stclement.fssp</b>",
+    "fr": "Plus de photos sur Instagram <b>@stclement.fssp</b>"
+  }
+}

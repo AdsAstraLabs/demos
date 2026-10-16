@@ -1,0 +1,70 @@
+{
+  "eyebrow": {
+    "en": "Livestream",
+    "fr": "En&nbsp;direct"
+  },
+  "heading": {
+    "en": "Watch the&nbsp;Mass",
+    "fr": "Regarder la&nbsp;messe"
+  },
+  "lead": {
+    "en": "The Sunday 10:30 High Mass and major feasts are streamed live on the parish YouTube&nbsp;channel.",
+    "fr": "La <span class='nw'>grand-messe</span> du dimanche à 10&nbsp;h&nbsp;30 et les grandes fêtes sont diffusées en direct sur la chaîne YouTube de la&nbsp;paroisse."
+  },
+  "thumb": {
+    "src": "img/yt-latest.webp",
+    "srcset": "img/yt-latest-400.webp 400w, img/yt-latest-640.webp 640w, img/yt-latest-960.webp 960w, img/yt-latest.webp 1280w",
+    "w": "1280",
+    "h": "720",
+    "alt": {
+      "en": "The high altar during the Sunday livestream",
+      "fr": "Le maître-autel pendant la diffusion du dimanche"
+    }
+  },
+  "video": {
+    "title": {
+      "en": "20th Sunday after Pentecost",
+      "fr": "20e dimanche après la&nbsp;Pentecôte"
+    },
+    "label": {
+      "en": "Recent livestream · Oct 11",
+      "fr": "Diffusion récente · 11 octobre"
+    },
+    "id": "mcsCPLC6r6Y"
+  },
+  "channel": {
+    "en": "Watch live on YouTube",
+    "fr": "En direct sur YouTube"
+  },
+  "livemass": {
+    "url": "https://www.livemass.net/",
+    "title": {
+      "en": "Live Latin Mass online, an FSSP apostolate",
+      "fr": "La messe latine en direct, un apostolat de la FSSP"
+    },
+    "label": {
+      "en": "Latin Mass online:&nbsp;LiveMass.net",
+      "fr": "Messe latine en ligne&nbsp;:&nbsp;LiveMass.net"
+    }
+  },
+  "links": [
+    {
+      "url": "https://www.divinumofficium.com/cgi-bin/missa/missa.pl",
+      "label": {
+        "en": "Today’s readings",
+        "fr": "Lectures du jour"
+      }
+    },
+    {
+      "url": "https://www.divinumofficium.com/cgi-bin/horas/officium.pl",
+      "label": {
+        "en": "Divine Office",
+        "fr": "Office divin"
+      }
+    }
+  ],
+  "next": {
+    "en": "Find the church",
+    "fr": "Trouver l’église"
+  }
+}

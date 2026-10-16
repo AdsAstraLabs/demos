@@ -1,0 +1,194 @@
+{
+  "eyebrow": {
+    "en": "Sacraments",
+    "fr": "Sacrements"
+  },
+  "heading": {
+    "en": "All the Sacraments of the&nbsp;Church",
+    "fr": "Tous les sacrements de&nbsp;l’Église"
+  },
+  "cards": [
+    {
+      "emergency": false,
+      "anchor": "",
+      "img": {
+        "src": "img/sac-confession-800.webp",
+        "srcset": "img/sac-confession-600.webp 600w, img/sac-confession-800.webp 800w, img/sac-confession-1100.webp 1100w",
+        "w": "800",
+        "h": "400",
+        "alt": {
+          "en": "A traditional carved wooden confessional with grilled doors",
+          "fr": "Un confessionnal traditionnel en bois sculpté, aux portes grillagées"
+        }
+      },
+      "pos": "50% 50%",
+      "credit": "Photo: Guerinf, CC BY-SA 4.0, via Wikimedia Commons",
+      "tag": {
+        "en": "Penance",
+        "fr": "Pénitence"
+      },
+      "title": {
+        "en": "Confession",
+        "fr": "Confession"
+      },
+      "text": {
+        "en": "30 minutes before every Mass and Saturdays 3:30⁠–⁠4:30&nbsp;pm, or by&nbsp;appointment.",
+        "fr": "30 minutes avant chaque messe et le samedi de 15&nbsp;h&nbsp;30 à 16&nbsp;h&nbsp;30, ou sur&nbsp;rendez-vous."
+      },
+      "ext": ""
+    },
+    {
+      "emergency": false,
+      "anchor": "",
+      "img": {
+        "src": "img/sac-baptism-800.webp",
+        "srcset": "img/sac-baptism-600.webp 600w, img/sac-baptism-800.webp 800w, img/sac-baptism-1100.webp 1100w",
+        "w": "800",
+        "h": "400",
+        "alt": {
+          "en": "A marble baptismal font with a gilded cover in a Quebec church",
+          "fr": "Des fonts baptismaux en marbre au couvercle doré, dans une église du Québec"
+        }
+      },
+      "pos": "50% 50%",
+      "credit": "Photo: Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons",
+      "tag": {
+        "en": "Baptism &&nbsp;Matrimony",
+        "fr": "Baptême et&nbsp;mariage"
+      },
+      "title": {
+        "en": "Baptisms & weddings",
+        "fr": "Baptêmes et mariages"
+      },
+      "text": {
+        "en": "Celebrated in the traditional Roman Rite; please arrange them well in&nbsp;advance.",
+        "fr": "Célébrés selon le rite romain traditionnel&#8239;; prévoyez-les bien à l’avance."
+      },
+      "ext": ""
+    },
+    {
+      "emergency": false,
+      "anchor": "confirmation",
+      "img": {
+        "src": "img/sac-confirmation-800.webp",
+        "srcset": "img/sac-confirmation-600.webp 600w, img/sac-confirmation-800.webp 800w, img/sac-confirmation-1100.webp 1100w",
+        "w": "800",
+        "h": "400",
+        "alt": {
+          "en": "The bishop confirming a kneeling confirmand with his sponsor at St. Anne Church, 2015",
+          "fr": "L’évêque confirme un confirmand agenouillé, avec son parrain, à l’église Sainte-Anne, 2015"
+        }
+      },
+      "pos": "50% 50%",
+      "credit": "",
+      "tag": {
+        "en": "Confirmation",
+        "fr": "Confirmation"
+      },
+      "title": {
+        "en": "Confirmation for youth",
+        "fr": "Confirmation des jeunes"
+      },
+      "text": {
+        "en": "For parishioners in grade 6 or older. Registration for the 2027 class (forms in English and&nbsp;French) closed October&nbsp;4.",
+        "fr": "Pour les paroissiens de la 6e année ou plus. Les inscriptions pour 2027 (formulaires en anglais et en&nbsp;français) se terminaient le 4&nbsp;octobre."
+      },
+      "ext": ""
+    },
+    {
+      "emergency": false,
+      "anchor": "",
+      "img": {
+        "src": "img/sac-communion-800.webp",
+        "srcset": "img/sac-communion-600.webp 600w, img/sac-communion-800.webp 800w, img/sac-communion-1100.webp 1100w",
+        "w": "800",
+        "h": "400",
+        "alt": {
+          "en": "First communicants in white with the altar servers, 2024",
+          "fr": "Les premiers communiants en blanc avec les servants, 2024"
+        }
+      },
+      "pos": "50% 55%",
+      "credit": "",
+      "tag": {
+        "en": "Holy&nbsp;Eucharist",
+        "fr": "Eucharistie"
+      },
+      "title": {
+        "en": "First Holy Communion",
+        "fr": "Première communion"
+      },
+      "text": {
+        "en": "Preparation for children receiving the Eucharist for the first&nbsp;time.",
+        "fr": "Préparation des enfants qui reçoivent l’Eucharistie pour la première&nbsp;fois."
+      },
+      "ext": ""
+    },
+    {
+      "emergency": false,
+      "anchor": "catechism",
+      "img": {
+        "src": "img/sac-catechism-800.webp",
+        "srcset": "img/sac-catechism-600.webp 600w, img/sac-catechism-800.webp 800w, img/sac-catechism-1100.webp 1100w",
+        "w": "800",
+        "h": "400",
+        "alt": {
+          "en": "Young altar servers holding candles at the Easter Vigil",
+          "fr": "De jeunes servants tenant des cierges à la Vigile pascale"
+        }
+      },
+      "pos": "50% 45%",
+      "credit": "",
+      "tag": {
+        "en": "Catechesis",
+        "fr": "Catéchèse"
+      },
+      "title": {
+        "en": "Family catechism",
+        "fr": "Catéchisme familial"
+      },
+      "text": {
+        "en": "Free video series from the Baltimore Catechism: the Creed, Commandments, Sacraments and&nbsp;prayer.",
+        "fr": "Série vidéo gratuite tirée du Catéchisme de Baltimore&nbsp;: Credo, Commandements, Sacrements et&nbsp;prière."
+      },
+      "ext": ""
+    },
+    {
+      "emergency": true,
+      "anchor": "",
+      "img": {
+        "src": "",
+        "srcset": "",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "tag": {
+        "en": "Sacramental&nbsp;emergencies",
+        "fr": "Urgences&nbsp;sacramentelles"
+      },
+      "title": {
+        "en": "Last Rites",
+        "fr": "Derniers sacrements"
+      },
+      "text": {
+        "en": "To call a priest to the sick or&nbsp;dying:",
+        "fr": "Pour appeler un prêtre auprès d’un malade ou d’un mourant&nbsp;:"
+      },
+      "ext": "8",
+      "credit": "",
+      "pos": "50% 50%"
+    }
+  ],
+  "note": {
+    "en": "For baptisms, weddings, confirmation, First Communion or catechism, call the parish office at <a href=\"tel:+16135659656,2\"><span class=\"nw\">(613) 565-9656,</span> <span class=\"nw\">ext. 2</span></a>.",
+    "fr": "Baptêmes, mariages, confirmation, première communion ou catéchisme&nbsp;: appelez le bureau paroissial au <a href=\"tel:+16135659656,2\"><span class=\"nw\">(613) 565-9656,</span> <span class=\"nw\">poste 2</span></a>."
+  },
+  "next": {
+    "en": "Parish life",
+    "fr": "La vie paroissiale"
+  }
+}

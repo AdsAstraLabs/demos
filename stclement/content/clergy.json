@@ -1,0 +1,93 @@
+{
+  "eyebrow": {
+    "en": "Clergy",
+    "fr": "Clergé"
+  },
+  "heading": {
+    "en": "Your&nbsp;priests",
+    "fr": "Vos&nbsp;prêtres"
+  },
+  "priests": [
+    {
+      "name": {
+        "en": "Fr.&nbsp;Erik&nbsp;Deprey",
+        "fr": "Abbé&nbsp;Erik&nbsp;Deprey"
+      },
+      "role": {
+        "en": "Pastor · FSSP",
+        "fr": "Curé · FSSP"
+      },
+      "ext": "3"
+    },
+    {
+      "name": {
+        "en": "Fr.&nbsp;Manuel Pinho&nbsp;Sousa",
+        "fr": "Abbé&nbsp;Manuel Pinho&nbsp;Sousa"
+      },
+      "role": {
+        "en": "Parochial Vicar · FSSP",
+        "fr": "Vicaire paroissial · FSSP"
+      },
+      "ext": "5"
+    },
+    {
+      "name": {
+        "en": "Fr.&nbsp;Matthew&nbsp;Jagas",
+        "fr": "Abbé&nbsp;Matthew&nbsp;Jagas"
+      },
+      "role": {
+        "en": "Parochial Vicar · FSSP",
+        "fr": "Vicaire paroissial · FSSP"
+      },
+      "ext": "6"
+    }
+  ],
+  "fssp": {
+    "alt": {
+      "en": "Coat of arms of the Priestly Fraternity of St. Peter",
+      "fr": "Armoiries de la Fraternité Sacerdotale Saint-Pierre"
+    },
+    "name": {
+      "en": "Priestly Fraternity of St.&nbsp;Peter",
+      "fr": "Fraternité Sacerdotale Saint-Pierre"
+    },
+    "founded": {
+      "en": "Founded 1988",
+      "fr": "Fondée en 1988"
+    },
+    "heading": {
+      "en": "What is the FSSP?",
+      "fr": "Qu’est-ce que la FSSP&#8239;?"
+    },
+    "intro": {
+      "en": "A Society of Apostolic Life of Pontifical right: priests, without religious vows, working together for a common mission in the Church under the authority of the Holy&nbsp;See.",
+      "fr": "Une société de vie apostolique de droit pontifical&nbsp;: des prêtres, sans vœux religieux, unis dans une mission commune au sein de l’Église, sous l’autorité du&nbsp;Saint-Siège."
+    },
+    "mission": {
+      "en": "Founded on 18 July 1988 at the Abbey of Hauterive in Switzerland, its mission is two-fold: the formation and sanctification of priests, and the care of souls, using the liturgical books in force in&nbsp;1962.",
+      "fr": "Fondée le 18 juillet 1988 à l’abbaye d’Hauterive (Suisse), elle a une double mission&nbsp;: la formation et la sanctification des prêtres, et le soin des âmes, avec les livres liturgiques en vigueur en&nbsp;1962."
+    },
+    "links": [
+      {
+        "url": "https://www.fssp.org/en/",
+        "url_fr": "https://www.fssp.org/fr/",
+        "label": {
+          "en": "FSSP website",
+          "fr": "Site de la FSSP"
+        }
+      },
+      {
+        "url": "https://www.fssp.org/en/confraternity-of-saint-peter/",
+        "url_fr": "https://www.fssp.org/fr/nous-aider/confraternite-saint-pierre/",
+        "label": {
+          "en": "Confraternity of St.&nbsp;Peter",
+          "fr": "Confraternité Saint-Pierre"
+        }
+      }
+    ]
+  },
+  "next": {
+    "en": "Our story, 1873 to today",
+    "fr": "Notre histoire, de 1873 à aujourd’hui"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "eyebrow": {
+    "en": "Parish&nbsp;schedule",
+    "fr": "Horaire&nbsp;paroissial"
+  },
+  "heading": {
+    "en": "Mass & confession&nbsp;times",
+    "fr": "Messes et&nbsp;confessions"
+  },
+  "readings_url": "https://www.divinumofficium.com/cgi-bin/missa/missa.pl",
+  "labels": {
+    "readings": {
+      "en": "Today’s readings",
+      "fr": "Lectures du jour"
+    },
+    "appt": {
+      "en": "By appointment: <span class=\"nw\">(613)&nbsp;565-9656</span>",
+      "fr": "Prendre rendez-vous : <span class=\"nw\">613&nbsp;565-9656</span>"
+    },
+    "sunday": {
+      "en": "Sunday",
+      "fr": "Dimanche"
+    },
+    "weekdays": {
+      "en": "Weekdays",
+      "fr": "En semaine"
+    },
+    "confession": {
+      "en": "Confession",
+      "fr": "Confession"
+    }
+  }
+}

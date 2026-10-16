@@ -1,0 +1,52 @@
+{
+  "score": {
+    "en": "4.9",
+    "fr": "4,9"
+  },
+  "count": {
+    "en": "134 Google reviews",
+    "fr": "134 avis Google"
+  },
+  "heading": {
+    "en": "What visitors say",
+    "fr": "Ce qu’en disent les visiteurs"
+  },
+  "items": [
+    {
+      "quote": {
+        "en": "“Wonderful TLM Mass with complete reverence shown to God. Wonderful to receive the Holy Eucharist kneeling and on the tongue. Confessions offered before each Mass!”",
+        "fr": "«&nbsp;Une magnifique messe traditionnelle, célébrée avec une entière révérence envers Dieu. Quel bonheur de recevoir la sainte Eucharistie à genoux et sur la langue. Des confessions avant chaque messe&nbsp;!&nbsp;»"
+      },
+      "name": "Debra M."
+    },
+    {
+      "quote": {
+        "en": "“Got to experience my first ever Latin Mass here and it was a rather eye opening experience. You get to see the Catholic faith in a much more spiritual form which is really nice.”",
+        "fr": "«&nbsp;J’ai vécu ici ma toute première messe en latin, et ce fut une vraie révélation. On y découvre la foi catholique sous une forme beaucoup plus spirituelle, ce qui est vraiment beau.&nbsp;»"
+      },
+      "name": "Axel G."
+    },
+    {
+      "quote": {
+        "en": "“The ambiance of this parish is unlike any other around. You will feel refreshed and renewed. I always do.”",
+        "fr": "«&nbsp;L’ambiance de cette paroisse ne ressemble à aucune autre. Vous en ressortirez reposé et renouvelé. C’est toujours mon cas.&nbsp;»"
+      },
+      "name": "Sylvie"
+    },
+    {
+      "quote": {
+        "en": "“My favourite parish in Ottawa. They have low and high Masses in Latin. A very holy place.”",
+        "fr": "«&nbsp;Ma paroisse préférée à Ottawa. On y célèbre des messes basses et des grand-messes en latin. Un lieu très saint.&nbsp;»"
+      },
+      "name": "Mathieu"
+    }
+  ],
+  "note": {
+    "en": "Excerpts from public Google reviews.",
+    "fr": "Extraits d’avis Google publics, traduits de l’anglais."
+  },
+  "all": {
+    "en": "Read all reviews on Google →",
+    "fr": "Lire tous les avis sur Google →"
+  }
+}

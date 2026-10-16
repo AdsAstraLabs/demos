@@ -1,0 +1,214 @@
+{
+  "eyebrow": {
+    "en": "Support the&nbsp;parish",
+    "fr": "Soutenir la&nbsp;paroisse"
+  },
+  "heading": {
+    "en": "Your generosity keeps the lamps&nbsp;lit",
+    "fr": "Votre générosité fait vivre la&nbsp;paroisse"
+  },
+  "photo": {
+    "src": "img/give-steeple-700.webp",
+    "srcset": "img/give-steeple-700.webp 700w, img/give-steeple-1100.webp 1169w",
+    "w": "1169",
+    "h": "877",
+    "alt": {
+      "en": "The steeple and stone gable of St. Anne Church, with statues in their niches, at dusk",
+      "fr": "Le clocher et le pignon de pierre de l’église Sainte-Anne, avec les statues dans leurs niches, au crépuscule"
+    }
+  },
+  "lead": {
+    "en": "Electricity, heating, repairs and insurance all depend on regular collections. Tax receipts are&nbsp;issued.",
+    "fr": "L’électricité, le chauffage, les réparations et les assurances dépendent des quêtes régulières. Des reçus d’impôt sont&nbsp;émis."
+  },
+  "donate": {
+    "en": "Donate online&nbsp;(CanadaHelps)",
+    "fr": "Donner en ligne&nbsp;(CanaDon)"
+  },
+  "ways": [
+    {
+      "icon": "interac",
+      "title": {
+        "en": "Interac e-Transfer",
+        "fr": "Virement Interac"
+      },
+      "copy": [
+        {
+          "label": {
+            "en": "Send to",
+            "fr": "Envoyer à"
+          },
+          "value": "finances@saintclement.ca",
+          "aria": {
+            "en": "Copy the email address",
+            "fr": "Copier l’adresse courriel"
+          }
+        },
+        {
+          "label": {
+            "en": "Security answer",
+            "fr": "Réponse de sécurité"
+          },
+          "value": "Clement",
+          "aria": {
+            "en": "Copy the security answer",
+            "fr": "Copier la réponse de sécurité"
+          }
+        }
+      ],
+      "paras": [
+        {
+          "en": "Include your name, address and the reason for a tax&nbsp;receipt.",
+          "fr": "Indiquez votre nom, votre adresse et la raison du don pour obtenir un reçu&nbsp;d’impôt."
+        }
+      ],
+      "link": {
+        "label": {
+          "en": "",
+          "fr": ""
+        },
+        "url": "",
+        "url_fr": ""
+      }
+    },
+    {
+      "icon": "card",
+      "title": {
+        "en": "Credit card",
+        "fr": "Carte de crédit"
+      },
+      "copy": [],
+      "paras": [
+        {
+          "en": "Through <a href=\"https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/\" target=\"_blank\" rel=\"noopener\">CanadaHelps</a>, which issues the tax&nbsp;receipt.",
+          "fr": "Par <a href=\"https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/\" target=\"_blank\" rel=\"noopener\">CanaDon</a>, qui émet le reçu&nbsp;d’impôt."
+        },
+        {
+          "en": "Monthly gifts can be cancelled at any&nbsp;time.",
+          "fr": "Les dons mensuels peuvent être annulés en tout&nbsp;temps."
+        }
+      ],
+      "link": {
+        "label": {
+          "en": "",
+          "fr": ""
+        },
+        "url": "",
+        "url_fr": ""
+      }
+    },
+    {
+      "icon": "bank",
+      "title": {
+        "en": "Monthly bank transfer&nbsp;(PAD)",
+        "fr": "Prélèvement mensuel&nbsp;(DPA)"
+      },
+      "copy": [],
+      "paras": [
+        {
+          "en": "Complete the form, then mail it or drop it off at the parish&nbsp;office.",
+          "fr": "Remplissez le formulaire, puis <span class=\"nw\">postez-le</span> ou <span class=\"nw\">déposez-le</span> au bureau&nbsp;paroissial."
+        }
+      ],
+      "link": {
+        "url": "https://stclement-ottawa.org/wp-content/uploads/2020/03/PAD-Authorization-Form-rev.pdf",
+        "url_fr": "https://stclement-ottawa.org/wp-content/uploads/2020/03/DAP-Formulaire-dinscripton.pdf",
+        "label": {
+          "en": "PAD form (PDF)&nbsp;→",
+          "fr": "Formulaire DPA (PDF)&nbsp;→"
+        }
+      }
+    },
+    {
+      "icon": "mail",
+      "title": {
+        "en": "Envelopes & securities",
+        "fr": "Enveloppes et valeurs&nbsp;mobilières"
+      },
+      "copy": [],
+      "paras": [
+        {
+          "en": "Envelope boxes on request: <a href=\"https://stclement-ottawa.org/wp-content/uploads/2025/06/2025-Registration-forms-1.pdf\" target=\"_blank\" rel=\"noopener\">registration&nbsp;form</a>.",
+          "fr": "Boîte d’enveloppes sur demande&nbsp;: <a href=\"https://stclement-ottawa.org/wp-content/uploads/2025/06/2025-Registration-forms-1.pdf\" target=\"_blank\" rel=\"noopener\">formulaire d’inscription</a>."
+        },
+        {
+          "en": "Gifts of securities through CanadaHelps or the <a href=\"https://stclement-ottawa.org/wp-content/uploads/2026/09/GiftofSecuritiesForm2023-withfee.pdf\" target=\"_blank\" rel=\"noopener\">Archdiocese</a>, directed to <span class=\"nw\">St. Clement Parish</span>.",
+          "fr": "Dons de titres par CanaDon ou l’<a href=\"https://stclement-ottawa.org/wp-content/uploads/2026/09/GiftofSecuritiesForm2023-withfee.pdf\" target=\"_blank\" rel=\"noopener\">Archidiocèse</a>, à l’intention de la <span class=\"nw\">paroisse St-Clément</span>."
+        }
+      ],
+      "link": {
+        "label": {
+          "en": "",
+          "fr": ""
+        },
+        "url": "",
+        "url_fr": ""
+      }
+    }
+  ],
+  "camp": {
+    "eyebrow": {
+      "en": "Capital campaign",
+      "fr": "Campagne de financement"
+    },
+    "heading": {
+      "en": "A parish hall",
+      "fr": "Une salle paroissiale"
+    },
+    "large": "img/parish-hall-1120.webp",
+    "img": {
+      "src": "img/parish-hall-900.webp",
+      "srcset": "img/parish-hall-600.webp 600w, img/parish-hall-900.webp 900w, img/parish-hall-1120.webp 1119w",
+      "w": "900",
+      "h": "562",
+      "alt": {
+        "en": "Architectural rendering of St. Anne Church with the proposed parish hall addition beside it",
+        "fr": "Rendu architectural de l’église Sainte-Anne avec l’agrandissement proposé de la salle paroissiale"
+      }
+    },
+    "caption": {
+      "en": "Proposed parish hall design",
+      "fr": "Projet de salle paroissiale"
+    },
+    "amount": {
+      "en": "$658,433",
+      "fr": "658&#8239;433&nbsp;$"
+    },
+    "amount_label": {
+      "en": "pledged & donated so far",
+      "fr": "reçus en promesses et dons"
+    },
+    "bar_label": {
+      "en": "73% of the $900,000 goal",
+      "fr": "73 % de l’objectif de 900 000 $"
+    },
+    "percent": "73",
+    "reached": {
+      "en": "73% reached",
+      "fr": "73&nbsp;% atteint"
+    },
+    "goal": {
+      "en": "Goal $900,000",
+      "fr": "Objectif : 900&#8239;000&nbsp;$"
+    },
+    "note": {
+      "en": "Pledges and donations to the parish hall aren’t subject to the 13% diocesan tax.",
+      "fr": "Les promesses et dons pour la salle paroissiale ne sont pas soumis à la taxe diocésaine de 13&nbsp;%."
+    },
+    "source": {
+      "en": "Figure from the October 11, 2026 bulletin.",
+      "fr": "Montant selon le feuillet du 11&nbsp;octobre&nbsp;2026."
+    },
+    "pledge": {
+      "url": "https://www.saintclement.ca/pledge",
+      "label": {
+        "en": "Make a pledge",
+        "fr": "Faire une promesse de don"
+      }
+    },
+    "design": {
+      "en": "See the design",
+      "fr": "Voir le projet"
+    }
+  }
+}

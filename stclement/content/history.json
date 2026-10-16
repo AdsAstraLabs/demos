@@ -1,0 +1,153 @@
+{
+  "eyebrow": {
+    "en": "Our&nbsp;history",
+    "fr": "Notre&nbsp;histoire"
+  },
+  "heading": {
+    "en": "Canada’s oldest Traditional Mass&nbsp;community",
+    "fr": "La plus ancienne communauté de la messe traditionnelle au&nbsp;Canada"
+  },
+  "lead": {
+    "en": "From St. Anne’s cornerstone in 1873 to the small group that gathered in 1968 and the parish it became: the milestones.",
+    "fr": "De la pierre angulaire de Sainte-Anne en 1873 au petit groupe réuni en 1968, devenu une paroisse&nbsp;: les grandes étapes."
+  },
+  "timeline": [
+    {
+      "year": "1873",
+      "text": {
+        "en": "The cornerstone of St. Anne, designed by Québec architect Joseph-Pierre-Michel Lecourt in the style of Québec’s small country parish churches, is blessed on 3 May by Msgr. Guigues, Ottawa’s first bishop. The first Mass is celebrated on 30&nbsp;November.",
+        "fr": "La pierre angulaire de Sainte-Anne, église conçue par l’architecte québécois Joseph-Pierre-Michel Lecourt dans le style des églises de campagne du Québec, est bénie le 3 mai par Mgr&nbsp;Guigues, premier évêque d’Ottawa. Première messe le 30&nbsp;novembre."
+      }
+    },
+    {
+      "year": "1968",
+      "text": {
+        "en": "In March, Archbishop Joseph-Aurèle Plourde permits a small group of the faithful to gather for Sunday Mass in the Tridentine form at the Monastery of the Sisters Adorers of the Precious Blood on Echo&nbsp;Drive.",
+        "fr": "En mars, Mgr Joseph-Aurèle Plourde permet à un petit groupe de fidèles de se réunir pour la messe tridentine au monastère des Sœurs Adoratrices du Précieux-Sang, promenade&nbsp;Echo."
+      }
+    },
+    {
+      "year": "1984",
+      "text": {
+        "en": "The community acquires its first chapel, on Albion Road, placed under the patronage of St. Clement, pope and&nbsp;martyr.",
+        "fr": "La communauté acquiert sa première chapelle, chemin Albion, placée sous le patronage de saint Clément, pape et&nbsp;martyr."
+      }
+    },
+    {
+      "year": "1993",
+      "text": {
+        "en": "Archbishop Marcel Gervais gives the community a church at 87 Mann Avenue in Sandy Hill, and soon elevates it to a&nbsp;quasi-parish.",
+        "fr": "Mgr Marcel Gervais lui confie une église au 87, avenue Mann, dans la Côte-de-Sable, puis l’élève au rang de&nbsp;quasi-paroisse."
+      }
+    },
+    {
+      "year": "1995 – 1997",
+      "text": {
+        "en": "The FSSP assumes pastoral care on 1 January 1995. In November 1997 St. Clement is erected a personal parish: the first worldwide established after Vatican II for those attached to the older liturgical&nbsp;traditions.",
+        "fr": "La FSSP prend charge de la paroisse le 1er janvier 1995. En novembre 1997, Saint-Clément est érigée en paroisse personnelle&nbsp;: la première au monde érigée après Vatican II pour les fidèles attachés à l’ancienne&nbsp;liturgie."
+      }
+    },
+    {
+      "year": "2012",
+      "text": {
+        "en": "At the invitation of Archbishop Terrence Prendergast, the parish moves to St. Anne. On Trinity Sunday in June, the first Solemn High Mass in Latin and Gregorian chant in decades is celebrated&nbsp;there.",
+        "fr": "À l’invitation de Mgr Terrence Prendergast, la paroisse s’installe à Sainte-Anne. Le dimanche de la Trinité, en juin, on y célèbre la première messe solennelle en latin et en grégorien depuis des&nbsp;décennies."
+      }
+    }
+  ],
+  "quote": {
+    "en": "“To its members, Saint Clement is a very special parish&nbsp;indeed.”",
+    "fr": "«&nbsp;Pour ses membres, Saint-Clément est vraiment une paroisse bien spéciale.&nbsp;»"
+  },
+  "cite": "Bernard Pothier, <i>The Continual Sacrifice: A History of the Origins of Saint Clement Parish, Ottawa&nbsp;1968–1998</i>",
+  "arms_alt": {
+    "en": "Coat of arms of Saint Clement Parish, with the mottoes Una voce dicentes and Animum intendamus in sanguinem Christi",
+    "fr": "Armoiries de la paroisse Saint-Clément, avec les devises Una voce dicentes et Animum intendamus in sanguinem Christi"
+  },
+  "arms_caption": {
+    "en": "The coat of arms of Saint Clement&nbsp;Parish",
+    "fr": "Les armoiries de la paroisse&nbsp;Saint-Clément"
+  },
+  "wins": [
+    {
+      "wide": true,
+      "sizes": "(min-width:1440px) 485px, (min-width:1000px) 36vw, 90vw",
+      "img": {
+        "src": "img/historic-800.webp",
+        "srcset": "img/historic-600.webp 600w, img/historic-800.webp 800w, img/historic-1100.webp 1100w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "Archival black-and-white photograph of St. Anne Church and a neighbouring building",
+          "fr": "Photographie d’archives en noir et blanc de l’église Sainte-Anne et d’un bâtiment voisin"
+        }
+      },
+      "style": "aspect-ratio:1/1;filter:sepia(.25)",
+      "caption": {
+        "en": "St. Anne Church, archival&nbsp;photograph",
+        "fr": "Sainte-Anne, photographie&nbsp;d’archives"
+      }
+    },
+    {
+      "wide": false,
+      "sizes": "(min-width:1340px) 235px, (min-width:1000px) 17.5vw, 44.5vw",
+      "img": {
+        "src": "img/win-nativity-800.webp",
+        "srcset": "img/win-nativity-360.webp 360w, img/win-nativity-800.webp 533w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "Stained-glass window of the Nativity at St. Anne Church",
+          "fr": "Vitrail de la Nativité à l’église Sainte-Anne"
+        }
+      },
+      "style": "",
+      "caption": {
+        "en": "Nativity&nbsp;window",
+        "fr": "Vitrail de la&nbsp;Nativité"
+      }
+    },
+    {
+      "wide": false,
+      "sizes": "(min-width:1340px) 235px, (min-width:1000px) 17.5vw, 44.5vw",
+      "img": {
+        "src": "img/win-visitation-800.webp",
+        "srcset": "img/win-visitation-360.webp 360w, img/win-visitation-800.webp 533w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "Stained-glass window of the Visitation at St. Anne Church",
+          "fr": "Vitrail de la Visitation à l’église Sainte-Anne"
+        }
+      },
+      "style": "",
+      "caption": {
+        "en": "Visitation&nbsp;window",
+        "fr": "Vitrail de la&nbsp;Visitation"
+      }
+    },
+    {
+      "wide": true,
+      "sizes": "(min-width:960px) 420px, 90vw",
+      "img": {
+        "src": "img/steeple-sky-800.webp",
+        "srcset": "img/steeple-sky-800.webp 800w, img/steeple-sky-1600.webp 1600w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "The steeple of St. Anne Church against a blue sky",
+          "fr": "Le clocher de l’église Sainte-Anne sur un ciel bleu"
+        }
+      },
+      "style": "object-position:40% 60%",
+      "caption": {
+        "en": "The steeple of St.&nbsp;Anne",
+        "fr": "Le clocher de&nbsp;Sainte-Anne"
+      }
+    }
+  ],
+  "next": {
+    "en": "Support the parish",
+    "fr": "Soutenir la paroisse"
+  }
+}

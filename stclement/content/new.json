@@ -1,0 +1,82 @@
+{
+  "photo": {
+    "src": "img/procession-900.webp",
+    "srcset": "img/procession-900.webp 675w, img/procession-1000.webp 1000w, img/procession-1600.webp 1600w",
+    "w": "900",
+    "h": "1200",
+    "alt": {
+      "en": "Altar servers with candles leading the recessional down the centre aisle of a full church",
+      "fr": "Des servants portant des cierges mènent la procession de sortie dans l’allée centrale d’une église pleine"
+    }
+  },
+  "caption": {
+    "en": "The recessional down the centre&nbsp;aisle",
+    "fr": "Procession de sortie dans l’allée centrale"
+  },
+  "heading": {
+    "en": "New to the Latin&nbsp;Mass?",
+    "fr": "Nouveau&nbsp;à&nbsp;la messe latine&#8239;?"
+  },
+  "lead": {
+    "en": "Everyone is welcome. A few things that help on a first&nbsp;visit:",
+    "fr": "Tous sont les bienvenus. Voici quelques repères pour une première&nbsp;visite."
+  },
+  "tips": [
+    {
+      "general": false,
+      "title": {
+        "en": "Choose a&nbsp;Mass",
+        "fr": "Choisir une&nbsp;messe"
+      },
+      "text": {
+        "en": "The 10:30&nbsp;am High Mass is sung; 8:00&nbsp;am and 5:30&nbsp;pm are quiet Low Masses. Or watch the <a class=\"yti\" href=\"#watch\"><svg aria-hidden=\"true\"><use href=\"#i-ytc\"/></svg>livestream</a>&nbsp;first.",
+        "fr": "La <span class='nw'>grand-messe</span> de 10&nbsp;h&nbsp;30 est chantée&#8239;; celles de 8&nbsp;h et 17&nbsp;h&nbsp;30 sont des messes basses. Ou regardez d’abord la&nbsp;<a class=\"yti\" href=\"#watch\"><svg aria-hidden=\"true\"><use href=\"#i-ytc\"/></svg>diffusion</a>."
+      }
+    },
+    {
+      "general": false,
+      "title": {
+        "en": "Follow with a&nbsp;missal",
+        "fr": "Suivre avec un&nbsp;missel"
+      },
+      "text": {
+        "en": "English-Latin, French-Latin, children’s and used missals at the parish bookstore on Sundays. Daily texts&nbsp;<a href=\"https://www.divinumofficium.com/cgi-bin/missa/missa.pl\" target=\"_blank\" rel=\"noopener\">online</a>.",
+        "fr": "Missels latin-anglais, latin-français, pour enfants et usagés à la librairie, le dimanche. Textes du jour <a href=\"https://www.divinumofficium.com/cgi-bin/missa/missa.pl\" target=\"_blank\" rel=\"noopener\">en&nbsp;ligne</a>."
+      }
+    },
+    {
+      "general": true,
+      "title": {
+        "en": "What to&nbsp;expect",
+        "fr": "À quoi&nbsp;s’attendre"
+      },
+      "text": {
+        "en": "Latin, the priest facing the altar, long silences. It’s fine simply to watch, listen and&nbsp;pray.",
+        "fr": "En latin, le prêtre tourné vers l’autel, avec de longs silences. Vous pouvez simplement regarder, écouter et&nbsp;prier."
+      }
+    },
+    {
+      "general": true,
+      "title": {
+        "en": "Communion &&nbsp;dress",
+        "fr": "Communion et&nbsp;tenue"
+      },
+      "text": {
+        "en": "Communion kneeling and on the tongue, for prepared Catholics. Modest dress; many women wear a veil.&nbsp;<a href=\"#contact\">Questions?</a>",
+        "fr": "Communion à genoux et sur la langue, pour les catholiques préparés. Tenue sobre&#8239;; beaucoup de femmes portent un voile. <a href=\"#contact\">Des&nbsp;questions&#8239;?</a>"
+      }
+    }
+  ],
+  "general": {
+    "en": "general",
+    "fr": "général"
+  },
+  "note": {
+    "en": "“General” means common Latin Mass practice, not a parish&nbsp;rule.",
+    "fr": "«&nbsp;Général&nbsp;»&nbsp;: usage courant à la messe traditionnelle, et non une règle de la&nbsp;paroisse."
+  },
+  "next": {
+    "en": "The parish in pictures",
+    "fr": "La paroisse en images"
+  }
+}

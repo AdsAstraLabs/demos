@@ -1,0 +1,202 @@
+{
+  "seo": {
+    "title": {
+      "en": "Saint Clement Parish at St. Anne Church | Traditional Latin Mass in Ottawa (FSSP)",
+      "fr": "Paroisse Saint-Clément à l’église Sainte-Anne | Messe traditionnelle en latin à Ottawa (FSSP)"
+    },
+    "description": "St. Clement Parish at St. Anne Church, 528 Old St. Patrick Street, Ottawa. A parish of the Archdiocese of Ottawa-Cornwall served by the Priestly Fraternity of St. Peter. Traditional Latin Mass daily; Sunday Masses 8:00, 10:30 (High Mass) and 5:30 pm.",
+    "og_title": "Saint Clement Parish at St. Anne Church, Ottawa",
+    "og_description": "Traditional Latin Mass daily in Ottawa's Lower Town. Served by the Priestly Fraternity of St. Peter (FSSP).",
+    "og_image": "img/og.jpg"
+  },
+  "skip": {
+    "en": "Skip to Mass times",
+    "fr": "Aller à l’horaire des messes"
+  },
+  "brand": {
+    "name": {
+      "en": "Saint Clement Parish",
+      "fr": "Paroisse Saint-Clément"
+    },
+    "sub": {
+      "en": "<span class=\"dx\">at </span>St. Anne Church · Ottawa",
+      "fr": "<span class='dx'>à l’église </span>Sainte-Anne · Ottawa"
+    }
+  },
+  "nav": [
+    {
+      "href": "#new",
+      "label": {
+        "en": "First visit",
+        "fr": "Visite"
+      }
+    },
+    {
+      "href": "#mass",
+      "label": {
+        "en": "Mass times",
+        "fr": "Horaire"
+      }
+    },
+    {
+      "href": "#sacraments",
+      "label": {
+        "en": "Sacraments",
+        "fr": "Sacrements"
+      }
+    },
+    {
+      "href": "#life",
+      "label": {
+        "en": "Parish life",
+        "fr": "Paroisse"
+      }
+    },
+    {
+      "href": "#history",
+      "label": {
+        "en": "History",
+        "fr": "Histoire"
+      }
+    },
+    {
+      "href": "#bulletin",
+      "label": {
+        "en": "Bulletin",
+        "fr": "Feuillet"
+      }
+    },
+    {
+      "href": "#contact",
+      "label": {
+        "en": "Contact",
+        "fr": "Contact"
+      }
+    }
+  ],
+  "donate": {
+    "url": "https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/",
+    "short": {
+      "en": "Donate",
+      "fr": "Donner"
+    },
+    "long": {
+      "en": "Donate to the parish",
+      "fr": "Faire un don à la paroisse"
+    }
+  },
+  "drawer": [
+    {
+      "href": "#new",
+      "label": {
+        "en": "New to the Latin Mass?",
+        "fr": "Nouveau&nbsp;à&nbsp;la messe latine&#8239;?"
+      }
+    },
+    {
+      "href": "#mass",
+      "label": {
+        "en": "Mass & confession times",
+        "fr": "Messes et confessions"
+      }
+    },
+    {
+      "href": "#watch",
+      "label": {
+        "en": "Livestream",
+        "fr": "Messe en direct"
+      }
+    },
+    {
+      "href": "#sacraments",
+      "label": {
+        "en": "Sacraments",
+        "fr": "Sacrements"
+      }
+    },
+    {
+      "href": "#life",
+      "label": {
+        "en": "Parish life",
+        "fr": "Vie paroissiale"
+      }
+    },
+    {
+      "href": "#clergy",
+      "label": {
+        "en": "Clergy",
+        "fr": "Clergé"
+      }
+    },
+    {
+      "href": "#history",
+      "label": {
+        "en": "History",
+        "fr": "Histoire"
+      }
+    },
+    {
+      "href": "#give",
+      "label": {
+        "en": "Support the parish",
+        "fr": "Soutenir la paroisse"
+      }
+    },
+    {
+      "href": "#bulletin",
+      "label": {
+        "en": "Bulletin",
+        "fr": "Feuillet paroissial"
+      }
+    },
+    {
+      "href": "#contact",
+      "label": {
+        "en": "Contact",
+        "fr": "Contact"
+      }
+    }
+  ],
+  "next": {
+    "en": "Next",
+    "fr": "À suivre"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/stclement.fssp/",
+    "youtube": "https://youtube.com/@st.clementsparishparoisses8409",
+    "facebook": "https://www.facebook.com/stclementottawa/"
+  },
+  "maps": {
+    "search": "https://www.google.com/maps/search/?api=1&query=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa,+ON",
+    "embed": "https://maps.google.com/maps?q=Saint%20Clement%20Parish%20(at%20St.%20Anne%20Church)%2C%20528%20Old%20St.%20Patrick%20St%2C%20Ottawa&z=16&output=embed"
+  },
+  "tel": "+16135659656",
+  "phone": "(613)&nbsp;565-9656",
+  "flocknote": "https://stclementparish.flocknote.com/",
+  "email": "office.st.clement@rogers.com",
+  "address": {
+    "street": {
+      "en": "528 Old St. Patrick Street",
+      "fr": "528, rue Old St. Patrick"
+    },
+    "city": {
+      "en": "Ottawa, ON K1N 5L5",
+      "fr": "Ottawa (Ontario) K1N&nbsp;5L5"
+    }
+  },
+  "mbar": {
+    "mass": {
+      "en": "Mass&nbsp;times",
+      "fr": "Horaire"
+    },
+    "directions": {
+      "en": "Directions",
+      "fr": "Itinéraire"
+    },
+    "donate": {
+      "en": "Donate",
+      "fr": "Don"
+    }
+  }
+}

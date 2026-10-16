@@ -1,0 +1,177 @@
+{
+  "photo": {
+    "src": "img/congregation-800.webp",
+    "srcset": "img/congregation-600.webp 600w, img/congregation-800.webp 800w, img/congregation-1600.webp 1200w",
+    "w": "800",
+    "h": "1067",
+    "alt": {
+      "en": "A full church at Mass at Christmastime, seen from the side aisle beneath the stained-glass windows",
+      "fr": "Une église pleine pour la messe au temps de Noël, vue du bas-côté sous les vitraux"
+    }
+  },
+  "photo_pos": "50% 60%",
+  "eyebrow": {
+    "en": "Parish&nbsp;life",
+    "fr": "Vie&nbsp;paroissiale"
+  },
+  "heading": {
+    "en": "A&nbsp;living community",
+    "fr": "Une communauté bien&nbsp;vivante"
+  },
+  "lead": {
+    "en": "Choir and children’s schola, altar servers, young adults, the Legion of Mary, the Knights of Columbus: there is a place for&nbsp;everyone.",
+    "fr": "Chorale et schola pour enfants, servants de messe, jeunes adultes, Légion de Marie, Chevaliers de Colomb&nbsp;: il y a une place pour&nbsp;chacun."
+  },
+  "flocknote": {
+    "en": "Get parish news by&nbsp;email",
+    "fr": "Recevoir les nouvelles par&nbsp;courriel"
+  },
+  "upcoming": {
+    "en": "Coming up",
+    "fr": "À venir"
+  },
+  "groups": [
+    {
+      "icon": "",
+      "sizes": "56px",
+      "img": {
+        "src": "img/grp-organ-160.webp",
+        "srcset": "img/grp-organ-160.webp 160w, img/grp-organ-240.webp 240w",
+        "w": "160",
+        "h": "160",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt",
+      "name": {
+        "en": "St. Clement Choir",
+        "fr": "Chorale St-Clément"
+      },
+      "text": {
+        "en": "Practices every Thursday at 7:00&nbsp;pm. <a href=\"mailto:stclementchoirottawa@gmail.com\">stclementchoirottawa@gmail.com</a>",
+        "fr": "Pratiques tous les jeudis à 19&nbsp;h. <a href='mailto:stclementchoirottawa@gmail.com'>stclementchoirottawa@gmail.com</a>"
+      }
+    },
+    {
+      "icon": "music",
+      "name": {
+        "en": "Schola Cantorum for children & youth",
+        "fr": "Schola Cantorum (enfants et jeunes)"
+      },
+      "text": {
+        "en": "Fridays 6:00⁠–⁠7:15&nbsp;pm; sings at First Friday High Masses. <a href=\"mailto:sjb.schola@gmail.com\">sjb.schola@gmail.com</a>",
+        "fr": "Les vendredis de 18&nbsp;h à 19&nbsp;h&nbsp;15&#8239;; chante aux <span class='nw'>grand-messes</span> des premiers vendredis. <a href='mailto:sjb.schola@gmail.com'>sjb.schola@gmail.com</a>"
+      },
+      "img": {
+        "src": "",
+        "srcset": "",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt",
+      "sizes": "56px"
+    },
+    {
+      "icon": "",
+      "sizes": "56px",
+      "img": {
+        "src": "img/grp-servers-160.webp",
+        "srcset": "img/grp-servers-160.webp 160w, img/grp-servers-240.webp 240w",
+        "w": "160",
+        "h": "160",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt",
+      "name": {
+        "en": "Altar servers",
+        "fr": "Servants de messe"
+      },
+      "text": {
+        "en": "Boys and young men of the parish; server practice once a month. Contact Fr.&nbsp;Pinho&nbsp;Sousa.",
+        "fr": "Garçons et jeunes hommes de la paroisse&#8239;; pratique une fois par mois. Contact&nbsp;: abbé&nbsp;Pinho&nbsp;Sousa."
+      }
+    },
+    {
+      "icon": "",
+      "sizes": "(max-width:999px) 56px, 40px",
+      "img": {
+        "src": "img/logos/legion-of-mary-disc-160.webp",
+        "srcset": "img/logos/legion-of-mary-disc-80.webp 80w, img/logos/legion-of-mary-disc-160.webp 160w",
+        "w": "160",
+        "h": "160",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt gl2 gd",
+      "name": {
+        "en": "Legion of Mary",
+        "fr": "Légion de Marie"
+      },
+      "text": {
+        "en": "Meets Wednesdays at 5:45&nbsp;pm in the old St.&nbsp;Anne&nbsp;rectory.",
+        "fr": "Réunions les mercredis à 17&nbsp;h&nbsp;45 au vieux presbytère&nbsp;Sainte-Anne."
+      }
+    },
+    {
+      "icon": "",
+      "sizes": "(max-width:999px) 56px, 40px",
+      "img": {
+        "src": "img/logos/young-adults-160.webp",
+        "srcset": "img/logos/young-adults-80.webp 80w, img/logos/young-adults-160.webp 160w",
+        "w": "160",
+        "h": "160",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt gl2 gd",
+      "name": {
+        "en": "St. Clement Young Adults",
+        "fr": "Jeunes adultes St-Clément"
+      },
+      "text": {
+        "en": "<a href=\"mailto:stclementyag@gmail.com\">stclementyag@gmail.com</a>",
+        "fr": ""
+      }
+    },
+    {
+      "icon": "",
+      "sizes": "(max-width:999px) 56px, 46px",
+      "img": {
+        "src": "img/logos/kofc-160.webp",
+        "srcset": "img/logos/kofc-80.webp 80w, img/logos/kofc-160.webp 160w",
+        "w": "",
+        "h": "",
+        "alt": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      "cls": "gt gl2",
+      "name": {
+        "en": "Also",
+        "fr": "Et aussi"
+      },
+      "text": {
+        "en": "Knights of Columbus, Seven Sisters Apostolate, Domus Christiani (for married couples) and the parish&nbsp;bookstore.",
+        "fr": "Chevaliers de Colomb, Apostolat des Sept Sœurs, Domus Christiani (couples mariés) et la librairie&nbsp;paroissiale."
+      }
+    }
+  ],
+  "next": {
+    "en": "Meet your priests",
+    "fr": "Vos prêtres"
+  }
+}

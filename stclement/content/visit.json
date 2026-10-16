@@ -1,0 +1,48 @@
+{
+  "mimg": {
+    "src": "img/grounds-800.webp",
+    "srcset": "img/grounds-800.webp 800w, img/grounds-1400.webp 1400w",
+    "w": "",
+    "h": "",
+    "alt": {
+      "en": "",
+      "fr": ""
+    }
+  },
+  "img": {
+    "src": "img/grounds-2400.webp",
+    "srcset": "img/grounds-1400.webp 1400w, img/grounds-2400.webp 2400w",
+    "w": "2400",
+    "h": "1594",
+    "alt": {
+      "en": "St. Anne Church and its steeple seen across the park and playing field in spring",
+      "fr": "L’église Sainte-Anne et son clocher, vus du parc et du terrain de jeu au printemps"
+    }
+  },
+  "since": [
+    {
+      "en": "St. Anne Church <b>since&nbsp;1873</b>",
+      "fr": "L’église Sainte-Anne <b>depuis&nbsp;1873</b>"
+    },
+    {
+      "en": "Saint Clement Parish&nbsp;<b>since&nbsp;1968</b>",
+      "fr": "La paroisse Saint-Clément <b>depuis&nbsp;1968</b>"
+    }
+  ],
+  "eyebrow": {
+    "en": "Find&nbsp;us",
+    "fr": "Nous&nbsp;trouver"
+  },
+  "note": {
+    "en": "In the heart of Ottawa’s Lower Town.",
+    "fr": "Au cœur de la Basse-Ville d’Ottawa."
+  },
+  "directions": {
+    "en": "Directions",
+    "fr": "Itinéraire"
+  },
+  "caption": {
+    "en": "St. Anne Church from the&nbsp;park",
+    "fr": "L’église Sainte-Anne vue du&nbsp;parc"
+  }
+}

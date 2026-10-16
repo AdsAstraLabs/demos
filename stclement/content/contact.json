@@ -1,0 +1,96 @@
+{
+  "eyebrow": {
+    "en": "Contact",
+    "fr": "Contact"
+  },
+  "heading": {
+    "en": "Reach the&nbsp;parish",
+    "fr": "Joindre la&nbsp;paroisse"
+  },
+  "hours": {
+    "en": "Office: Mon–Fri, 9:00&nbsp;am⁠–⁠3:00&nbsp;pm",
+    "fr": "Bureau&nbsp;: lun.–ven., de 9&nbsp;h à 15&nbsp;h"
+  },
+  "email_label": {
+    "en": "Parish&nbsp;secretary",
+    "fr": "Secrétariat paroissial"
+  },
+  "map_button": {
+    "en": "Open in Google&nbsp;Maps",
+    "fr": "Ouvrir dans Google&nbsp;Maps"
+  },
+  "map_title": {
+    "en": "Map: St. Anne Church, 528 Old St. Patrick Street, Ottawa",
+    "fr": "Carte&nbsp;: église Sainte-Anne, 528, rue Old St. Patrick, Ottawa"
+  },
+  "ext_heading": {
+    "en": "Phone extensions",
+    "fr": "Postes téléphoniques"
+  },
+  "ext_note": {
+    "en": "then dial the extension",
+    "fr": "puis composez le poste"
+  },
+  "extensions": [
+    {
+      "emergency": false,
+      "ext": "2",
+      "label": {
+        "en": "Secretary",
+        "fr": "Secrétariat"
+      },
+      "sub": {
+        "en": "",
+        "fr": ""
+      }
+    },
+    {
+      "emergency": false,
+      "ext": "3",
+      "label": {
+        "en": "Fr. Erik Deprey",
+        "fr": "Abbé Erik Deprey"
+      },
+      "sub": {
+        "en": "Pastor",
+        "fr": "Curé"
+      }
+    },
+    {
+      "emergency": false,
+      "ext": "5",
+      "label": {
+        "en": "Fr. Manuel Pinho Sousa",
+        "fr": "Abbé Manuel Pinho&nbsp;Sousa"
+      },
+      "sub": {
+        "en": "",
+        "fr": ""
+      }
+    },
+    {
+      "emergency": false,
+      "ext": "6",
+      "label": {
+        "en": "Fr. Matthew Jagas",
+        "fr": "Abbé Matthew Jagas"
+      },
+      "sub": {
+        "en": "Parochial Vicar",
+        "fr": "Vicaire paroissial"
+      }
+    },
+    {
+      "emergency": true,
+      "ext": "8",
+      "label": {
+        "en": "Last Rites",
+        "fr": "Derniers sacrements"
+      },
+      "sub": {
+        "en": "Emergency",
+        "fr": "Urgence"
+      }
+    }
+  ]
+}
