@@ -5,11 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="same-origin">
-<title>St. Clement Parish · Editor</title>
+<title>St. Clement Parish · Website editor</title>
 <link rel="icon" href="../img/brand/stclement-160.webp">
+<link rel="stylesheet" href="admin.css">
+<script type="module" src="admin.js"></script>
 </head>
 <body>
-<!-- Decap CMS (open source, MIT). Pinned version; config in ./config.yml. Not linked from the site. -->
-<script src="https://unpkg.com/decap-cms@3.17.1/dist/decap-cms.js"></script>
+<header class="top">
+ <img src="../img/brand/stclement-160.webp" width="27" height="32" alt="">
+ <b>St. Clement Parish <span>· Website editor</span></b>
+ <span class="sp"></span>
+ <label class="advt"><input type="checkbox" id="adv"> Show layout settings</label>
+ <a class="tb" href="/" target="_blank" rel="noopener">View the site ↗</a>
+ <span id="who"></span>
+ <form method="post" action="/admin/logout"><button class="tb" type="submit">Sign out</button></form>
+</header>
+<div class="app">
+ <nav id="side" aria-label="Sections"></nav>
+ <main id="main" tabindex="-1">
+  <div class="welcome">
+   <h1>Welcome</h1>
+   <p>Choose a part of the page on the left. Each section has its fields in English and French side by side.
+   When you press <b>Save</b>, the website is updated straight away; the previous version is kept and can be restored with <b>History</b>.</p>
+   <h2>Tips</h2>
+   <ul>
+    <li><b>Keep together</b> stops words from being split across two lines (for example a name or “10:30&nbsp;am”). It wraps the selected words in <code>&lt;span class="nw"&gt;…&lt;/span&gt;</code>.</li>
+    <li><b>Fixed space</b> inserts <code>&amp;nbsp;</code>, a space that never breaks a line.</li>
+    <li>Times are kept together with “am”, “pm” and “h” automatically, and a short last word is not left alone on a line.</li>
+    <li>Photos: choose one from the library or upload a new one (JPG, PNG or WebP, up to 15&nbsp;MB). Always describe what the photo shows, for people using screen readers.</li>
+   </ul>
+  </div>
+ </main>
+</div>
+<dialog id="dlg"><div id="dlgc"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
