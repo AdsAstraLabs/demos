@@ -694,7 +694,7 @@ footer{padding-top:3rem}
 @media(min-width:900px){.sit{grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:2.4rem;padding:1.1rem 1.1rem 1.1rem 2.4rem;align-items:center}.sit>div:not(.ph){padding:0}}
 /* rev6: sacraments get real parish photos (card tops) and a night-window backdrop on Last Rites */
 .sc .simg{display:block;width:calc(100% + 3rem);max-width:none;margin:-1.5rem -1.5rem .55rem;aspect-ratio:2/1;object-fit:cover;border-radius:19px 19px 0 0}
-.sc.em{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(40,8,14,.25) 0%,rgba(80,13,26,.82) 45%,#6e1423 72%),url(img/sac-lamp-430.webp) 50% 41%/cover no-repeat #5a0f1c}
+.sc.em{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(40,8,14,.25) 0%,rgba(80,13,26,.82) 45%,#6e1423 72%),url(img/sac-lamp-1100.webp) 50% 41%/cover no-repeat #5a0f1c}
 @media(min-width:1000px){.sc.em{padding-top:9.5rem}}
 @media(max-width:999px){.sc.em{padding-top:7.5rem}}
 /* rev7: hero logo strip optical balance: per-logo heights (in markup), cream pill wordmarks, mobile keeps the ratios */
@@ -796,7 +796,115 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
 .conf p.exc{font-size:14px!important;color:var(--mut);line-height:1.5}
 .conf .capp{display:inline-block;margin-top:.9rem;font-weight:600;color:var(--wine);text-decoration:none;border-bottom:1px solid rgba(110,20,30,.3)}
 .conf .capp:hover{border-bottom-color:var(--wine)}
-</style></head><body>
+/* scroll pass (Oct 16, 2026): story-first order, reviews strip, Up-next teasers, reveals, photo break, hero polish */
+/* reveals: hidden state only once JS has tagged <html> (.rvjs); without JS everything is visible */
+html:not(.rvjs) .rv{opacity:1;transform:none}
+html.rvjs .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0ms)}
+html.rvjs .rv.in{opacity:1;transform:none}
+html.rvjs .vid.rv{transform:translateY(10px) scale(.97)}
+html.rvjs .vid.rv.in{transform:none}
+@media(prefers-reduced-motion:reduce){html.rvjs .rv,html.rvjs .vid.rv{opacity:1!important;transform:none!important;transition:none!important}}
+/* reading-progress bar */
+.rprog{position:fixed;top:0;left:0;right:0;height:3px;z-index:80;pointer-events:none}
+.rprog i{display:block;height:100%;background:linear-gradient(90deg,#b8913f,#e9c97a);transform:scaleX(0);transform-origin:0 50%;box-shadow:0 0 8px rgba(233,201,122,.45)}
+/* full-bleed photos: gentle parallax / slow zoom driven by JS (transform only, no layout shift) */
+.band img,.grounds picture img,.pbk img{will-change:transform;transform:scale(1.08)}
+.grounds picture{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.band img,.grounds picture img,.pbk img{transform:none!important;will-change:auto}}
+/* Up next teasers */
+.nxw{width:min(1200px,90%);margin:calc(var(--blk) + .6rem) auto 0;text-align:center}
+.nxt{display:inline-flex;align-items:center;gap:.65rem;padding:.45rem .2rem;text-decoration:none;color:var(--wine);font-size:15px;line-height:1.2}
+.nxt .nxl{font:600 12px/1 var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.nxt .nxs{font-family:var(--hf);font-style:italic;font-weight:600;font-size:1.3rem;border-bottom:1px solid transparent;transition:border-color .25s}
+.nxt .nxa{width:30px;height:30px;padding:6px;border:1px solid currentColor;border-radius:50%;opacity:.7;transition:transform .3s,opacity .3s}
+.nxt:hover .nxs,.nxt:focus-visible .nxs{border-bottom-color:currentColor}
+.nxt:hover .nxa,.nxt:focus-visible .nxa{transform:translateY(3px);opacity:1}
+.dk .nxt{color:#fff}.dk .nxt .nxl{color:#e4c47c}
+@media(max-width:520px){.nxt{flex-wrap:wrap;justify-content:center;row-gap:.3rem}.nxt .nxs{font-size:1.2rem}}
+/* reviews strip */
+.rvs{padding-top:calc(var(--sec)*.8);padding-bottom:calc(var(--sec)*.8)}
+.rvs-top{display:flex;flex-direction:column;align-items:center;gap:.7rem;text-align:center}
+.rvs-top h2{font-size:clamp(2rem,3.6vw,2.7rem);margin:0}
+.rvs-badge{display:inline-flex;align-items:center;gap:.55rem;padding:.45rem 1rem .45rem .7rem;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:15px;box-shadow:0 6px 16px -12px rgba(60,30,20,.4)}
+.rvs-badge .rvs-g{width:20px;height:20px;flex:none}
+.rvs-badge b{font-size:17px;font-weight:700}
+.rvs-badge .st{color:#FBBC04;letter-spacing:.06em;font-size:15px}
+.rvs-badge:hover{border-color:var(--gold)}
+.rvs-row{display:grid;gap:1rem;margin-top:var(--blk);align-items:start}
+@media(min-width:760px){.rvs-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.rvs-row{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:759px){.rvs-row{grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:-5.6%;margin-right:-5.6%;padding:0 5.6% .6rem;scroll-padding:0 5.6%;scrollbar-width:none}.rvs-row::-webkit-scrollbar{display:none}.rq{scroll-snap-align:start}}
+.rq{position:relative;margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.6rem 1.3rem 1.1rem;display:flex;flex-direction:column;gap:1rem}
+.rq:before{content:"“";position:absolute;top:-.1rem;left:1rem;font:600 4.2rem/1 var(--hf);color:var(--gold-l);opacity:.55}
+.rq blockquote{margin:0;position:relative}
+.rq blockquote p{font-family:var(--hf);font-size:1.22rem!important;line-height:1.38!important;color:var(--ink);font-weight:500}
+.rq figcaption{display:flex;align-items:center;gap:.5rem;padding-top:.8rem;border-top:1px solid var(--line);font-size:14px!important}
+.rq .rqg{width:16px;height:16px;flex:none}
+.rq .rqn{font-weight:600;color:var(--ink)}
+.rq .rqs{margin-left:auto;color:#FBBC04;letter-spacing:.04em;font-size:13px}
+.rvs-ft{margin-top:1.2rem;text-align:center;font-size:14px!important;color:var(--mut)}
+.rvs-ft a{color:var(--wine);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(110,20,35,.3)}
+.rvs-ft a:hover{border-bottom-color:var(--wine)}
+/* hero Google line now links to the reviews strip */
+a.rate{text-decoration:none;color:rgba(255,255,255,.92)}
+a.rate>span:last-child{border-bottom:1px solid transparent;transition:border-color .2s}
+a.rate:hover>span:last-child,a.rate:focus-visible>span:last-child{border-bottom-color:rgba(255,255,255,.7)}
+/* full-bleed photo break (Una voce dicentes) */
+.pbk{position:relative;padding:0;height:clamp(340px,56vh,620px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:#1c0d10}
+.pbk picture,.pbk img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.pbk:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,6,8,.9) 0%,rgba(14,6,8,.55) 32%,rgba(14,6,8,.12) 62%,rgba(14,6,8,.22) 100%)}
+.pbk .w{position:relative;z-index:2;padding-bottom:clamp(1.8rem,5vh,3.2rem);text-align:center}
+.pbk-l{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.pbk .lat{font-family:var(--hf);font-style:italic;font-weight:500;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.05;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.pbk .tr{font-size:15px!important;color:#fff;opacity:.95;text-shadow:0 1px 3px rgba(0,0,0,.8);max-width:52ch}
+@media(max-width:759px){.pbk{height:clamp(280px,44vh,380px)}.pbk img{object-position:50% 35%}}
+/* cinematic livestream: ambient glow of the poster behind a still-compact player */
+#watch{position:relative;overflow:hidden;isolation:isolate}
+#watch:before{content:"";position:absolute;inset:-15%;z-index:-1;background:url(img/yt-latest.webp) 70% 50%/cover no-repeat;filter:blur(70px) saturate(1.3);opacity:.32}
+#watch:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--night) 20%,rgba(28,13,16,.55) 70%,rgba(28,13,16,.75)),linear-gradient(0deg,var(--night),transparent 18%,transparent 82%,var(--night))}
+#watch .vid{box-shadow:0 0 0 1px rgba(233,201,122,.22),0 30px 70px -25px rgba(0,0,0,.9),0 0 90px -20px rgba(217,181,108,.35)}
+/* hero: larger, airier subtitle; brighter photo with a slow Ken Burns zoom */
+.hero h1 em{font-size:clamp(1.9rem,4.6vh,2.5rem)!important;margin-top:.45em!important;margin-bottom:.2em;line-height:1.1;letter-spacing:.015em}
+@media(max-width:759px){.hero h1 em{font-size:clamp(1.7rem,8vw,2rem)!important;margin-top:.4em!important}}
+.hero p.l{margin-top:1rem}
+.hero picture img{animation:kb2 20s ease-in-out infinite alternate;transform-origin:64% 45%;filter:brightness(1.16) saturate(1.06)}
+@keyframes kb2{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero:after{background:linear-gradient(0deg,rgba(12,5,7,.9) 0%,rgba(12,5,7,.6) 30%,rgba(12,5,7,.1) 58%,rgba(12,5,7,.42) 100%),linear-gradient(90deg,rgba(12,5,7,.72) 0%,rgba(12,5,7,.42) 36%,rgba(12,5,7,0) 64%)}
+@media(max-width:759px){.hero:after{background:linear-gradient(0deg,rgba(12,5,7,.95) 0%,rgba(12,5,7,.82) 42%,rgba(12,5,7,.45) 72%,rgba(12,5,7,.58) 100%)}}
+@media(prefers-reduced-motion:reduce){.hero picture img{animation:none}}
+/* scroll pass fix: schedule cards could size to their nowrap content and overflow 390px screens (FR "Grand-messe · en direct") */
+@media(max-width:899px){.sch{grid-template-columns:minmax(0,1fr)}.sch .card{min-width:0}.sunday .row span{min-width:0}}
+@media(max-width:899px){.wk .row{grid-template-columns:minmax(0,1fr) 5.4rem 5.4rem}.wk .row b{white-space:normal;min-width:0}}
+@media(max-width:420px){.wk .row{grid-template-columns:minmax(0,1fr) 4.7rem 4.7rem}}
+.pbk .w{margin:0 auto}
+.pbk:after{background:linear-gradient(0deg,rgba(14,6,8,.92) 0%,rgba(14,6,8,.62) 30%,rgba(14,6,8,.15) 62%,rgba(14,6,8,.25) 100%)}
+.rq blockquote{border:0;padding:0}
+.rq:before{content:none}
+.rq{padding-top:1.3rem}
+section:has(>.nxw){padding-bottom:calc(var(--sec)*.7)}
+
+/* hero + brand scale-up */
+@media(min-width:760px){.brand .shield{height:54px}.brand b{font-size:1.22rem!important}.brand small{font-size:13px!important}.brand{gap:.85rem}}
+@media(min-width:760px){.hero h1{font-size:clamp(3.36rem,14vw,8.96rem)!important}}
+@media(min-width:760px) and (max-height:820px){.hero h1{font-size:clamp(3.58rem,12.32vh,7.84rem)!important}}
+
+@media(max-width:759px){.brand .shield{height:50px}.brand b{font-size:1.06rem!important}.hero h1{font-size:clamp(3.25rem,16.8vw,4.93rem)!important}}
+@media(max-width:379px){.brand .shield{height:42px}}
+
+/* hero spread: title higher, space shared */
+@media(min-width:760px){.hero .w{flex:1 1 auto;display:flex;flex-direction:column;padding-top:calc(68px + clamp(1.5rem,5vh,3.5rem))!important}
+.hero .w>.kick{margin-top:auto}
+.hero .w>.sun{margin-top:auto}
+.hero .w>.rate{margin-bottom:clamp(1.2rem,5vh,3rem)}
+.hero .w>.kick{margin-bottom:.2rem}}
+
+@media(min-width:760px){.brand{transform:translateY(6px)}}
+@media(max-width:759px){.brand{transform:translateY(4px)}}
+
+@media(min-width:1100px){.hero .w>.sun{width:fit-content;max-width:100%;grid-template-columns:auto auto auto}.hero .w>.sun>div{padding:.7rem 1.4rem}.hero .w>.sun .times{gap:.4rem 2rem}}
+</style>
+<script>document.documentElement.classList.add('rvjs');setTimeout(function(){if(!window.__rvok)document.documentElement.classList.remove('rvjs')},3000)</script>
+</head><body>
 <a class="skip" href="#mass" data-fr="Aller à l’horaire des messes">Skip to Mass times</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
@@ -814,6 +922,7 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
 <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 9V5.5A1.5 1.5 0 0 0 13.5 4h-8A1.5 1.5 0 0 0 4 5.5v8A1.5 1.5 0 0 0 5.5 15H9" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>
+<div class="rprog" aria-hidden="true"><i></i></div>
 <header id="top">
  <div class="w">
   <a class="brand" href="#top" aria-label="Saint Clement Parish, home" data-fr-aria="Paroisse Saint-Clément, accueil"><img class="shield" src="img/brand/stclement-160.png" width="41" height="48" alt=""><span><b data-fr="Paroisse Saint-Clément">Saint Clement Parish</b><small data-fr="<span class='dx'>à l’église </span>Sainte-Anne · Ottawa"><span class="dx">at </span>St. Anne Church · Ottawa</small></span></a>
@@ -827,22 +936,22 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
   </div>
  </div>
  <div class="drawer" id="drawer">
-  <a href="#mass" data-fr="Messes et confessions">Mass &amp; confession times</a><a href="#new" data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Vie paroissiale">Parish life</a><a href="#watch" data-fr="Messe en direct">Livestream</a><a href="#clergy" data-fr="Clergé">Clergy</a><a href="#history" data-fr="Histoire">History</a><a href="#give" data-fr="Soutenir la paroisse">Support the parish</a><a href="#bulletin" data-fr="Feuillet paroissial">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
+  <a href="#mass" data-fr="Messes et confessions">Mass &amp; confession times</a><a href="#new" data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</a><a href="#watch" data-fr="Messe en direct">Livestream</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Vie paroissiale">Parish life</a><a href="#clergy" data-fr="Clergé">Clergy</a><a href="#history" data-fr="Histoire">History</a><a href="#give" data-fr="Soutenir la paroisse">Support the parish</a><a href="#bulletin" data-fr="Feuillet paroissial">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
   <a class="btn bg" href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener" data-fr="Faire un don à la paroisse">Donate to the parish</a>
  </div>
 </header>
 <main>
 <section class="hero" aria-label="Welcome" data-fr-aria="Bienvenue" style="padding:0">
- <picture><source media="(max-width:760px)" srcset="img/hero-m.jpg" width="900" height="1600"><img src="img/hero.jpg" alt="The candlelit nave of St. Anne Church at night, votive lights along the pews and the high altar glowing beyond" data-fr-alt="La nef de l’église Sainte-Anne la nuit, à la lueur des lampions, le maître-autel illuminé au fond" fetchpriority="high" width="2400" height="1400"></picture>
+ <picture><source media="(max-width:760px)" sizes="100vw" srcset="img/hero-m.jpg 900w, img/hero-m-1600.webp 1600w" width="900" height="1600"><img src="img/hero.jpg" alt="The candlelit nave of St. Anne Church at night, votive lights along the pews and the high altar glowing beyond" data-fr-alt="La nef de l’église Sainte-Anne la nuit, à la lueur des lampions, le maître-autel illuminé au fond" fetchpriority="high" width="2400" height="1400"></picture>
  <div class="w">
   <div class="kick"><span data-fr="Messe traditionnelle en latin">Traditional Latin Mass</span><span>Ottawa</span><span>FSSP</span></div>
   <h1><span data-fr="Paroisse &lt;span class=&quot;nw&quot;&gt;Saint-Clément&lt;/span&gt;">Saint Clement Parish</span><em data-fr="à l’église Sainte-Anne">at St. Anne Church</em></h1>
-  <p class="l" data-fr="Une paroisse de l’Archidiocèse d’Ottawa-Cornwall, desservie par la Fraternité Sacerdotale Saint-Pierre, offrant la messe et les sacrements selon le rite romain traditionnel.">A parish of the Archdiocese of Ottawa-Cornwall, served by the Priestly Fraternity of Saint Peter, offering Mass and the Sacraments in the traditional Roman Rite.</p>
+  <p class="l" data-fr="La messe et les sacrements selon le rite romain traditionnel, assurés par la Fraternité Sacerdotale Saint-Pierre, au sein de l’Archidiocèse d’Ottawa‑Cornwall.">Mass and the Sacraments in the traditional Roman Rite, served by the Priestly Fraternity of Saint Peter, in the Archdiocese of Ottawa‑Cornwall.</p>
   <div class="ctas">
    <a class="btn bg" href="#mass"><svg class="ic"><use href="#i-clock"/></svg><span data-fr="Messes et confessions">Mass &amp; confession times</span></a>
    <a class="btn bo" href="https://www.google.com/maps/dir/?api=1&amp;destination=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa,+ON" target="_blank" rel="noopener"><svg class="ic"><use href="#i-gmap"/></svg><span data-fr="Itinéraire">Get directions</span></a>
   </div>
-  <div class="rate"><svg class="gg" aria-hidden="true"><use href="#i-g"/></svg><span class="st" aria-hidden="true">★★★★★</span><span data-fr="4,9 sur Google · 134 avis">4.9 on Google · 134 reviews</span></div>
+  <a class="rate" href="#reviews"><svg class="gg" aria-hidden="true"><use href="#i-g"/></svg><span class="st" aria-hidden="true">★★★★★</span><span data-fr="4,9 sur Google · 134 avis">4.9 on Google · 134 reviews</span></a>
   <div class="sun">
    <div><small data-fr="Messes du dimanche">Sunday Masses</small><div class="times t2"><span><b data-fr="8&nbsp;h">8:00&nbsp;am</b><i data-fr="Messe basse">Low Mass</i></span><span class="hm"><b data-fr="10&nbsp;h&nbsp;30">10:30&nbsp;am</b><i data-fr="Grand-messe">High Mass</i></span><span><b data-fr="17&nbsp;h&nbsp;30">5:30&nbsp;pm</b><i data-fr="Messe basse">Low Mass</i></span></div></div>
    <div><small data-fr="Confessions">Confessions</small><b class="cf" data-fr="<span class='l'>30 min avant chaque messe</span><span class='l nw'>Samedi 15 h 30 – 16 h 30</span>"><span class="l">30 min before every Mass</span><span class="l nw">Saturday 3:30⁠–⁠4:30 pm</span></b></div>
@@ -850,6 +959,77 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
   </div>
  </div>
  <div class="hl" aria-label="Affiliations"><div class="hl-v"><div class="hl-t"><ul class="hl-g"><li><a href="https://www.kofc.org/" target="_blank" rel="noopener" title="Knights of Columbus" data-fr-title="Chevaliers de Colomb"><img class="gb" src="img/logos/kofc-160.webp" alt="Knights of Columbus" data-fr-alt="Chevaliers de Colomb" style="--h:46px" decoding="async"></a></li><li><a href="https://www.livemass.net/" target="_blank" rel="noopener" title="LiveMass.net"><img class="wm" src="img/logos/livemass-160.webp" alt="LiveMass.net" style="--h:34px" decoding="async"></a></li><li><a href="https://ottawacornwall.ca/" target="_blank" rel="noopener" title="Archdiocese of Ottawa-Cornwall" data-fr-title="Archidiocèse d’Ottawa-Cornwall"><img class="wm" src="img/logos/archdiocese-160.webp" alt="Archdiocese of Ottawa-Cornwall" data-fr-alt="Archidiocèse d’Ottawa-Cornwall" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Clement, pope and martyr" data-fr-title="Saint Clément, pape et martyr"><img class="gb" src="img/logos/st-clement-160.webp" alt="Saint Clement, pope and martyr" data-fr-alt="Saint Clément, pape et martyr" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Anne" data-fr-title="Sainte Anne"><img class="ga" src="img/logos/st-anne-160.webp" alt="Saint Anne" data-fr-alt="Sainte Anne" style="--h:38px" decoding="async"></a></li><li><a href="https://www.vatican.va/" target="_blank" rel="noopener" title="The Holy See (Vatican)" data-fr-title="Le Saint-Siège (Vatican)"><img class="gb" src="img/logos/vatican-160.webp" alt="The Holy See (Vatican)" data-fr-alt="Le Saint-Siège (Vatican)" style="--h:46px" decoding="async"></a></li><li><a href="https://www.fssp.org/en/" target="_blank" rel="noopener" title="Priestly Fraternity of St. Peter (FSSP)" data-fr-title="Fraternité Sacerdotale Saint-Pierre (FSSP)"><img class="gs" src="img/logos/fssp-160.webp" alt="Priestly Fraternity of St. Peter (FSSP)" data-fr-alt="Fraternité Sacerdotale Saint-Pierre (FSSP)" style="--h:46px" decoding="async"></a></li><li><a href="#groups" title="Legion of Mary" data-fr-title="Légion de Marie"><img class="gb" src="img/logos/legion-of-mary-disc-160.webp" alt="Legion of Mary" data-fr-alt="Légion de Marie" style="--h:40px" decoding="async"></a></li><li><a href="#groups" title="Saint Clement Young Adults Group" data-fr-title="Groupe des jeunes adultes de Saint-Clément"><img class="gb" src="img/logos/young-adults-160.webp" alt="Saint Clement Young Adults Group" data-fr-alt="Groupe des jeunes adultes de Saint-Clément" style="--h:40px" decoding="async"></a></li></ul><ul class="hl-g" aria-hidden="true"><li><a href="https://www.kofc.org/" target="_blank" rel="noopener" title="Knights of Columbus" data-fr-title="Chevaliers de Colomb" tabindex="-1"><img class="gb" src="img/logos/kofc-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="https://www.livemass.net/" target="_blank" rel="noopener" title="LiveMass.net" tabindex="-1"><img class="wm" src="img/logos/livemass-160.webp" alt="" style="--h:34px" decoding="async"></a></li><li><a href="https://ottawacornwall.ca/" target="_blank" rel="noopener" title="Archdiocese of Ottawa-Cornwall" data-fr-title="Archidiocèse d’Ottawa-Cornwall" tabindex="-1"><img class="wm" src="img/logos/archdiocese-160.webp" alt="" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Clement, pope and martyr" data-fr-title="Saint Clément, pape et martyr" tabindex="-1"><img class="gb" src="img/logos/st-clement-160.webp" alt="" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Anne" data-fr-title="Sainte Anne" tabindex="-1"><img class="ga" src="img/logos/st-anne-160.webp" alt="" style="--h:38px" decoding="async"></a></li><li><a href="https://www.vatican.va/" target="_blank" rel="noopener" title="The Holy See (Vatican)" data-fr-title="Le Saint-Siège (Vatican)" tabindex="-1"><img class="gb" src="img/logos/vatican-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="https://www.fssp.org/en/" target="_blank" rel="noopener" title="Priestly Fraternity of St. Peter (FSSP)" data-fr-title="Fraternité Sacerdotale Saint-Pierre (FSSP)" tabindex="-1"><img class="gs" src="img/logos/fssp-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="#groups" title="Legion of Mary" data-fr-title="Légion de Marie" tabindex="-1"><img class="gb" src="img/logos/legion-of-mary-disc-160.webp" alt="" style="--h:40px" decoding="async"></a></li><li><a href="#groups" title="Saint Clement Young Adults Group" data-fr-title="Groupe des jeunes adultes de Saint-Clément" tabindex="-1"><img class="gb" src="img/logos/young-adults-160.webp" alt="" style="--h:40px" decoding="async"></a></li></ul></div></div></div>
+</section>
+<section id="new" class="dk">
+ <div class="w new">
+  <figure class="ph rv"><img src="img/procession-900.webp" srcset="img/procession-900.webp 900w, img/procession-1600.webp 1600w" sizes="(min-width:900px) 480px, 90vw" alt="Altar servers with candles leading the recessional down the centre aisle of a full church" data-fr-alt="Des servants portant des cierges mènent la procession de sortie dans l’allée centrale d’une église pleine" loading="lazy" width="900" height="1200"><figcaption data-fr="Procession de sortie dans l’allée centrale">The recessional down the centre aisle</figcaption></figure>
+  <div>
+   <span class="eb" data-fr="Bienvenue">Welcome</span>
+   <h2 data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</h2>
+   <p class="lead" data-fr="Tous sont les bienvenus. Voici quelques repères pour une première visite.">Everyone is welcome. A few things that help on a first visit:</p>
+   <div class="tips">
+    <div class="tip"><div class="tk"><span class="num">01</span></div><h3><span data-fr="Choisir une messe">Choose a Mass</span></h3><p data-fr="La &lt;span class='nw'&gt;grand-messe&lt;/span&gt; de 10 h 30 est chantée ; celles de 8 h et 17 h 30 sont des messes basses. Ou regardez d’abord la &lt;a class=&quot;yti&quot; href=&quot;#watch&quot;&gt;&lt;svg aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#i-ytc&quot;/&gt;&lt;/svg&gt;diffusion&lt;/a&gt;.">The 10:30 am High Mass is sung; 8:00 am and 5:30 pm are quiet Low Masses. Or watch the <a class="yti" href="#watch"><svg aria-hidden="true"><use href="#i-ytc"/></svg>livestream</a> first.</p></div>
+    <div class="tip"><div class="tk"><span class="num">02</span></div><h3><span data-fr="Suivre avec un missel">Follow with a missal</span></h3><p data-fr="Missels latin-anglais, latin-français, pour enfants et usagés à la librairie, le dimanche. Textes du jour &lt;a href=&quot;https://www.divinumofficium.com/cgi-bin/missa/missa.pl&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;en ligne&lt;/a&gt;.">English-Latin, French-Latin, children’s and used missals at the parish bookstore on Sundays. Daily texts <a href="https://www.divinumofficium.com/cgi-bin/missa/missa.pl" target="_blank" rel="noopener">online</a>.</p></div>
+    <div class="tip"><div class="tk"><span class="num">03</span><em class="gen" data-fr="général">general</em></div><h3><span data-fr="À quoi s’attendre">What to expect</span></h3><p data-fr="En latin, le prêtre tourné vers l’autel, avec de longs silences. Vous pouvez simplement regarder, écouter et prier.">Latin, the priest facing the altar, long silences. It’s fine simply to watch, listen and pray.</p></div>
+    <div class="tip"><div class="tk"><span class="num">04</span><em class="gen" data-fr="général">general</em></div><h3><span data-fr="Communion et tenue">Communion &amp; dress</span></h3><p data-fr="Communion à genoux et sur la langue, pour les catholiques préparés. Tenue sobre ; beaucoup de femmes portent un voile. &lt;a href=&quot;#contact&quot;&gt;Des questions ?&lt;/a&gt;">Communion kneeling and on the tongue, for prepared Catholics. Modest dress; many women wear a veil. <a href="#contact">Questions?</a></p></div>
+   </div>
+   <p class="note" style="color:rgba(255,255,255,.5);margin-top:1rem" data-fr="« Général » : usage courant à la messe traditionnelle, et non une règle de la paroisse.">“General” means common Latin Mass practice, not a parish rule.</p>
+  </div>
+ </div>
+ <div class="nxw"><a class="nxt" href="#gallery"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="La paroisse en images">The parish in pictures</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</section>
+<section id="gallery">
+ <div class="w">
+  <div class="head center"><span class="eb" data-fr="La paroisse en images">The parish in pictures</span><h2 data-fr="La beauté de la liturgie, la vie d’une paroisse">The beauty of the liturgy, the life of a parish</h2></div>
+  <div class="gal" id="gal">
+   <button class="w2 w2l t2l" data-full="img/altar-christmas-1600.webp"><img sizes="(min-width:900px) 769px, 90vw" srcset="img/altar-christmas-800.webp 800w, img/altar-christmas-1600.webp 1600w" src="img/altar-christmas-800.webp" alt="The high altar decorated for Christmas" data-fr-alt="Le maître-autel décoré pour Noël" loading="lazy"><figcaption data-fr="Le maître-autel à Noël">The high altar at Christmas</figcaption></button>
+   <button class="t2 t2l" data-full="img/blue-hour-1600.webp"><img sizes="(min-width:900px) 325px, (min-width:600px) 45vw, 232px" srcset="img/blue-hour-800.webp 600w, img/blue-hour-1600.webp 1200w" src="img/blue-hour-800.webp" alt="St. Anne Church at dusk with its lit steeple cross" data-fr-alt="L’église Sainte-Anne au crépuscule, la croix du clocher illuminée" loading="lazy"><figcaption data-fr="Sainte-Anne au crépuscule">St. Anne at dusk</figcaption></button>
+   <button data-full="img/organ-1600.webp"><img sizes="(min-width:900px) 444px, (min-width:760px) 45vw, 317px" srcset="img/organ-800.webp 800w, img/organ-1600.webp 1600w" src="img/organ-800.webp" alt="The choir loft and pipe organ under the chandelier" data-fr-alt="La tribune et l’orgue sous le lustre" loading="lazy"><figcaption data-fr="La tribune et l’orgue">The choir loft and organ</figcaption></button>
+   <button data-full="img/nativity-creche-1600.webp"><img src="img/nativity-creche-800.webp" alt="The Christmas crèche" data-fr-alt="La crèche de Noël" loading="lazy"><figcaption data-fr="La crèche de Noël">The Christmas crèche</figcaption></button>
+   <button class="t2 t2l" data-full="img/snow-1600.webp"><img sizes="(min-width:900px) 325px, (min-width:600px) 45vw, 232px" srcset="img/snow-800.webp 600w, img/snow-1600.webp 1200w" src="img/snow-800.webp" alt="St. Anne Church in falling snow" data-fr-alt="L’église Sainte-Anne sous la neige" loading="lazy"><figcaption data-fr="Sainte-Anne sous la neige">St. Anne in the snow</figcaption></button>
+   <button class="w2 w2l" data-full="img/first-communion-1600.webp"><img sizes="(min-width:1440px) 594px, (min-width:900px) 44.5vw, 90vw" srcset="img/first-communion-800.webp 800w, img/first-communion-1600.webp 1600w" src="img/first-communion-800.webp" alt="First Communicants with clergy and servers in the sanctuary" data-fr-alt="Les premiers communiants avec le clergé et les servants dans le sanctuaire" loading="lazy"><figcaption data-fr="Premières communions, 2024">First Communions, 2024</figcaption></button>
+   <button class="t2 t2l" data-full="img/passion-1600.webp"><img sizes="(min-width:900px) 345px, (min-width:600px) 45vw, 247px" srcset="img/passion-800.webp 638w, img/passion-1600.webp 1277w" src="img/passion-800.webp" alt="Altar servers in procession on Passion Sunday" data-fr-alt="Servants en procession le dimanche de la Passion" loading="lazy"><figcaption data-fr="Dimanche de la Passion">Passion Sunday</figcaption></button>
+   <button data-full="img/corpus-canopy-1600.webp"><img src="img/corpus-canopy-800.webp" alt="Corpus Christi procession under a gold canopy" data-fr-alt="Procession de la Fête-Dieu sous un dais doré" loading="lazy"><figcaption data-fr="Procession de la Fête-Dieu, 2024">Corpus Christi procession, 2024</figcaption></button>
+   <button data-full="img/nave-1600.webp"><img src="img/nave-800.webp" alt="The nave and high altar beneath the dome" data-fr-alt="La nef et le maître-autel sous la coupole" loading="lazy"><figcaption data-fr="La nef et le maître-autel">The nave and high altar</figcaption></button>
+  </div>
+  <p class="note igrow"><a class="btn bl igb" href="https://www.instagram.com/stclement.fssp/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ig-app"/></svg><span data-fr="Plus de photos sur Instagram &lt;b&gt;@stclement.fssp&lt;/b&gt;">More on Instagram <b>@stclement.fssp</b></span></a></p>
+ </div>
+</section>
+<section id="reviews" class="iv rvs" aria-labelledby="rvs-h">
+ <div class="w">
+  <div class="rvs-top">
+   <a class="rvs-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa" target="_blank" rel="noopener"><svg class="rvs-g" aria-hidden="true"><use href="#i-g"/></svg><b data-fr="4,9">4.9</b><span class="st" aria-hidden="true">★★★★★</span><span data-fr="134 avis Google">134 Google reviews</span></a>
+   <h2 id="rvs-h" data-fr="Ce qu’en disent les visiteurs">What visitors say</h2>
+  </div>
+  <div class="rvs-row">
+   <figure class="rq"><blockquote><p data-fr="« Une magnifique messe traditionnelle, célébrée avec une entière révérence envers Dieu. Quel bonheur de recevoir la sainte Eucharistie à genoux et sur la langue. Des confessions avant chaque messe ! »">“Wonderful TLM Mass with complete reverence shown to God. Wonderful to receive the Holy Eucharist kneeling and on the tongue. Confessions offered before each Mass!”</p></blockquote><figcaption><svg class="rqg" aria-hidden="true"><use href="#i-g"/></svg><span class="rqn">Debra M.</span><span class="rqs" role="img" aria-label="5 out of 5 stars" data-fr-aria="5 étoiles sur 5">★★★★★</span></figcaption></figure>
+   <figure class="rq"><blockquote><p data-fr="« J’ai vécu ici ma toute première messe en latin, et ce fut une vraie révélation. On y découvre la foi catholique sous une forme beaucoup plus spirituelle, ce qui est vraiment beau. »">“Got to experience my first ever Latin Mass here and it was a rather eye opening experience. You get to see the Catholic faith in a much more spiritual form which is really nice.”</p></blockquote><figcaption><svg class="rqg" aria-hidden="true"><use href="#i-g"/></svg><span class="rqn">Axel G.</span><span class="rqs" role="img" aria-label="5 out of 5 stars" data-fr-aria="5 étoiles sur 5">★★★★★</span></figcaption></figure>
+   <figure class="rq"><blockquote><p data-fr="« L’ambiance de cette paroisse ne ressemble à aucune autre. Vous en ressortirez reposé et renouvelé. C’est toujours mon cas. »">“The ambiance of this parish is unlike any other around. You will feel refreshed and renewed. I always do.”</p></blockquote><figcaption><svg class="rqg" aria-hidden="true"><use href="#i-g"/></svg><span class="rqn">Sylvie</span><span class="rqs" role="img" aria-label="5 out of 5 stars" data-fr-aria="5 étoiles sur 5">★★★★★</span></figcaption></figure>
+   <figure class="rq"><blockquote><p data-fr="« Ma paroisse préférée à Ottawa. On y célèbre des messes basses et des grand-messes en latin. Un lieu très saint. »">“My favourite parish in Ottawa. They have low and high Masses in Latin. A very holy place.”</p></blockquote><figcaption><svg class="rqg" aria-hidden="true"><use href="#i-g"/></svg><span class="rqn">Mathieu</span><span class="rqs" role="img" aria-label="5 out of 5 stars" data-fr-aria="5 étoiles sur 5">★★★★★</span></figcaption></figure>
+  </div>
+  <p class="rvs-ft"><span data-fr="Extraits d’avis Google publics, traduits de l’anglais.">Excerpts from public Google reviews.</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa" target="_blank" rel="noopener" data-fr="Lire tous les avis sur Google →">Read all reviews on Google →</a></p>
+ </div>
+</section>
+<section id="watch" class="dk">
+ <div class="w">
+  <div class="head"><span class="eb" data-fr="En direct">Livestream</span><h2 data-fr="Regarder la messe">Watch the Mass</h2><p class="lead" data-fr="La <span class='nw'>grand-messe</span> du dimanche à 10 h 30 et les grandes fêtes sont diffusées en direct sur la chaîne YouTube de la paroisse.">The Sunday 10:30 High Mass and major feasts are streamed live on the parish YouTube channel.</p></div>
+  <div class="vid" id="vid">
+   <button class="venl" type="button" aria-label="Enlarge the video" data-fr-aria="Agrandir la vidéo" title="Enlarge" data-fr-title="Agrandir"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg><span data-fr="Agrandir">Enlarge</span></button>
+   <img src="img/yt-latest.webp" alt="The high altar during the Sunday livestream" data-fr-alt="Le maître-autel pendant la diffusion du dimanche" loading="lazy" width="1280" height="720">
+   <button aria-label="Play: 20th Sunday after Pentecost (YouTube)" data-fr-aria="Lire : 20e dimanche après la Pentecôte (YouTube)"><span class="vt"><small data-fr="Diffusion récente · 11 octobre">Recent livestream · Oct 11</small>20th Sunday after Pentecost<span class="fr"><br>20e dimanche après la Pentecôte</span></span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span></button>
+  </div>
+  <div class="vlinks">
+   <a class="ytb" href="https://youtube.com/@st.clementsparishparoisses8409" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt-app"/></svg><span data-fr="En direct sur YouTube">Watch live on YouTube</span></a>
+   <a class="btn bo lmb" href="https://www.livemass.net/" target="_blank" rel="noopener" title="Live Latin Mass online, an FSSP apostolate" data-fr-title="La messe latine en direct, un apostolat de la FSSP"><img src="img/logos/livemass.webp" alt="" width="22" height="22"><span data-fr="Messe latine en ligne : LiveMass.net">Latin Mass online: LiveMass.net</span></a>
+   <a class="btn bo" href="https://www.divinumofficium.com/cgi-bin/missa/missa.pl" target="_blank" rel="noopener" data-fr="Lectures du jour">Today’s readings</a>
+   <a class="btn bo" href="https://www.divinumofficium.com/cgi-bin/horas/officium.pl" target="_blank" rel="noopener" data-fr="Office divin">Divine Office</a>
+  </div>
+ </div>
+ <div class="nxw"><a class="nxt" href="#mass"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="Messes et confessions">Mass &amp; confession times</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</section>
+<section class="band" aria-label="Introibo ad altare Dei">
+ <picture><source media="(max-width:760px)" sizes="100vw" srcset="img/band-m.jpg 1000w, img/band-m-1900.webp 1900w"><img src="img/band.jpg" alt="The sanctuary at night: candles on the high altar beneath the ring of stained-glass windows" data-fr-alt="Le sanctuaire la nuit : cierges sur le maître-autel sous la couronne de vitraux" loading="lazy" width="2400" height="1100"></picture>
+ <div class="w"><p class="lat">Introibo ad altare Dei.</p><p class="tr" data-fr="« Je m’approcherai de l’autel de Dieu. » Psaume 42, prière au bas de l’autel">“I will go in unto the altar of God.” Psalm 42, from the prayers at the foot of the altar</p></div>
 </section>
 <section id="mass" class="iv">
  <div class="w">
@@ -900,6 +1080,7 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
    <div><b data-fr="Dévotions au Précieux Sang">Precious Blood devotions</b><span data-fr="De janvier à juillet, à 15 h le 3e dimanche.">January to July, 3:00 pm on 3rd Sundays.</span></div>
      </div>
  </div>
+ <div class="nxw"><a class="nxt" href="#visit"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="Trouver l’église">Find the church</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 <section class="grounds" id="visit" aria-labelledby="since-h">
  <picture><source media="(max-width:759px)" srcset="img/grounds-1400.webp"><img src="img/grounds-2400.webp" srcset="img/grounds-1400.webp 1400w, img/grounds-2400.webp 2400w" sizes="100vw" alt="St. Anne Church and its steeple seen across the park and playing field in spring" data-fr-alt="L’église Sainte-Anne et son clocher, vus du parc et du terrain de jeu au printemps" loading="lazy" width="2400" height="1594"></picture>
@@ -915,57 +1096,20 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
  </div>
  <p class="gcap" data-fr="L’église Sainte-Anne vue du parc">St. Anne Church from the park</p>
 </section>
-<section id="new" class="dk">
- <div class="w new">
-  <figure class="ph rv"><img src="img/procession-900.webp" srcset="img/procession-900.webp 900w, img/procession-1600.webp 1600w" sizes="(min-width:900px) 480px, 90vw" alt="Altar servers with candles leading the recessional down the centre aisle of a full church" data-fr-alt="Des servants portant des cierges mènent la procession de sortie dans l’allée centrale d’une église pleine" loading="lazy" width="900" height="1200"><figcaption data-fr="Procession de sortie dans l’allée centrale">The recessional down the centre aisle</figcaption></figure>
-  <div>
-   <span class="eb" data-fr="Bienvenue">Welcome</span>
-   <h2 data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</h2>
-   <p class="lead" data-fr="Tous sont les bienvenus. Voici quelques repères pour une première visite.">Everyone is welcome. A few things that help on a first visit:</p>
-   <div class="tips">
-    <div class="tip"><div class="tk"><span class="num">01</span></div><h3><span data-fr="Choisir une messe">Choose a Mass</span></h3><p data-fr="La &lt;span class='nw'&gt;grand-messe&lt;/span&gt; de 10 h 30 est chantée ; celles de 8 h et 17 h 30 sont des messes basses. Ou regardez d’abord la &lt;a class=&quot;yti&quot; href=&quot;#watch&quot;&gt;&lt;svg aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#i-ytc&quot;/&gt;&lt;/svg&gt;diffusion&lt;/a&gt;.">The 10:30 am High Mass is sung; 8:00 am and 5:30 pm are quiet Low Masses. Or watch the <a class="yti" href="#watch"><svg aria-hidden="true"><use href="#i-ytc"/></svg>livestream</a> first.</p></div>
-    <div class="tip"><div class="tk"><span class="num">02</span></div><h3><span data-fr="Suivre avec un missel">Follow with a missal</span></h3><p data-fr="Missels latin-anglais, latin-français, pour enfants et usagés à la librairie, le dimanche. Textes du jour &lt;a href=&quot;https://www.divinumofficium.com/cgi-bin/missa/missa.pl&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;en ligne&lt;/a&gt;.">English-Latin, French-Latin, children’s and used missals at the parish bookstore on Sundays. Daily texts <a href="https://www.divinumofficium.com/cgi-bin/missa/missa.pl" target="_blank" rel="noopener">online</a>.</p></div>
-    <div class="tip"><div class="tk"><span class="num">03</span><em class="gen" data-fr="général">general</em></div><h3><span data-fr="À quoi s’attendre">What to expect</span></h3><p data-fr="En latin, le prêtre tourné vers l’autel, avec de longs silences. Vous pouvez simplement regarder, écouter et prier.">Latin, the priest facing the altar, long silences. It’s fine simply to watch, listen and pray.</p></div>
-    <div class="tip"><div class="tk"><span class="num">04</span><em class="gen" data-fr="général">general</em></div><h3><span data-fr="Communion et tenue">Communion &amp; dress</span></h3><p data-fr="Communion à genoux et sur la langue, pour les catholiques préparés. Tenue sobre ; beaucoup de femmes portent un voile. &lt;a href=&quot;#contact&quot;&gt;Des questions ?&lt;/a&gt;">Communion kneeling and on the tongue, for prepared Catholics. Modest dress; many women wear a veil. <a href="#contact">Questions?</a></p></div>
-   </div>
-   <p class="note" style="color:rgba(255,255,255,.5);margin-top:1rem" data-fr="« Général » : usage courant à la messe traditionnelle, et non une règle de la paroisse.">“General” means common Latin Mass practice, not a parish rule.</p>
-  </div>
- </div>
-</section>
-<section id="gallery">
- <div class="w">
-  <div class="head center"><span class="eb" data-fr="La paroisse en images">The parish in pictures</span><h2 data-fr="La beauté de la liturgie, la vie d’une paroisse">The beauty of the liturgy, the life of a parish</h2></div>
-  <div class="gal" id="gal">
-   <button class="w2 w2l t2l" data-full="img/altar-christmas-1600.webp"><img src="img/altar-christmas-800.webp" alt="The high altar decorated for Christmas" data-fr-alt="Le maître-autel décoré pour Noël" loading="lazy"><figcaption data-fr="Le maître-autel à Noël">The high altar at Christmas</figcaption></button>
-   <button class="t2 t2l" data-full="img/blue-hour-1600.webp"><img src="img/blue-hour-800.webp" alt="St. Anne Church at dusk with its lit steeple cross" data-fr-alt="L’église Sainte-Anne au crépuscule, la croix du clocher illuminée" loading="lazy"><figcaption data-fr="Sainte-Anne au crépuscule">St. Anne at dusk</figcaption></button>
-   <button data-full="img/organ-1600.webp"><img src="img/organ-800.webp" alt="The choir loft and pipe organ under the chandelier" data-fr-alt="La tribune et l’orgue sous le lustre" loading="lazy"><figcaption data-fr="La tribune et l’orgue">The choir loft and organ</figcaption></button>
-   <button data-full="img/nativity-creche-1600.webp"><img src="img/nativity-creche-800.webp" alt="The Christmas crèche" data-fr-alt="La crèche de Noël" loading="lazy"><figcaption data-fr="La crèche de Noël">The Christmas crèche</figcaption></button>
-   <button class="t2 t2l" data-full="img/snow-1600.webp"><img src="img/snow-800.webp" alt="St. Anne Church in falling snow" data-fr-alt="L’église Sainte-Anne sous la neige" loading="lazy"><figcaption data-fr="Sainte-Anne sous la neige">St. Anne in the snow</figcaption></button>
-   <button class="w2 w2l" data-full="img/first-communion-1600.webp"><img src="img/first-communion-800.webp" alt="First Communicants with clergy and servers in the sanctuary" data-fr-alt="Les premiers communiants avec le clergé et les servants dans le sanctuaire" loading="lazy"><figcaption data-fr="Premières communions, 2024">First Communions, 2024</figcaption></button>
-   <button class="t2 t2l" data-full="img/passion-1600.webp"><img src="img/passion-800.webp" alt="Altar servers in procession on Passion Sunday" data-fr-alt="Servants en procession le dimanche de la Passion" loading="lazy"><figcaption data-fr="Dimanche de la Passion">Passion Sunday</figcaption></button>
-   <button data-full="img/corpus-canopy-1600.webp"><img src="img/corpus-canopy-800.webp" alt="Corpus Christi procession under a gold canopy" data-fr-alt="Procession de la Fête-Dieu sous un dais doré" loading="lazy"><figcaption data-fr="Procession de la Fête-Dieu, 2024">Corpus Christi procession, 2024</figcaption></button>
-   <button data-full="img/nave-1600.webp"><img src="img/nave-800.webp" alt="The nave and high altar beneath the dome" data-fr-alt="La nef et le maître-autel sous la coupole" loading="lazy"><figcaption data-fr="La nef et le maître-autel">The nave and high altar</figcaption></button>
-  </div>
-  <p class="note igrow"><a class="btn bl igb" href="https://www.instagram.com/stclement.fssp/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ig-app"/></svg><span data-fr="Plus de photos sur Instagram &lt;b&gt;@stclement.fssp&lt;/b&gt;">More on Instagram <b>@stclement.fssp</b></span></a></p>
- </div>
-</section>
-<section class="band" aria-label="Introibo ad altare Dei">
- <picture><source media="(max-width:760px)" srcset="img/band-m.jpg"><img src="img/band.jpg" alt="The sanctuary at night: candles on the high altar beneath the ring of stained-glass windows" data-fr-alt="Le sanctuaire la nuit : cierges sur le maître-autel sous la couronne de vitraux" loading="lazy" width="2400" height="1100"></picture>
- <div class="w"><p class="lat">Introibo ad altare Dei.</p><p class="tr" data-fr="« Je m’approcherai de l’autel de Dieu. » Psaume 42, prière au bas de l’autel">“I will go in unto the altar of God.” Psalm 42, from the prayers at the foot of the altar</p></div>
-</section>
 <section id="sacraments" class="iv">
  <div class="w">
   <div class="head"><span class="eb" data-fr="Sacrements">Sacraments</span><h2 data-fr="Tous les sacrements de l’Église">All the Sacraments of the Church</h2></div>
   <div class="sac">
-   <div class="sc"><img class="simg" src="img/sac-confession-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A traditional carved wooden confessional with grilled doors" data-fr-alt="Un confessionnal traditionnel en bois sculpté, aux portes grillagées" title="Photo: Guerinf, CC BY-SA 4.0, via Wikimedia Commons"><span class="n" data-fr="Pénitence">Penance</span><h3 data-fr="Confession">Confession</h3><p data-fr="30 minutes avant chaque messe et le samedi de 15 h 30 à 16 h 30, ou sur rendez-vous.">30 minutes before every Mass and Saturdays 3:30⁠–⁠4:30 pm, or by appointment.</p></div>
-   <div class="sc"><img class="simg" src="img/sac-baptism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A marble baptismal font with a gilded cover in a Quebec church" data-fr-alt="Des fonts baptismaux en marbre au couvercle doré, dans une église du Québec" title="Photo: Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons"><span class="n" data-fr="Baptême et mariage">Baptism &amp; Matrimony</span><h3 data-fr="Baptêmes et mariages">Baptisms &amp; weddings</h3><p data-fr="Célébrés selon le rite romain traditionnel ; prévoyez-les bien à l’avance.">Celebrated in the traditional Roman Rite; please arrange them well in advance.</p></div>
-   <div class="sc" id="confirmation"><img class="simg" src="img/sac-confirmation-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="The bishop confirming a kneeling confirmand with his sponsor at St. Anne Church, 2015" data-fr-alt="L’évêque confirme un confirmand agenouillé, avec son parrain, à l’église Sainte-Anne, 2015"><span class="n" data-fr="Confirmation">Confirmation</span><h3 data-fr="Confirmation des jeunes">Confirmation for youth</h3><p data-fr="Pour les paroissiens de la 6e année ou plus. Les inscriptions pour 2027 (formulaires en anglais et en français) se terminaient le 4 octobre.">For parishioners in grade 6 or older. Registration for the 2027 class (forms in English and French) closed October 4.</p></div>
-   <div class="sc"><img class="simg" src="img/sac-communion-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 55%" alt="First communicants in white with the altar servers, 2024" data-fr-alt="Les premiers communiants en blanc avec les servants, 2024"><span class="n" data-fr="Eucharistie">Holy Eucharist</span><h3 data-fr="Première communion">First Holy Communion</h3><p data-fr="Préparation des enfants qui reçoivent l’Eucharistie pour la première fois.">Preparation for children receiving the Eucharist for the first time.</p></div>
-   <div class="sc" id="catechism"><img class="simg" src="img/sac-catechism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 45%" alt="Young altar servers holding candles at the Easter Vigil" data-fr-alt="De jeunes servants tenant des cierges à la Vigile pascale"><span class="n" data-fr="Catéchèse">Catechesis</span><h3 data-fr="Catéchisme familial">Family catechism</h3><p data-fr="Série vidéo gratuite tirée du Catéchisme de Baltimore : Credo, Commandements, Sacrements et prière.">Free video series from the Baltimore Catechism: the Creed, Commandments, Sacraments and prayer.</p></div>
+   <div class="sc"><img sizes="(min-width:1440px) 387px, (min-width:1000px) 29vw, (min-width:760px) 44vw, 90vw" srcset="img/sac-confession-800.webp 800w, img/sac-confession-1100.webp 1100w" class="simg" src="img/sac-confession-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A traditional carved wooden confessional with grilled doors" data-fr-alt="Un confessionnal traditionnel en bois sculpté, aux portes grillagées" title="Photo: Guerinf, CC BY-SA 4.0, via Wikimedia Commons"><span class="n" data-fr="Pénitence">Penance</span><h3 data-fr="Confession">Confession</h3><p data-fr="30 minutes avant chaque messe et le samedi de 15 h 30 à 16 h 30, ou sur rendez-vous.">30 minutes before every Mass and Saturdays 3:30⁠–⁠4:30 pm, or by appointment.</p></div>
+   <div class="sc"><img sizes="(min-width:1440px) 387px, (min-width:1000px) 29vw, (min-width:760px) 44vw, 90vw" srcset="img/sac-baptism-800.webp 800w, img/sac-baptism-1100.webp 1100w" class="simg" src="img/sac-baptism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A marble baptismal font with a gilded cover in a Quebec church" data-fr-alt="Des fonts baptismaux en marbre au couvercle doré, dans une église du Québec" title="Photo: Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons"><span class="n" data-fr="Baptême et mariage">Baptism &amp; Matrimony</span><h3 data-fr="Baptêmes et mariages">Baptisms &amp; weddings</h3><p data-fr="Célébrés selon le rite romain traditionnel ; prévoyez-les bien à l’avance.">Celebrated in the traditional Roman Rite; please arrange them well in advance.</p></div>
+   <div class="sc" id="confirmation"><img sizes="(min-width:1440px) 387px, (min-width:1000px) 29vw, (min-width:760px) 44vw, 90vw" srcset="img/sac-confirmation-800.webp 800w, img/sac-confirmation-1100.webp 1100w" class="simg" src="img/sac-confirmation-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="The bishop confirming a kneeling confirmand with his sponsor at St. Anne Church, 2015" data-fr-alt="L’évêque confirme un confirmand agenouillé, avec son parrain, à l’église Sainte-Anne, 2015"><span class="n" data-fr="Confirmation">Confirmation</span><h3 data-fr="Confirmation des jeunes">Confirmation for youth</h3><p data-fr="Pour les paroissiens de la 6e année ou plus. Les inscriptions pour 2027 (formulaires en anglais et en français) se terminaient le 4 octobre.">For parishioners in grade 6 or older. Registration for the 2027 class (forms in English and French) closed October 4.</p></div>
+   <div class="sc"><img sizes="(min-width:1440px) 387px, (min-width:1000px) 29vw, (min-width:760px) 44vw, 90vw" srcset="img/sac-communion-800.webp 800w, img/sac-communion-1100.webp 1100w" class="simg" src="img/sac-communion-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 55%" alt="First communicants in white with the altar servers, 2024" data-fr-alt="Les premiers communiants en blanc avec les servants, 2024"><span class="n" data-fr="Eucharistie">Holy Eucharist</span><h3 data-fr="Première communion">First Holy Communion</h3><p data-fr="Préparation des enfants qui reçoivent l’Eucharistie pour la première fois.">Preparation for children receiving the Eucharist for the first time.</p></div>
+   <div class="sc" id="catechism"><img sizes="(min-width:1440px) 387px, (min-width:1000px) 29vw, (min-width:760px) 44vw, 90vw" srcset="img/sac-catechism-800.webp 800w, img/sac-catechism-1100.webp 1100w" class="simg" src="img/sac-catechism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 45%" alt="Young altar servers holding candles at the Easter Vigil" data-fr-alt="De jeunes servants tenant des cierges à la Vigile pascale"><span class="n" data-fr="Catéchèse">Catechesis</span><h3 data-fr="Catéchisme familial">Family catechism</h3><p data-fr="Série vidéo gratuite tirée du Catéchisme de Baltimore : Credo, Commandements, Sacrements et prière.">Free video series from the Baltimore Catechism: the Creed, Commandments, Sacraments and prayer.</p></div>
    <div class="sc em"><span class="n" data-fr="Urgences sacramentelles">Sacramental emergencies</span><h3 data-fr="Derniers sacrements">Last Rites</h3><p data-fr="Pour appeler un prêtre auprès d’un malade ou d’un mourant :">To call a priest to the sick or dying:</p><a class="tel" href="tel:+16135659656,8" data-fr="(613) 565-9656, &lt;span class=&quot;nw&quot;&gt;poste 8&lt;/span&gt;">(613) 565-9656, <span class="nw">ext. 8</span></a></div>
   </div>
   <p class="scnote" data-fr="Baptêmes, mariages, confirmation, première communion ou catéchisme : appelez le bureau paroissial au &lt;a href=&quot;tel:+16135659656,2&quot;&gt;&lt;span class=&quot;nw&quot;&gt;(613) 565-9656,&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;poste 2&lt;/span&gt;&lt;/a&gt;.">For baptisms, weddings, confirmation, First Communion or catechism, call the parish office at <a href="tel:+16135659656,2"><span class="nw">(613) 565-9656,</span> <span class="nw">ext. 2</span></a>.</p>
  </div>
+ <div class="nxw"><a class="nxt" href="#life"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="La vie paroissiale">Parish life</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 <section id="life">
  <div class="w">
@@ -979,35 +1123,20 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
   </div>
   <h3 style="margin-top:2.4rem;font-size:2rem" data-fr="À venir">Coming up</h3>
   <div class="ev">
-   <div class="e"><img class="eimg" src="img/ev-carmel-680.webp" width="680" height="425" loading="lazy" alt="A crowned statue of Our Lady with her hands joined in prayer" data-fr-alt="Une statue couronnée de la Vierge Marie, les mains jointes en prière"><div class="dt"><small data-fr="oct">Oct</small><b>17</b></div><div><h3 data-fr="Visite au Carmel">Visit to Carmel</h3><p data-fr="Les jeunes femmes sont invitées au Carmel des Trois Cœurs, à Almonte : messe à 9 h, conférence, prière, visite avec les sœurs et pique-nique.">Young women are invited to the Carmel of the Three Hearts in Almonte: Mass at 9 am, a talk, prayer, a visit with the sisters and a picnic.</p><a href="mailto:stclementyag@gmail.com">stclementyag@gmail.com</a></div></div>
-   <div class="e"><img class="eimg" src="img/ev-saints-800.webp" width="800" height="500" loading="lazy" alt="A statue of St. Joseph holding the Child Jesus and a lily" data-fr-alt="Une statue de saint Joseph portant l’Enfant Jésus et un lys"><div class="dt"><small data-fr="oct">Oct</small><b>31</b></div><div><h3 data-fr="Fête de la Toussaint">All Saints party</h3><p data-fr="Pour les enfants, après la messe de 9 h, à l’école secondaire De La Salle, en face de l’église. Déguisement de saint <span class='nw'>et repas-partage.</span>">For children, after the 9 am Mass at De La Salle High School across the street. Come dressed as a favourite saint; potluck lunch.</p></div></div>
-   <div class="e"><img class="eimg" src="img/ev-gather-800.webp" width="800" height="500" loading="lazy" alt="A large crowd of the faithful gathered on a park lawn for an outdoor parish celebration" data-fr-alt="Une foule de fidèles réunie sur la pelouse d’un parc pour une célébration paroissiale en plein air"><div class="dt"><small data-fr="nov">Nov</small><b>14</b></div><div><h3 data-fr="Souper paroissial et encan silencieux">Parish Dinner &amp; Silent Auction</h3><p data-fr="Conférencier : Brian Holdsworth, avec l’abbé Josef Bisig, FSSP, cofondateur de la Fraternité. Places limitées.">Guest speaker Brian Holdsworth, with Fr. Josef Bisig, FSSP, co-founder of the Fraternity. Space is limited.</p><a href="https://www.zeffy.com/en-CA/ticketing/annual-parish-dinner-souper-paroissial-annuel" target="_blank" rel="noopener" data-fr="Billets →">Tickets →</a></div></div>
+   <div class="e"><img sizes="(min-width:1440px) 387px, (min-width:900px) 29vw, 90vw" srcset="img/ev-carmel-680.webp 680w, img/ev-carmel-1100.webp 1100w" class="eimg" src="img/ev-carmel-680.webp" width="680" height="425" loading="lazy" alt="A crowned statue of Our Lady with her hands joined in prayer" data-fr-alt="Une statue couronnée de la Vierge Marie, les mains jointes en prière"><div class="dt"><small data-fr="oct">Oct</small><b>17</b></div><div><h3 data-fr="Visite au Carmel">Visit to Carmel</h3><p data-fr="Les jeunes femmes sont invitées au Carmel des Trois Cœurs, à Almonte : messe à 9 h, conférence, prière, visite avec les sœurs et pique-nique.">Young women are invited to the Carmel of the Three Hearts in Almonte: Mass at 9 am, a talk, prayer, a visit with the sisters and a picnic.</p><a href="mailto:stclementyag@gmail.com">stclementyag@gmail.com</a></div></div>
+   <div class="e"><img sizes="(min-width:1440px) 387px, (min-width:900px) 29vw, 90vw" srcset="img/ev-saints-800.webp 800w, img/ev-saints-1100.webp 1100w" class="eimg" src="img/ev-saints-800.webp" width="800" height="500" loading="lazy" alt="A statue of St. Joseph holding the Child Jesus and a lily" data-fr-alt="Une statue de saint Joseph portant l’Enfant Jésus et un lys"><div class="dt"><small data-fr="oct">Oct</small><b>31</b></div><div><h3 data-fr="Fête de la Toussaint">All Saints party</h3><p data-fr="Pour les enfants, après la messe de 9 h, à l’école secondaire De La Salle, en face de l’église. Déguisement de saint <span class='nw'>et repas-partage.</span>">For children, after the 9 am Mass at De La Salle High School across the street. Come dressed as a favourite saint; potluck lunch.</p></div></div>
+   <div class="e"><img sizes="(min-width:1440px) 387px, (min-width:900px) 29vw, 90vw" srcset="img/ev-gather-800.webp 800w, img/ev-gather-1100.webp 1100w" class="eimg" src="img/ev-gather-800.webp" width="800" height="500" loading="lazy" alt="A large crowd of the faithful gathered on a park lawn for an outdoor parish celebration" data-fr-alt="Une foule de fidèles réunie sur la pelouse d’un parc pour une célébration paroissiale en plein air"><div class="dt"><small data-fr="nov">Nov</small><b>14</b></div><div><h3 data-fr="Souper paroissial et encan silencieux">Parish Dinner &amp; Silent Auction</h3><p data-fr="Conférencier : Brian Holdsworth, avec l’abbé Josef Bisig, FSSP, cofondateur de la Fraternité. Places limitées.">Guest speaker Brian Holdsworth, with Fr. Josef Bisig, FSSP, co-founder of the Fraternity. Space is limited.</p><a href="https://www.zeffy.com/en-CA/ticketing/annual-parish-dinner-souper-paroissial-annuel" target="_blank" rel="noopener" data-fr="Billets →">Tickets →</a></div></div>
   </div>
   <div class="groups" id="groups">
-   <div class="g"><img class="gt" src="img/grp-organ-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Chorale St-Clément">St. Clement Choir</b><span data-fr="Pratiques tous les jeudis à 19 h. <a href='mailto:stclementchoirottawa@gmail.com'>stclementchoirottawa@gmail.com</a>">Practices every Thursday at 7:00 pm. <a href="mailto:stclementchoirottawa@gmail.com">stclementchoirottawa@gmail.com</a></span></div>
+   <div class="g"><img sizes="56px" srcset="img/grp-organ-160.webp 160w, img/grp-organ-240.webp 240w" class="gt" src="img/grp-organ-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Chorale St-Clément">St. Clement Choir</b><span data-fr="Pratiques tous les jeudis à 19 h. <a href='mailto:stclementchoirottawa@gmail.com'>stclementchoirottawa@gmail.com</a>">Practices every Thursday at 7:00 pm. <a href="mailto:stclementchoirottawa@gmail.com">stclementchoirottawa@gmail.com</a></span></div>
    <div class="g"><span class="gt gi2" aria-hidden="true"><svg><use href="#i-music"/></svg></span><b data-fr="Schola Cantorum (enfants et jeunes)">Schola Cantorum for children &amp; youth</b><span data-fr="Les vendredis de 18 h à 19 h 15 ; chante aux &lt;span class='nw'&gt;grand-messes&lt;/span&gt; des premiers vendredis. &lt;a href='mailto:sjb.schola@gmail.com'&gt;sjb.schola@gmail.com&lt;/a&gt;">Fridays 6:00⁠–⁠7:15 pm; sings at First Friday High Masses. <a href="mailto:sjb.schola@gmail.com">sjb.schola@gmail.com</a></span></div>
-   <div class="g"><img class="gt" src="img/grp-servers-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Servants de messe">Altar servers</b><span data-fr="Garçons et jeunes hommes de la paroisse ; pratique une fois par mois. Contact : abbé Pinho Sousa.">Boys and young men of the parish; server practice once a month. Contact Fr. Pinho Sousa.</span></div>
+   <div class="g"><img sizes="56px" srcset="img/grp-servers-160.webp 160w, img/grp-servers-240.webp 240w" class="gt" src="img/grp-servers-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Servants de messe">Altar servers</b><span data-fr="Garçons et jeunes hommes de la paroisse ; pratique une fois par mois. Contact : abbé Pinho Sousa.">Boys and young men of the parish; server practice once a month. Contact Fr. Pinho Sousa.</span></div>
    <div class="g"><img class="gt gl2 gd" src="img/logos/legion-of-mary-disc-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Légion de Marie">Legion of Mary</b><span data-fr="Réunions les mercredis à 17 h 45 au vieux presbytère Sainte-Anne.">Meets Wednesdays at 5:45 pm in the old St. Anne rectory.</span></div>
    <div class="g"><img class="gt gl2 gd" src="img/logos/young-adults-160.webp" width="160" height="160" loading="lazy" alt=""><b data-fr="Jeunes adultes St-Clément">St. Clement Young Adults</b><span><a href="mailto:stclementyag@gmail.com">stclementyag@gmail.com</a></span></div>
    <div class="g"><img class="gt gl2" src="img/logos/kofc-160.webp" loading="lazy" alt=""><b data-fr="Et aussi">Also</b><span data-fr="Chevaliers de Colomb, Apostolat des Sept Sœurs, Domus Christiani (couples mariés) et la librairie paroissiale.">Knights of Columbus, Seven Sisters Apostolate, Domus Christiani (for married couples) and the parish bookstore.</span></div>
   </div>
  </div>
-</section>
-<section id="watch" class="dk">
- <div class="w">
-  <div class="head"><span class="eb" data-fr="En direct">Livestream</span><h2 data-fr="Regarder la messe">Watch the Mass</h2><p class="lead" data-fr="La <span class='nw'>grand-messe</span> du dimanche à 10 h 30 et les grandes fêtes sont diffusées en direct sur la chaîne YouTube de la paroisse.">The Sunday 10:30 High Mass and major feasts are streamed live on the parish YouTube channel.</p></div>
-  <div class="vid" id="vid">
-   <button class="venl" type="button" aria-label="Enlarge the video" data-fr-aria="Agrandir la vidéo" title="Enlarge" data-fr-title="Agrandir"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg><span data-fr="Agrandir">Enlarge</span></button>
-   <img src="img/yt-latest.webp" alt="The high altar during the Sunday livestream" data-fr-alt="Le maître-autel pendant la diffusion du dimanche" loading="lazy" width="1280" height="720">
-   <button aria-label="Play: 20th Sunday after Pentecost (YouTube)" data-fr-aria="Lire : 20e dimanche après la Pentecôte (YouTube)"><span class="vt"><small data-fr="Diffusion récente · 11 octobre">Recent livestream · Oct 11</small>20th Sunday after Pentecost<span class="fr"><br>20e dimanche après la Pentecôte</span></span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span></button>
-  </div>
-  <div class="vlinks">
-   <a class="ytb" href="https://youtube.com/@st.clementsparishparoisses8409" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt-app"/></svg><span data-fr="En direct sur YouTube">Watch live on YouTube</span></a>
-   <a class="btn bo lmb" href="https://www.livemass.net/" target="_blank" rel="noopener" title="Live Latin Mass online, an FSSP apostolate" data-fr-title="La messe latine en direct, un apostolat de la FSSP"><img src="img/logos/livemass.webp" alt="" width="22" height="22"><span data-fr="Messe latine en ligne : LiveMass.net">Latin Mass online: LiveMass.net</span></a>
-   <a class="btn bo" href="https://www.divinumofficium.com/cgi-bin/missa/missa.pl" target="_blank" rel="noopener" data-fr="Lectures du jour">Today’s readings</a>
-   <a class="btn bo" href="https://www.divinumofficium.com/cgi-bin/horas/officium.pl" target="_blank" rel="noopener" data-fr="Office divin">Divine Office</a>
-  </div>
- </div>
+ <div class="nxw"><a class="nxt" href="#clergy"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="Vos prêtres">Meet your priests</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 <section id="clergy" class="dk" style="background:#241014">
  <div class="w">
@@ -1024,6 +1153,7 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
    <div class="fsspc"><p data-fr="Fondée le 18 juillet 1988 à l’abbaye d’Hauterive (Suisse), elle a une double mission : la formation et la sanctification des prêtres, et le soin des âmes, avec les livres liturgiques en vigueur en 1962.">Founded on 18 July 1988 at the Abbey of Hauterive in Switzerland, its mission is two-fold: the formation and sanctification of priests, and the care of souls, using the liturgical books in force in 1962.</p><p class="fsl"><a href="https://www.fssp.org/en/" data-fr-href="https://www.fssp.org/fr/" target="_blank" rel="noopener" data-fr="Site de la FSSP">FSSP website</a><a href="https://www.fssp.org/en/confraternity-of-saint-peter/" data-fr-href="https://www.fssp.org/fr/nous-aider/confraternite-saint-pierre/" target="_blank" rel="noopener" data-fr="Confraternité Saint-Pierre">Confraternity of St. Peter</a></p></div>
   </div>
  </div>
+ <div class="nxw"><a class="nxt" href="#history"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="Notre histoire depuis 1968">Our history since 1968</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 </section>
 <section id="history">
  <div class="w hist">
@@ -1043,12 +1173,17 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
    <figure class="arms"><picture><source srcset="img/brand/arms-640.webp" type="image/webp"><img src="img/brand/arms-640.png" width="640" height="747" alt="Coat of arms of Saint Clement Parish, with the mottoes Una voce dicentes and Animum intendamus in sanguinem Christi" data-fr-alt="Armoiries de la paroisse Saint-Clément, avec les devises Una voce dicentes et Animum intendamus in sanguinem Christi" loading="lazy"></picture><figcaption data-fr="Les armoiries de la paroisse Saint-Clément">The coat of arms of Saint Clement Parish</figcaption></figure></div>
   </div>
   <div class="wins">
-   <figure class="wide"><img src="img/historic-800.webp" alt="Archival black-and-white photograph of St. Anne Church and a neighbouring building" data-fr-alt="Photographie d’archives en noir et blanc de l’église Sainte-Anne et d’un bâtiment voisin" loading="lazy" style="aspect-ratio:1/1;filter:sepia(.25)"><figcaption data-fr="Sainte-Anne, photographie d’archives">St. Anne Church, archival photograph</figcaption></figure>
+   <figure class="wide"><img sizes="(min-width:1440px) 485px, (min-width:1000px) 36vw, 90vw" srcset="img/historic-800.webp 800w, img/historic-1100.webp 1100w" src="img/historic-800.webp" alt="Archival black-and-white photograph of St. Anne Church and a neighbouring building" data-fr-alt="Photographie d’archives en noir et blanc de l’église Sainte-Anne et d’un bâtiment voisin" loading="lazy" style="aspect-ratio:1/1;filter:sepia(.25)"><figcaption data-fr="Sainte-Anne, photographie d’archives">St. Anne Church, archival photograph</figcaption></figure>
    <figure><img src="img/win-nativity-800.webp" alt="Stained-glass window of the Nativity at St. Anne Church" data-fr-alt="Vitrail de la Nativité à l’église Sainte-Anne" loading="lazy"><figcaption data-fr="Vitrail de la Nativité">Nativity window</figcaption></figure>
    <figure><img src="img/win-visitation-800.webp" alt="Stained-glass window of the Visitation at St. Anne Church" data-fr-alt="Vitrail de la Visitation à l’église Sainte-Anne" loading="lazy"><figcaption data-fr="Vitrail de la Visitation">Visitation window</figcaption></figure>
    <figure class="wide"><img src="img/steeple-sky-800.webp" srcset="img/steeple-sky-800.webp 800w, img/steeple-sky-1600.webp 1600w" sizes="(min-width:960px) 420px, 90vw" alt="The steeple of St. Anne Church against a blue sky" data-fr-alt="Le clocher de l’église Sainte-Anne sur un ciel bleu" loading="lazy" style="object-position:40% 60%"><figcaption data-fr="Le clocher de Sainte-Anne">The steeple of St. Anne</figcaption></figure>
   </div>
  </div>
+ <div class="nxw"><a class="nxt" href="#give"><span class="nxl" data-fr="À suivre">Next</span><span class="nxs" data-fr="Soutenir la paroisse">Support the parish</span><svg class="nxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</section>
+<section class="pbk" aria-label="Una voce dicentes">
+ <picture><source media="(max-width:759px)" sizes="100vw" srcset="img/bnd-nave-m.webp 900w, img/bnd-nave-m-1300.webp 1300w" width="900" height="1125"><img src="img/bnd-nave.webp" width="2400" height="1100" loading="lazy" decoding="async" alt="The sanctuary of St. Anne Church beneath its half-dome of stained-glass windows, with the white high altar and a glass chandelier" data-fr-alt="Le sanctuaire de l’église Sainte-Anne sous sa demi-coupole de vitraux, avec le maître-autel blanc et un lustre de verre"></picture>
+ <div class="w"><p class="pbk-l"><span class="lat">Una voce dicentes.</span><span class="tr" data-fr="« Disant d’une seule voix. » Devise de la paroisse, tirée de la préface de la Sainte Trinité">“Saying with one voice.” The parish motto, from the Preface of the Holy Trinity</span></p></div>
 </section>
 <section id="give" class="iv">
  <div class="w">
@@ -1058,7 +1193,7 @@ html[lang=fr] .wk .row.today b:after{content:"Aujourd’hui"}
   <div class="ctas" style="margin-top:1.4rem"><a class="btn bw" href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener"><img class="ic bri" src="img/logos/canadahelps-64.webp" width="60" height="64" alt=""><span data-fr="Donner en ligne (CanaDon)">Donate online (CanadaHelps)</span></a></div></div>
   <div class="give" id="ways">
    <div class="gm">
-    <div class="gc"><div class="gh"><span class="gi gib" aria-hidden="true"><img src="img/logos/interac-48.webp" width="48" height="48" alt=""></span><b data-fr="Virement Interac">Interac e-Transfer</b></div>
+    <div class="gc"><div class="gh"><span class="gi gib" aria-hidden="true"><img sizes="40px" srcset="img/logos/interac-48.webp 48w, img/logos/interac-144.webp 144w" src="img/logos/interac-48.webp" width="48" height="48" alt=""></span><b data-fr="Virement Interac">Interac e-Transfer</b></div>
      <dl class="gk">
       <div><dt data-fr="Envoyer à">Send to</dt><dd><code>finances@saintclement.ca</code><button class="cpy" type="button" data-copy="finances@saintclement.ca" aria-label="Copy the email address" data-fr-aria="Copier l’adresse courriel"><svg class="i1" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i2" aria-hidden="true"><use href="#i-check"/></svg></button></dd></div>
       <div><dt data-fr="Réponse de sécurité">Security answer</dt><dd><code>Clement</code><button class="cpy" type="button" data-copy="Clement" aria-label="Copy the security answer" data-fr-aria="Copier la réponse de sécurité"><svg class="i1" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i2" aria-hidden="true"><use href="#i-check"/></svg></button></dd></div>
@@ -1172,8 +1307,26 @@ const lb=document.getElementById('lang');
 const setL=l=>{document.documentElement.lang=l;els.forEach(e=>e.innerHTML=l==='fr'?e.dataset.fr:e.dataset.en);ael.forEach(e=>AT.forEach(([a,f,n])=>{if(e.dataset[f]!==undefined)e.setAttribute(a,l==='fr'?e.dataset[f]:e.dataset[n])}));document.title=TI[l];hel.forEach(e=>e.setAttribute('href',l==='fr'?e.dataset.frHref:e.dataset.enHref));lb.textContent=l==='fr'?'EN':'FR';lb.setAttribute('aria-label',l==='fr'?'Read in English':'Lire en français');try{localStorage.setItem('lang',l)}catch(e){}};
 lb.onclick=()=>setL(document.documentElement.lang==='fr'?'en':'fr');
 let pref=null;try{pref=localStorage.getItem('lang')}catch(e){};if(location.hash==='#fr'||pref==='fr')setL('fr');
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+/* reveal: extends the original .rv observer (scroll pass, Oct 16 2026) */
+const RMq=matchMedia('(prefers-reduced-motion: reduce)'),RVS='main section .head,#new .new>div>h2,#new .lead,#life .split>div>h2,#history .hist>div>h2,#contact .ct>div>h2,.rvs-top,.nxt,.vid,.tw,.camp,.sit,.fssp,.bul,.hq,.ext';
+const RVG=['.sch>.card','.tips>.tip','.gal>button','.rvs-row>.rq','.sac>.sc','.ev>.e','.groups>.g','.cl>.pr','.wins>figure','.gm>.gc','.dev>div','.days>.day','.cl2>a'];
+document.querySelectorAll(RVS).forEach(e=>e.classList.add('rv'));
+RVG.forEach(sel=>{const n=[...document.querySelectorAll(sel)];n.forEach((e,k)=>{e.classList.add('rv');e.style.setProperty('--rd',Math.min(k,6)*70+'ms')})});
+const rvAll=()=>[...document.querySelectorAll('.rv:not(.in)')];
+const show1=e=>{e.classList.add('in');if(io)io.unobserve(e)};
+let io=null;
+if(RMq.matches||!('IntersectionObserver' in window)){rvAll().forEach(e=>e.classList.add('in'))}
+else{io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)show1(e.target)}),{rootMargin:'0px 0px -8% 0px'});rvAll().forEach(e=>io.observe(e))}
+/* safety net: anything already above the fold line is shown even if the observer never fires */
+const rvChk=()=>{const lim=innerHeight*.98;rvAll().forEach(e=>{if(e.getBoundingClientRect().top<lim)show1(e)})};
+setTimeout(rvChk,1200);let rvT=0;addEventListener('scroll',()=>{if(rvT)return;rvT=setTimeout(()=>{rvT=0;rvChk()},250)},{passive:true});
+window.__rvok=true;
+/* reading progress + gentle parallax / slow zoom on full-bleed photos */
+const PB=document.querySelector('.rprog i'),PX=[...document.querySelectorAll('.band img,.grounds picture img,.pbk img')];let raf=0;
+const frame=()=>{raf=0;const de=document.documentElement,mx=de.scrollHeight-innerHeight;if(PB)PB.style.transform='scaleX('+(mx>0?Math.min(1,scrollY/mx):0)+')';
+ if(RMq.matches)return;const vh=innerHeight,amp=innerWidth<760?14:36;
+ PX.forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<-50||r.top>vh+50)return;const p=Math.max(-1,Math.min(1,((r.top+r.height/2)-vh/2)/(vh/2+r.height/2)));im.style.transform='translate3d(0,'+(p*amp).toFixed(1)+'px,0) scale('+(1.1-.04*(1-Math.abs(p))).toFixed(3)+')'})};
+const req=()=>{if(!raf)raf=requestAnimationFrame(frame)};addEventListener('scroll',req,{passive:true});addEventListener('resize',req);frame();
 const L=document.getElementById('lb'),bs=[...document.querySelectorAll('#gal button')];let i=0;
 const show=k=>{L.classList.remove('one');i=(k+bs.length)%bs.length;const b=bs[i];L.querySelector('img').src=b.dataset.full;L.querySelector('img').alt=b.querySelector('img').alt;L.querySelector('p').textContent=b.querySelector('figcaption').textContent;L.classList.add('on');L.querySelector('.x').focus()};
 bs.forEach((b,k)=>b.onclick=()=>show(k));document.querySelectorAll('[data-lb]').forEach(a=>a.onclick=e=>{e.preventDefault();const f=document.querySelector('.hall'),im=f.querySelector('img');L.classList.add('one');L.querySelector('img').src=a.getAttribute('href');L.querySelector('img').alt=im.alt;L.querySelector('p').textContent=f.querySelector('figcaption').textContent;L.classList.add('on');L.querySelector('.x').focus()});L.querySelector('.x').onclick=()=>L.classList.remove('on');L.querySelector('.pv').onclick=()=>show(i-1);L.querySelector('.nx').onclick=()=>show(i+1);
