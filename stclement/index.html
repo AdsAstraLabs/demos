@@ -980,6 +980,13 @@ header.ph nav.main a:hover{background:rgba(255,255,255,.1);opacity:1}header.ph n
 header.ph .hr{gap:.55rem;margin-left:.9rem}}
 
 @media(min-width:900px) and (max-width:1129px){header.ph nav.main a{padding:.3rem clamp(.32rem,.62vw,.6rem)!important}header.ph nav.main{font-size:clamp(13px,1.35vw,14px)!important}header.ph .hr{margin-left:clamp(.4rem,.8vw,.9rem)}header.ph .w{gap:.6rem}}
+
+nav.main a{transition:color .25s,opacity .25s,background .25s}
+nav.main a.on{opacity:1!important;color:var(--gold-l)}
+nav.main a.on:after{width:100%!important;height:2px!important;background:var(--gold-l)!important;display:block!important}
+@media(min-width:900px) and (max-width:1129px){header.ph nav.main a.on{background:rgba(255,255,255,.1)}
+header.ph nav.main a.on:after{left:28%!important;width:44%!important;bottom:1px!important;border-radius:2px}}
+.drawer a.on{color:var(--gold-l)}
 </style>
 <script>document.documentElement.classList.add('rvjs');setTimeout(function(){if(!window.__rvok)document.documentElement.classList.remove('rvjs')},3000)</script>
 </head><body>
@@ -1005,7 +1012,7 @@ header.ph .hr{gap:.55rem;margin-left:.9rem}}
  <div class="w">
   <a class="brand" href="#top" aria-label="Saint Clement Parish, home" data-fr-aria="Paroisse Saint-Clément, accueil"><img class="shield" src="img/brand/stclement-160.png" width="41" height="48" alt=""><span><b data-fr="Paroisse Saint-Clément">Saint Clement Parish</b><small data-fr="<span class='dx'>à l’église </span>Sainte-Anne · Ottawa"><span class="dx">at </span>St. Anne Church · Ottawa</small></span></a>
   <nav class="main" aria-label="Main" data-fr-aria="Menu principal">
-   <a href="#mass" data-fr="Horaire">Mass times</a><a href="#new" data-fr="Visite">First visit</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Paroisse">Parish life</a><a href="#history" data-fr="Histoire">History</a><a href="#bulletin" data-fr="Feuillet">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
+   <a href="#new" data-fr="Visite">First visit</a><a href="#mass" data-fr="Horaire">Mass times</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Paroisse">Parish life</a><a href="#history" data-fr="Histoire">History</a><a href="#bulletin" data-fr="Feuillet">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
   </nav>
   <div class="hr">
    <button class="lang" id="lang" aria-label="Lire en français" title="Français / English">FR</button>
@@ -1014,7 +1021,7 @@ header.ph .hr{gap:.55rem;margin-left:.9rem}}
   </div>
  </div>
  <div class="drawer" id="drawer">
-  <a href="#mass" data-fr="Messes et confessions">Mass &amp; confession times</a><a href="#new" data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</a><a href="#watch" data-fr="Messe en direct">Livestream</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Vie paroissiale">Parish life</a><a href="#clergy" data-fr="Clergé">Clergy</a><a href="#history" data-fr="Histoire">History</a><a href="#give" data-fr="Soutenir la paroisse">Support the parish</a><a href="#bulletin" data-fr="Feuillet paroissial">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
+  <a href="#new" data-fr="Nouveau à la messe latine ?">New to the Latin Mass?</a><a href="#mass" data-fr="Messes et confessions">Mass &amp; confession times</a><a href="#watch" data-fr="Messe en direct">Livestream</a><a href="#sacraments" data-fr="Sacrements">Sacraments</a><a href="#life" data-fr="Vie paroissiale">Parish life</a><a href="#clergy" data-fr="Clergé">Clergy</a><a href="#history" data-fr="Histoire">History</a><a href="#give" data-fr="Soutenir la paroisse">Support the parish</a><a href="#bulletin" data-fr="Feuillet paroissial">Bulletin</a><a href="#contact" data-fr="Contact">Contact</a>
   <a class="btn bg" href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener" data-fr="Faire un don à la paroisse">Donate to the parish</a>
  </div>
 </header>
@@ -1421,4 +1428,10 @@ const fill=()=>{G.forEach(g=>g.querySelectorAll('li.rep').forEach(e=>e.remove())
 let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(fill,150)});RM.addEventListener&&RM.addEventListener('change',fill);
 if(document.readyState==='complete')fill();else addEventListener('load',fill)})();
 </script>
+<script>(()=>{const map={new:'new',gallery:'new',reviews:'new',mass:'mass',watch:'mass',visit:'mass',sacraments:'sacraments',life:'life',clergy:'life',history:'history',give:null,bulletin:'bulletin',contact:'contact'};
+const secs=Object.keys(map).map(i=>document.getElementById(i)).filter(Boolean);const links=[...document.querySelectorAll('nav.main a, .drawer a')];let cur;
+const upd=()=>{const y=innerHeight*.35;let k=null;for(const e of secs){if(e.getBoundingClientRect().top<=y)k=map[e.id];}
+if(document.documentElement.scrollHeight-innerHeight-scrollY<4)k='contact';if(k===cur)return;cur=k;
+links.forEach(a=>{const on=k&&a.getAttribute('href')==='#'+k;a.classList.toggle('on',!!on);on?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current')})};
+let t=0;addEventListener('scroll',()=>{if(!t)t=requestAnimationFrame(()=>{t=0;upd()})},{passive:true});addEventListener('resize',upd);upd();})();</script>
 </body></html>
