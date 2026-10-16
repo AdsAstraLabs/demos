@@ -283,7 +283,13 @@ function readBody(req, max) {
     const len = +req.headers['content-length'];
     if (len > max) { no(Object.assign(new Error('too large'), { status: 413 })); req.resume(); return; }
     const chunks = []; let n = 0;
-    req.on('data', c => { n += c.length; if (n > max) { no(Object.assign(new Error('too large'), { status: 413 })); req.destroy(); } else chunks.push(c); });
+    const onData = c => {
+      n += c.length;
+      if (n <= max) { chunks.push(c); return; }
+      req.off('data', onData); chunks.length = 0; req.resume();         // discard the rest, then answer 413
+      no(Object.assign(new Error('too large'), { status: 413 }));
+    };
+    req.on('data', onData);
     req.on('end', () => ok(Buffer.concat(chunks))); req.on('error', no);
   });
 }
