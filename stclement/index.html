@@ -7,6 +7,7 @@
 <link rel="icon" href="img/favicon.ico" sizes="any"><link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="img/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="img/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" imagesrcset="img/hs-hero-1600.webp 1600w, img/hs-hero-2400.webp 2400w, img/hs-hero-2880.webp 2880w" imagesizes="100vw" media="(min-width:761px)"><link rel="preload" as="image" imagesrcset="img/hs-hero-m-700.webp 700w, img/hs-hero-m-1000.webp 1000w" imagesizes="100vw" media="(max-width:760px)">
 <style>
 :root{--ivory:#f6f0e4;--paper:#fbf8f2;--wine:#6e1423;--wine2:#3d0b14;--night:#1c0d10;--gold:#7f5d1e;--gold-l:#d9b56c;--ink:#1f1916;--mut:#4f4540;--line:#e4d9c6;--hf:'Cormorant Garamond',Georgia,'Times New Roman',serif;--bf:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
@@ -1023,6 +1024,46 @@ header.s .brand{transform:none!important}header .brand{transition:transform .25s
 .hc-on header:not(.ph):not(.open) .brand .shield{max-width:0;opacity:0;margin-right:-.45rem}}
 @media(max-width:379px){.hc-on header:not(.ph):not(.open) .brand .shield{margin-right:-.4rem}}
 @media(max-width:759px) and (prefers-reduced-motion:reduce){header .brand .shield{transition:none}}
+
+.hs>picture{transition-duration:1.2s}.hs>picture.on img,.hs>picture.out img{animation-duration:6s}
+@media(prefers-reduced-motion:reduce){.hs>picture{transition-duration:2.5s}}
+
+/* trad blend */
+/* ===================== TRAD-BLEND overrides (current layout + current sans UI/body fonts; traditional feel via headings, eyebrows, ornaments, cream, gold hairlines) ===================== */
+:root{--crs:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 14'%3E%3Cpath d='M4.1 0h1.8v3.9H10v1.8H5.9V14H4.1V5.7H0V3.9h4.1z'/%3E%3C/svg%3E")}
+/* small cross replaces the dash before eyebrows */
+.eb:before{width:9px;height:13px;background:currentColor;-webkit-mask:var(--crs) no-repeat center/contain;mask:var(--crs) no-repeat center/contain;flex:none}
+.center h2::after,.head.center h2::after{margin-left:auto!important;margin-right:auto!important;-webkit-mask-position:center!important;mask-position:center!important}
+/* gentle reveals (as trad-light): short, small fade-ups, no stagger or scale */
+html.rvjs .rv,html.rvjs .vid.rv{transform:translateY(6px);transition:opacity .35s ease,transform .35s ease!important;transition-delay:0ms!important}
+html.rvjs .rv.in,html.rvjs .vid.rv.in{transform:none}
+/* solid scrolled header, gold hairline, no glass blur */
+header.s,header.open{backdrop-filter:none;-webkit-backdrop-filter:none}
+nav.main a.on{color:var(--gold-l)!important;opacity:1!important}
+:root{--paper:#fcf7ee;--ivory:#f7eedf;--line:#e6d6b4;--rub:#8c1c1c;--goldr:#b38b3e;
+--orn2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 18'%3E%3Cpath d='M0 7.5h66M0 10.5h66M94 7.5h66M94 10.5h66' stroke='%23000' stroke-width='.9'/%3E%3Cpath d='M78.9 1.5h2.2v4.6h4.4v2.2h-4.4V16.5h-2.2V8.3h-4.4V6.1h4.4z'/%3E%3Ccircle cx='70' cy='9' r='1.4'/%3E%3Ccircle cx='90' cy='9' r='1.4'/%3E%3C/svg%3E")}
+body{background:var(--paper)}
+footer{border-top:3px double var(--goldr)}
+/* missal small-caps section headings */
+main section h2:not(.since){font-family:'Cormorant SC','Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.03em;text-transform:none;line-height:1.08}
+/* small-caps red card titles (gold on the dark Sunday card); clergy names left in Cormorant to avoid overflow */
+.card h3,.sc h3,.ext h3,.tw-h h3,.conf h3{font-family:'Cormorant SC','Cormorant Garamond',Georgia,serif;letter-spacing:.04em;color:#7a1f1f}
+.card.sunday h3{color:#e9cf8f}
+/* red rubric eyebrows on light sections, gold on dark */
+main section:not(.dk):not(.grounds):not([class*="dk"]) .eb{color:var(--rub)}
+#clergy .eb,.dk .eb,.grounds .eb,.camp .eb{color:#e4c47c}
+/* gold double rule + cross under headings */
+main section h2:not(.since):not(.fssph)::after{content:"";display:block;margin:.75rem 0 .1rem;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:left center;mask-position:left center;-webkit-mask-size:contain;mask-size:contain;width:160px;height:18px;background:var(--goldr);opacity:1;-webkit-mask-image:var(--orn2);mask-image:var(--orn2)}
+.dk h2::after,main section[class*="dk"] h2::after,#clergy h2::after{background:var(--gold-l)!important}
+/* red drop cap on the history intro */
+.hist .lead::first-letter{float:left;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:3.3em;line-height:.8;color:#7a1f1f;margin:.07em .1em 0 0}
+/* softer shadows + hairline gold borders on light cards (radii unchanged) */
+.card:not(.sunday),.day:not(.on),.sc:not(.em),.e,.gm div,.bc,.ext,.rq,.tw,.sit,.rvs-badge{border-color:var(--line)!important;box-shadow:0 1px 2px rgba(70,40,10,.05),0 10px 24px -18px rgba(70,40,10,.28)!important}
+/* solid scrolled header with gold hairline (from light) is inherited; keep it a hairline, not a double rule */
+header.s,header.open{background:#1c0d10;box-shadow:0 1px 0 rgba(217,181,108,.45)}
+
+
+.eb:before{display:none!important}
 </style>
 <script>document.documentElement.classList.add('rvjs');setTimeout(function(){if(!window.__rvok)document.documentElement.classList.remove('rvjs')},3000)</script>
 </head><body>
@@ -1473,7 +1514,7 @@ links.forEach(a=>{const on=k&&a.getAttribute('href')==='#'+k;a.classList.toggle(
 let t=0;addEventListener('scroll',()=>{if(!t)t=requestAnimationFrame(()=>{t=0;upd()})},{passive:true});addEventListener('resize',upd);upd();})();</script>
 <script>(()=>{const r=document.getElementById('hs');if(!r)return;const S=[...r.children];if(S.length<2)return;
 const nc=navigator.connection;if(nc&&(nc.saveData||/(^|-)2g$/.test(nc.effectiveType||'')))return;
-const rm=matchMedia('(prefers-reduced-motion: reduce)'),HOLD=()=>rm.matches?11000:6500,FADE=()=>rm.matches?3000:1500;
+const rm=matchMedia('(prefers-reduced-motion: reduce)'),HOLD=()=>rm.matches?8000:4500,FADE=()=>rm.matches?2500:1200;
 let i=0,t=0,vis=true,started=false;
 const load=n=>{const p=S[n];if(p.__l)return p.__l;p.querySelectorAll('[data-srcset]').forEach(e=>{e.srcset=e.dataset.srcset;e.removeAttribute('data-srcset')});const im=p.querySelector('img');
  p.__l=(im.complete&&im.naturalWidth?Promise.resolve():new Promise((ok,no)=>{im.addEventListener('load',ok,{once:true});im.addEventListener('error',no,{once:true})})).then(()=>im.decode&&im.decode().catch(()=>{}));p.__l.catch(()=>{p.__bad=1});return p.__l};
