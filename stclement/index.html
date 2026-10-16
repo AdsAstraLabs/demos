@@ -937,6 +937,49 @@ svg:has(>use[href="#i-gmap"]){width:24px!important;height:24px!important;flex:0 
 .give>.camp p{margin:0}.give>.camp>.hall figcaption{margin-top:.25rem}
 .give .gm{gap:.6rem!important}.give .gm>.gc{padding:.85rem 1.1rem;gap:.35rem}.give .gm>.gc p{margin:0}
 .give .gm>.gc .gk{margin:0}}
+
+@media(min-width:760px){.hero .w>.kick{margin-top:auto!important}.hero .w>.rate{margin-bottom:auto!important}.hero .w{padding-bottom:clamp(2rem,6vh,4rem)!important}
+.hero .w>.ctas{margin-top:1.4rem}.hero .w>.rate{margin-top:1rem}.hero .w>.l{margin-top:1rem}}
+
+@media(min-width:900px) and (max-width:1129px){header .w{flex-wrap:wrap;height:auto;row-gap:0;padding:.55rem 0 .5rem}
+header .brand{order:1;min-height:56px}
+header nav.main{order:2;display:flex!important;gap:clamp(.7rem,1.4vw,1.1rem);font-size:14px!important;margin-left:auto}
+header nav.main a{text-decoration:none;opacity:.85;position:relative;padding:.3rem 0}header nav.main a:hover{opacity:1}
+header .hr{order:3;flex:0 0 100%;justify-content:flex-end;margin-top:-.2rem}
+header .menu{display:none!important}header .hdon{display:inline-flex!important;padding:.5rem 1rem;min-height:40px}
+header.open .drawer{display:none!important}
+.hero .w{padding-top:calc(118px + clamp(1rem,4vh,2.5rem))!important}}
+
+@media(min-width:900px) and (max-width:1129px){html{scroll-padding-top:114px}}
+
+@media(min-width:900px) and (max-width:1129px){header .w{padding:.35rem 0 .35rem;position:relative}
+header .brand{min-height:0}
+header nav.main{position:absolute;right:0;top:.45rem;line-height:1}header nav.main a{padding:.2rem 0}
+header .hr{flex:0 0 auto;margin:0 0 0 auto;align-self:flex-end;gap:.4rem;padding-top:1.7rem}
+header .lang{min-height:30px!important;min-width:0!important;padding:.2rem .55rem!important;font-size:12px!important}
+header .hdon{min-height:30px!important;padding:.25rem .85rem!important;font-size:13px!important}
+html{scroll-padding-top:84px}.hero .w{padding-top:calc(80px + clamp(1rem,4vh,2.5rem))!important}}
+
+@media(min-width:900px) and (max-width:1129px){header .w{transition:padding .25s}
+header.ph .w{flex-wrap:nowrap;padding:.3rem 0;gap:.9rem}
+header.ph .brand small{display:none}header.ph .brand b{font-size:16px}header.ph .brand .shield{width:30px;height:auto}
+header.ph nav.main{position:static;margin-left:auto;font-size:13.5px!important;gap:clamp(.6rem,1.1vw,1rem)}
+header.ph .hr{padding-top:0;align-self:center;margin-left:.3rem}}
+
+@media(min-width:900px) and (max-width:1129px){header.ph .brand{flex:none;gap:.55rem}header.ph .brand b{font-size:15px!important;white-space:nowrap;line-height:1.2}
+header.ph .brand>span{width:auto!important;min-width:0}header.ph .w{padding:.4rem 0}}
+
+@media(min-width:900px) and (max-width:1129px){header.ph .brand .shield{height:34px!important;width:auto!important;transform:none!important;margin:0!important}
+header.ph .brand,header.ph .brand>span{transform:none!important;align-items:center}
+header.ph .w{align-items:center;padding:.45rem 0}
+header.ph nav.main{gap:0!important;align-items:center}
+header.ph nav.main a{padding:.3rem .6rem!important;border-radius:999px;opacity:.9;transition:background .2s}
+header.ph nav.main a+a{border-left:0;position:relative}
+header.ph nav.main a+a:before{content:"";position:absolute;left:0;top:28%;height:44%;width:1px;background:rgba(255,255,255,.22)}
+header.ph nav.main a:hover{background:rgba(255,255,255,.1);opacity:1}header.ph nav.main a:after{display:none}
+header.ph .hr{gap:.55rem;margin-left:.9rem}}
+
+@media(min-width:900px) and (max-width:1129px){header.ph nav.main a{padding:.3rem clamp(.32rem,.62vw,.6rem)!important}header.ph nav.main{font-size:clamp(13px,1.35vw,14px)!important}header.ph .hr{margin-left:clamp(.4rem,.8vw,.9rem)}header.ph .w{gap:.6rem}}
 </style>
 <script>document.documentElement.classList.add('rvjs');setTimeout(function(){if(!window.__rvok)document.documentElement.classList.remove('rvjs')},3000)</script>
 </head><body>
@@ -987,11 +1030,6 @@ svg:has(>use[href="#i-gmap"]){width:24px!important;height:24px!important;flex:0 
    <a class="btn bo" href="https://www.google.com/maps/dir/?api=1&amp;destination=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa,+ON" target="_blank" rel="noopener"><svg class="ic"><use href="#i-gmap"/></svg><span data-fr="Itinéraire">Get directions</span></a>
   </div>
   <a class="rate" href="#reviews"><svg class="gg" aria-hidden="true"><use href="#i-g"/></svg><span class="st" aria-hidden="true">★★★★★</span><span data-fr="4,9 sur Google · 134 avis">4.9 on Google · 134 reviews</span></a>
-  <div class="sun">
-   <div><small data-fr="Messes du dimanche">Sunday Masses</small><div class="times t2"><span><b data-fr="8&nbsp;h">8:00&nbsp;am</b><i data-fr="Messe basse">Low Mass</i></span><span class="hm"><b data-fr="10&nbsp;h&nbsp;30">10:30&nbsp;am</b><i data-fr="Grand-messe">High Mass</i></span><span><b data-fr="17&nbsp;h&nbsp;30">5:30&nbsp;pm</b><i data-fr="Messe basse">Low Mass</i></span></div></div>
-   <div><small data-fr="Confessions">Confessions</small><b class="cf" data-fr="<span class='l'>30 min avant chaque messe</span><span class='l nw'>Samedi 15 h 30 – 16 h 30</span>"><span class="l">30 min before every Mass</span><span class="l nw">Saturday 3:30⁠–⁠4:30 pm</span></b></div>
-   <div><small data-fr="Adresse">Address</small><a href="#visit" style="text-decoration:none"><b class="cf" data-fr="528, rue Old St. Patrick<br>Basse-Ville, Ottawa">528 Old St. Patrick St.<br>Lower Town, Ottawa</b></a></div>
-  </div>
  </div>
  <div class="hl" aria-label="Affiliations"><div class="hl-v"><div class="hl-t"><ul class="hl-g"><li><a href="https://www.kofc.org/" target="_blank" rel="noopener" title="Knights of Columbus" data-fr-title="Chevaliers de Colomb"><img class="gb" src="img/logos/kofc-160.webp" alt="Knights of Columbus" data-fr-alt="Chevaliers de Colomb" style="--h:46px" decoding="async"></a></li><li><a href="https://www.livemass.net/" target="_blank" rel="noopener" title="LiveMass.net"><img class="wm" src="img/logos/livemass-160.webp" alt="LiveMass.net" style="--h:34px" decoding="async"></a></li><li><a href="https://ottawacornwall.ca/" target="_blank" rel="noopener" title="Archdiocese of Ottawa-Cornwall" data-fr-title="Archidiocèse d’Ottawa-Cornwall"><img class="wm" src="img/logos/archdiocese-160.webp" alt="Archdiocese of Ottawa-Cornwall" data-fr-alt="Archidiocèse d’Ottawa-Cornwall" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Clement, pope and martyr" data-fr-title="Saint Clément, pape et martyr"><img class="gb" src="img/logos/st-clement-160.webp" alt="Saint Clement, pope and martyr" data-fr-alt="Saint Clément, pape et martyr" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Anne" data-fr-title="Sainte Anne"><img class="ga" src="img/logos/st-anne-160.webp" alt="Saint Anne" data-fr-alt="Sainte Anne" style="--h:38px" decoding="async"></a></li><li><a href="https://www.vatican.va/" target="_blank" rel="noopener" title="The Holy See (Vatican)" data-fr-title="Le Saint-Siège (Vatican)"><img class="gb" src="img/logos/vatican-160.webp" alt="The Holy See (Vatican)" data-fr-alt="Le Saint-Siège (Vatican)" style="--h:46px" decoding="async"></a></li><li><a href="https://www.fssp.org/en/" target="_blank" rel="noopener" title="Priestly Fraternity of St. Peter (FSSP)" data-fr-title="Fraternité Sacerdotale Saint-Pierre (FSSP)"><img class="gs" src="img/logos/fssp-160.webp" alt="Priestly Fraternity of St. Peter (FSSP)" data-fr-alt="Fraternité Sacerdotale Saint-Pierre (FSSP)" style="--h:46px" decoding="async"></a></li><li><a href="#groups" title="Legion of Mary" data-fr-title="Légion de Marie"><img class="gb" src="img/logos/legion-of-mary-disc-160.webp" alt="Legion of Mary" data-fr-alt="Légion de Marie" style="--h:40px" decoding="async"></a></li><li><a href="#groups" title="Saint Clement Young Adults Group" data-fr-title="Groupe des jeunes adultes de Saint-Clément"><img class="gb" src="img/logos/young-adults-160.webp" alt="Saint Clement Young Adults Group" data-fr-alt="Groupe des jeunes adultes de Saint-Clément" style="--h:40px" decoding="async"></a></li></ul><ul class="hl-g" aria-hidden="true"><li><a href="https://www.kofc.org/" target="_blank" rel="noopener" title="Knights of Columbus" data-fr-title="Chevaliers de Colomb" tabindex="-1"><img class="gb" src="img/logos/kofc-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="https://www.livemass.net/" target="_blank" rel="noopener" title="LiveMass.net" tabindex="-1"><img class="wm" src="img/logos/livemass-160.webp" alt="" style="--h:34px" decoding="async"></a></li><li><a href="https://ottawacornwall.ca/" target="_blank" rel="noopener" title="Archdiocese of Ottawa-Cornwall" data-fr-title="Archidiocèse d’Ottawa-Cornwall" tabindex="-1"><img class="wm" src="img/logos/archdiocese-160.webp" alt="" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Clement, pope and martyr" data-fr-title="Saint Clément, pape et martyr" tabindex="-1"><img class="gb" src="img/logos/st-clement-160.webp" alt="" style="--h:36px" decoding="async"></a></li><li><a href="#history" title="Saint Anne" data-fr-title="Sainte Anne" tabindex="-1"><img class="ga" src="img/logos/st-anne-160.webp" alt="" style="--h:38px" decoding="async"></a></li><li><a href="https://www.vatican.va/" target="_blank" rel="noopener" title="The Holy See (Vatican)" data-fr-title="Le Saint-Siège (Vatican)" tabindex="-1"><img class="gb" src="img/logos/vatican-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="https://www.fssp.org/en/" target="_blank" rel="noopener" title="Priestly Fraternity of St. Peter (FSSP)" data-fr-title="Fraternité Sacerdotale Saint-Pierre (FSSP)" tabindex="-1"><img class="gs" src="img/logos/fssp-160.webp" alt="" style="--h:46px" decoding="async"></a></li><li><a href="#groups" title="Legion of Mary" data-fr-title="Légion de Marie" tabindex="-1"><img class="gb" src="img/logos/legion-of-mary-disc-160.webp" alt="" style="--h:40px" decoding="async"></a></li><li><a href="#groups" title="Saint Clement Young Adults Group" data-fr-title="Groupe des jeunes adultes de Saint-Clément" tabindex="-1"><img class="gb" src="img/logos/young-adults-160.webp" alt="" style="--h:40px" decoding="async"></a></li></ul></div></div></div>
 </section>
@@ -1324,7 +1362,7 @@ svg:has(>use[href="#i-gmap"]){width:24px!important;height:24px!important;flex:0 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" data-fr-aria="Visionneuse de photos"><img alt=""><p></p><button class="x" aria-label="Close" data-fr-aria="Fermer">×</button><button class="pv" aria-label="Previous" data-fr-aria="Précédente">‹</button><button class="nx" aria-label="Next" data-fr-aria="Suivante">›</button></div>
 <script>
 (()=>{const h=document.querySelector('header'),mb=document.getElementById('mbar');
-const sc=()=>{h.classList.toggle('s',scrollY>40);mb.classList.toggle('on',scrollY>innerHeight*.7)};addEventListener('scroll',sc,{passive:true});sc();
+const sc=()=>{h.classList.toggle('s',scrollY>40);{const hh=document.querySelector('.hero');h.classList.toggle('ph',!!hh&&scrollY>hh.offsetHeight-90)}mb.classList.toggle('on',scrollY>innerHeight*.7)};addEventListener('scroll',sc,{passive:true});sc();
 const m=document.getElementById('menu');m.onclick=()=>{const o=h.classList.toggle('open');m.setAttribute('aria-expanded',o)};
 document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',()=>{h.classList.remove('open');m.setAttribute('aria-expanded',false)}));
 const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Toronto'}));const dw=now.getDay();
