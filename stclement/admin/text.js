@@ -6,7 +6,7 @@ const DANGER = /<\s*\/?\s*(script|style|iframe|frame|object|embed|link|meta|base
 export function clean(s) {
   s = String(s ?? '');
   if (s.indexOf('<') < 0) return s;
-  return s.replace(DANGER, '').replace(/<[^>]+>/g, tag => tag
+  return s.replace(/<\s*(script|style|template|iframe|object|textarea)\b[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '').replace(DANGER, '').replace(/<[^>]+>/g, tag => tag
     .replace(/\s+on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
     .replace(/\b(href|src|xlink:href|action|formaction)\s*=\s*(["']?)\s*(javascript|vbscript|data):[^"'\s>]*/gi, '$1=$2#'));
 }
@@ -41,7 +41,8 @@ export function typo(s) {
   s = parts.join('');
   const text = s.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, '\u00a0');
   const words = text.trim().split(/[ \t\n]+/).filter(Boolean);
-  if (words.length < 4 || words[words.length - 1].length > 12) return s;
+  const last = words[words.length - 1] || '';
+  if (words.length < 4 || last.length > 12 || /[\u00a0\u202f]/.test(last)) return s;
   let inTag = false, at = -1;
   for (let i = 0; i < s.length; i++) {
     const c = s[i];
