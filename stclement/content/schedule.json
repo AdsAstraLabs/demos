@@ -1,0 +1,105 @@
+{
+  "sunday": [
+    {
+      "time": "08:00",
+      "label_en": "Low Mass",
+      "label_fr": "Messe basse",
+      "livestream": false
+    },
+    {
+      "time": "10:30",
+      "label_en": "High Mass",
+      "label_fr": "Grand-messe",
+      "livestream": true
+    },
+    {
+      "time": "17:30",
+      "label_en": "Low Mass",
+      "label_fr": "Messe basse",
+      "livestream": false
+    }
+  ],
+  "weekdays": [
+    {
+      "day": "Monday",
+      "times": [
+        "07:00",
+        "09:00"
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "times": [
+        "07:00"
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "times": [
+        "07:00",
+        "19:30"
+      ]
+    },
+    {
+      "day": "Thursday",
+      "times": [
+        "07:00"
+      ]
+    },
+    {
+      "day": "Friday",
+      "times": [
+        "07:00",
+        "19:30"
+      ]
+    },
+    {
+      "day": "Saturday",
+      "times": [
+        "07:00",
+        "09:00"
+      ]
+    }
+  ],
+  "confession": {
+    "day": "Saturday",
+    "start": "15:30",
+    "end": "16:30",
+    "also_en": "Also 30 minutes before every Mass, including weekdays.",
+    "also_fr": "Aussi 30 minutes avant chaque messe, y compris en semaine.",
+    "exceptions_en": "No Saturday confessions on Christmas Day, New Year’s Day, Holy Saturday or Easter Sunday.",
+    "exceptions_fr": "Pas de confessions le samedi à Noël, au Jour de l’An, le Samedi saint et le dimanche de Pâques."
+  },
+  "devotions": [
+    {
+      "title_en": "First Fridays",
+      "title_fr": "Premiers vendredis",
+      "text_en": "Exposition after the 7:00 am Mass, ending Saturday at 8:45 am. High Mass at 7:30 pm.",
+      "text_fr": "Exposition après la messe de 7 h, jusqu’au samedi 8 h 45. Grand-messe à 19 h 30."
+    },
+    {
+      "title_en": "First Saturdays",
+      "title_fr": "Premiers samedis",
+      "text_en": "Rosary and Litany of Loreto 8:20 am, Benediction 8:45, Mass 9:00, then Our Lady of Perpetual Help devotions.",
+      "text_fr": "Chapelet et litanies de Lorette à 8 h 20, bénédiction à 8 h 45, messe à 9 h, puis dévotions à N.-D. du Perpétuel Secours."
+    },
+    {
+      "title_en": "First Sundays",
+      "title_fr": "Premiers dimanches",
+      "text_en": "Benediction immediately after the 10:30 High Mass.",
+      "text_fr": "Bénédiction immédiatement après la <span class='nw'>grand-messe</span> de 10 h 30."
+    },
+    {
+      "title_en": "Fatima devotions (May–October)",
+      "title_fr": "Dévotions de Fatima (mai à octobre)",
+      "text_en": "Rosary in Latin, English and French with Exposition of the Blessed Sacrament, on or near the 13th of the month.",
+      "text_fr": "Rosaire en latin, anglais et français, avec exposition du Saint-Sacrement, autour du 13 du mois."
+    },
+    {
+      "title_en": "Precious Blood devotions",
+      "title_fr": "Dévotions au Précieux Sang",
+      "text_en": "January to July, 3:00 pm on 3rd Sundays.",
+      "text_fr": "De janvier à juillet, à 15 h le 3e dimanche."
+    }
+  ]
+}

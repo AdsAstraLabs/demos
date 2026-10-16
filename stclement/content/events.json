@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "date": "2026-10-17",
+      "time": "",
+      "title_en": "Visit to Carmel",
+      "title_fr": "Visite au Carmel",
+      "text_en": "Young women are invited to the Carmel of the Three Hearts in Almonte: Mass at 9 am, a talk, prayer, a visit with the sisters and a picnic.",
+      "text_fr": "Les jeunes femmes sont invitées au Carmel des Trois Cœurs, à Almonte : messe à 9 h, conférence, prière, visite avec les sœurs et pique-nique.",
+      "image": "img/uploads/ev-carmel-680.webp",
+      "image_alt_en": "A crowned statue of Our Lady with her hands joined in prayer",
+      "image_alt_fr": "Une statue couronnée de la Vierge Marie, les mains jointes en prière",
+      "link_url": "mailto:stclementyag@gmail.com",
+      "link_label_en": "stclementyag@gmail.com",
+      "link_label_fr": "",
+      "srcset": "img/uploads/ev-carmel-680.webp 680w, img/uploads/ev-carmel-1100.webp 1100w",
+      "width": "680",
+      "height": "425"
+    },
+    {
+      "date": "2026-10-31",
+      "time": "",
+      "title_en": "All Saints party",
+      "title_fr": "Fête de la Toussaint",
+      "text_en": "For children, after the 9 am Mass at De La Salle High School across the street. Come dressed as a favourite saint; potluck lunch.",
+      "text_fr": "Pour les enfants, après la messe de 9 h, à l’école secondaire De La Salle, en face de l’église. Déguisement de saint <span class='nw'>et repas-partage.</span>",
+      "image": "img/uploads/ev-saints-800.webp",
+      "image_alt_en": "A statue of St. Joseph holding the Child Jesus and a lily",
+      "image_alt_fr": "Une statue de saint Joseph portant l’Enfant Jésus et un lys",
+      "link_url": "",
+      "link_label_en": "",
+      "link_label_fr": "",
+      "srcset": "img/uploads/ev-saints-600.webp 600w, img/uploads/ev-saints-800.webp 800w, img/uploads/ev-saints-1100.webp 1100w",
+      "width": "800",
+      "height": "500"
+    },
+    {
+      "date": "2026-11-14",
+      "time": "",
+      "title_en": "Parish Dinner & Silent Auction",
+      "title_fr": "Souper paroissial et encan silencieux",
+      "text_en": "Guest speaker Brian Holdsworth, with Fr. Josef Bisig, FSSP, co-founder of the Fraternity. Space is limited.",
+      "text_fr": "Conférencier : Brian Holdsworth, avec l’abbé Josef Bisig, FSSP, cofondateur de la Fraternité. Places limitées.",
+      "image": "img/uploads/ev-gather-800.webp",
+      "image_alt_en": "A large crowd of the faithful gathered on a park lawn for an outdoor parish celebration",
+      "image_alt_fr": "Une foule de fidèles réunie sur la pelouse d’un parc pour une célébration paroissiale en plein air",
+      "link_url": "https://www.zeffy.com/en-CA/ticketing/annual-parish-dinner-souper-paroissial-annuel",
+      "link_label_en": "Tickets →",
+      "link_label_fr": "Billets →",
+      "srcset": "img/uploads/ev-gather-600.webp 600w, img/uploads/ev-gather-800.webp 800w, img/uploads/ev-gather-1100.webp 1100w",
+      "width": "800",
+      "height": "500"
+    }
+  ]
+}

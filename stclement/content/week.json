@@ -1,0 +1,106 @@
+{
+  "source_bulletin": "2026-10-11",
+  "days": [
+    {
+      "date": "2026-10-12",
+      "feast_en": "Feria",
+      "feast_fr": "De la férie",
+      "masses": [
+        {
+          "time": "07:00"
+        },
+        {
+          "time": "09:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "feast_en": "St. Edward, King",
+      "feast_fr": "St Édouard, roi",
+      "masses": [
+        {
+          "time": "07:00"
+        },
+        {
+          "time": "18:30",
+          "note_en": "Fatima devotions",
+          "note_fr": "Dévotions de Fatima"
+        },
+        {
+          "time": "19:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "feast_en": "St. Callistus I",
+      "feast_fr": "St Calixte I<sup>er</sup>",
+      "masses": [
+        {
+          "time": "07:00"
+        },
+        {
+          "time": "19:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "feast_en": "St. Teresa of Avila",
+      "feast_fr": "Ste Thérèse d’Avila",
+      "masses": [
+        {
+          "time": "07:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "feast_en": "St. Hedwig",
+      "feast_fr": "Ste Hedwige",
+      "masses": [
+        {
+          "time": "07:00"
+        },
+        {
+          "time": "19:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "feast_en": "St. Margaret Mary",
+      "feast_fr": "Ste Marguerite-Marie",
+      "masses": [
+        {
+          "time": "07:00"
+        },
+        {
+          "time": "09:00"
+        },
+        {
+          "time": "15:30",
+          "note_en": "Confessions",
+          "note_fr": "Confessions"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "feast_en": "<span class=\"nw\">21st Sunday</span> <span class=\"nw\">after Pentecost</span>",
+      "feast_fr": "<span class=\"nw\">21e dim.</span> <span class=\"nw\">après la Pentecôte</span>",
+      "masses": [
+        {
+          "time": "08:00"
+        },
+        {
+          "time": "10:30"
+        },
+        {
+          "time": "17:30"
+        }
+      ]
+    }
+  ]
+}

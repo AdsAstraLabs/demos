@@ -1,0 +1,164 @@
+# St. Clement Parish editor (Decap CMS). Opened at /admin/ (not linked anywhere; noindex).
+# Paths below are relative to the SITE ROOT = the repository root of the parish site repo.
+# Local preview: run `npx decap-server` from the site root, serve the site on localhost, open /admin/.
+
+# ── Production login: DecapBridge (email invite + password, or Google/Microsoft), no GitHub accounts for editors.
+#    Replace OWNER/REPO and YOUR_SITE_ID with the values DecapBridge shows after you add the site (see cms/SETUP.md).
+backend:
+  name: git-gateway
+  repo: OWNER/REPO
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+
+# ── Fallback if DecapBridge ever disappears and the site is on Netlify: Netlify Identity + Git Gateway
+#    (Git Gateway is deprecated for NEW setups, but still works). Swap the backend block for:
+# backend:
+#   name: git-gateway
+#   branch: main
+# and add <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> to admin/index.html.
+
+local_backend: true          # used automatically on localhost when `npx decap-server` is running
+logo_url: ../img/brand/stclement-160.webp
+locale: en
+
+media_folder: img/uploads    # event photos land here (committed to the repo)
+public_folder: img/uploads   # relative, so it works at any base path
+
+collections:
+  # ───────────────────────── Bulletins
+  - name: bulletins
+    label: Bulletins
+    description: Weekly parish bulletin PDFs. The two most recent are shown on the site; the newest is labelled “latest”.
+    editor: { preview: false }
+    files:
+      - name: bulletins
+        label: Parish bulletins
+        file: content/bulletins.json
+        fields:
+          - label: Bulletins
+            label_singular: bulletin
+            name: items
+            widget: list
+            hint: Newest first. Click “Add bulletin” to put a new one at the top.
+            add_to_top: true
+            collapsed: true
+            summary: "{{fields.date}} · {{fields.title_en}}"
+            fields:
+              - { label: Sunday date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+              - { label: Title (English), name: title_en, widget: string, hint: "e.g. 21st Sunday after Pentecost" }
+              - { label: Titre (français), name: title_fr, widget: string, hint: "ex. 21e dimanche après la Pentecôte" }
+              - { label: Bulletin PDF, name: pdf, widget: file, media_folder: /files/bulletins, public_folder: files/bulletins, hint: "Upload the PDF, or paste a link to it" }
+
+  # ───────────────────────── Schedule
+  - name: schedule
+    label: Schedule
+    description: Regular Mass and confession times, devotions, and the “This week” day cards.
+    editor: { preview: false }
+    files:
+      - name: regular
+        label: Mass & confession times
+        file: content/schedule.json
+        fields:
+          - label: Sunday Masses
+            label_singular: Sunday Mass
+            name: sunday
+            widget: list
+            summary: "{{fields.time}} · {{fields.label_en}}"
+            fields:
+              - { label: Time, name: time, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm", hint: "Shown as 10:30 am / 10 h 30 automatically" }
+              - { label: Name (English), name: label_en, widget: string, hint: "e.g. Low Mass, High Mass" }
+              - { label: Nom (français), name: label_fr, widget: string, hint: "ex. Messe basse, Grand-messe" }
+              - { label: Livestreamed?, name: livestream, widget: boolean, default: false, required: false }
+          - label: Weekday Masses
+            label_singular: weekday
+            name: weekdays
+            widget: list
+            summary: "{{fields.day}}"
+            fields:
+              - { label: Day, name: day, widget: select, options: [ Monday, Tuesday, Wednesday, Thursday, Friday, Saturday ] }
+              - { label: Mass times, name: times, widget: list, field: { label: Time, name: time, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm" } }
+          - label: Confession
+            name: confession
+            widget: object
+            fields:
+              - { label: Day, name: day, widget: select, options: [ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday ] }
+              - { label: Starts, name: start, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm" }
+              - { label: Ends, name: end, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm", required: false }
+              - { label: Note (English), name: also_en, widget: text, required: false }
+              - { label: Note (français), name: also_fr, widget: text, required: false }
+              - { label: Exceptions (English), name: exceptions_en, widget: text, required: false }
+              - { label: Exceptions (français), name: exceptions_fr, widget: text, required: false }
+          - label: Devotions
+            label_singular: devotion
+            name: devotions
+            widget: list
+            collapsed: true
+            summary: "{{fields.title_en}}"
+            fields:
+              - { label: Title (English), name: title_en, widget: string }
+              - { label: Titre (français), name: title_fr, widget: string }
+              - { label: Details (English), name: text_en, widget: text }
+              - { label: Détails (français), name: text_fr, widget: text }
+      - name: week
+        label: This week (day cards)
+        file: content/week.json
+        fields:
+          - { label: From bulletin dated, name: source_bulletin, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, required: false, hint: "Leave empty to use the newest bulletin" }
+          - label: Days
+            label_singular: day
+            name: days
+            widget: list
+            summary: "{{fields.date}} · {{fields.feast_en}}"
+            hint: "Usually 7 days, Monday to Sunday. The heading (e.g. This week · Oct 12–18) and day names are generated from the dates."
+            fields:
+              - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+              - { label: Feast / day (English), name: feast_en, widget: string, required: false }
+              - { label: Fête / jour (français), name: feast_fr, widget: string, required: false }
+              - label: Masses & services
+                name: masses
+                widget: list
+                summary: "{{fields.time}} {{fields.note_en}}"
+                fields:
+                  - { label: Time, name: time, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm" }
+                  - { label: Label (English), name: note_en, widget: string, required: false, hint: "Only for non-Mass items, e.g. Confessions, Fatima devotions" }
+                  - { label: Libellé (français), name: note_fr, widget: string, required: false }
+
+  # ───────────────────────── Events
+  - name: events
+    label: Events
+    description: “Coming up” cards. The next three upcoming events are shown; past events hide automatically.
+    editor: { preview: false }
+    files:
+      - name: events
+        label: Upcoming events
+        file: content/events.json
+        fields:
+          - label: Events
+            label_singular: event
+            name: items
+            widget: list
+            collapsed: true
+            summary: "{{fields.date}} · {{fields.title_en}}"
+            fields:
+              - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+              - { label: Time, name: time, widget: datetime, format: "HH:mm", date_format: false, time_format: "HH:mm", required: false, hint: "If set, shown before the description (9:00 am · …)" }
+              - { label: Title (English), name: title_en, widget: string }
+              - { label: Titre (français), name: title_fr, widget: string }
+              - { label: Description (English), name: text_en, widget: text }
+              - { label: Description (français), name: text_fr, widget: text }
+              - { label: Photo, name: image, widget: image, required: false, hint: "Landscape photo, about 1100 × 700 px or larger" }
+              - { label: Photo description (English), name: image_alt_en, widget: string, required: false, hint: "What the photo shows, for screen readers" }
+              - { label: Description de la photo (français), name: image_alt_fr, widget: string, required: false }
+              - { label: Link, name: link_url, widget: string, required: false, hint: "https://… for tickets/registration, or mailto:name@example.com" }
+              - { label: Link text (English), name: link_label_en, widget: string, required: false, hint: "e.g. Tickets →  (leave empty to show the email address)" }
+              - { label: Texte du lien (français), name: link_label_fr, widget: string, required: false, hint: "ex. Billets →" }
+              - { label: srcset, name: srcset, widget: hidden, required: false }
+              - { label: width, name: width, widget: hidden, required: false }
+              - { label: height, name: height, widget: hidden, required: false }
