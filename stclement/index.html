@@ -1320,7 +1320,7 @@ main section h2{text-wrap:balance}
   <div class="split">
    <div class="ph rv"><img src="img/congregation-800.webp" srcset="img/congregation-600.webp 600w, img/congregation-800.webp 800w, img/congregation-1600.webp 1200w" sizes="(min-width:900px) 600px, 90vw" alt="A full church at Mass at Christmastime, seen from the side aisle beneath the stained-glass windows" data-fr-alt="Une église pleine pour la messe au temps de Noël, vue du bas-côté sous les vitraux" loading="lazy" width="800" height="1067" style="object-position:50% 60%"></div>
    <div>
-    <span class="eb" data-fr="Vie paroissiale">Parish life</span><h2 data-fr="Une communauté bien vivante">A living community</h2>
+    <span class="eb" data-fr="Vie paroissiale">Parish life</span><h2 data-fr="Une communauté bien vivante">A living community</h2>
     <p class="lead" data-fr="Chorale et schola pour enfants, servants de messe, jeunes adultes, Légion de Marie, Chevaliers de Colomb : il y a une place pour chacun.">Choir and children’s schola, altar servers, young adults, the Legion of Mary, the Knights of Columbus: there is a place for everyone.</p>
     <div class="ctas" style="margin-top:1.4rem"><a class="btn bw" href="https://stclementparish.flocknote.com/" target="_blank" rel="noopener"><img class="ic bri" src="img/logos/flocknote.svg" width="24" height="20" alt="" loading="lazy" decoding="async"><span data-fr="Recevoir les nouvelles par courriel">Get parish news by email</span></a></div>
    </div>
@@ -1587,4 +1587,5 @@ window.heroSlides={count:S.length,show:n=>load(n).then(()=>show(n,true)),stop:()
 const D=document.documentElement,on=v=>{c.classList.toggle('on',v);D.classList.toggle('hc-on',v)};const fit=()=>{if(innerWidth>759){on(false);return}const ht=hero.getBoundingClientRect().top,z0=ht+(hd?hd.offsetHeight:68),z1=k.getBoundingClientRect().top,free=z1-z0,g=Math.max(14,Math.min(28,free*.12)),s=Math.min(128,Math.round(free-2*g));
  if(s<64){on(false);return}c.style.height=s+'px';c.style.top=Math.round(z0+(free-s)/2-w.getBoundingClientRect().top)+'px';on(true)};
 let r=0;const q=()=>{cancelAnimationFrame(r);r=requestAnimationFrame(fit)};fit();addEventListener('resize',q);addEventListener('orientationchange',q);addEventListener('load',q);document.fonts&&document.fonts.ready.then(q)})();</script>
+<script>document.querySelectorAll('a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});if(location.hash)history.replaceState(null,'',location.pathname+location.search)}))</script>
 </body></html>
