@@ -21,6 +21,7 @@ const ANCHOR = { seo: '', contactinfo: '#contact', header: '#top', hero: '#top',
 let S = null;                       // session: { user, csrf }
 const cache = {};                   // file name → { data, version, dirty }
 let view = null, fieldEls = new Map(), media = null;
+const open = new WeakSet();         // list items the editor has expanded; survives redraws
 
 // ───────────────────────── server calls
 async function api(path, opt = {}) {
@@ -175,7 +176,6 @@ const summaryOf = (f, it, i) => {
 function list(f, o, k, path) {
   if (!Array.isArray(o[k])) o[k] = [];
   const arr = o[k], box = h('div', { class: 'items' });
-  const open = new Set();
   const redraw = () => {
     box.textContent = '';
     arr.forEach((it, i) => {
