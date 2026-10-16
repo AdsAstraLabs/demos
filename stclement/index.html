@@ -708,25 +708,35 @@ footer{padding-top:3rem}
 /* rev8: in-page anchors land just below the fixed header (html already has scroll-padding-top:72px; this adds a little air) */
 [id]{scroll-margin-top:14px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-/* rev8: This week strip: one structure per card (label, 2-line feast, times), aligned rows via subgrid, tags for non-Mass items, clear Today */
-.days{grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:.6rem;align-items:stretch}
-.day{position:relative;display:grid;grid-template-rows:auto auto 1fr;align-content:start;row-gap:.25rem;padding:.85rem .9rem .9rem}
-@supports(grid-template-rows:subgrid){.day{grid-row:span 3;grid-template-rows:subgrid;row-gap:.25rem}}
-.day b{color:var(--gold);line-height:1.3}
-.day em{margin:0 0 .35rem;min-height:2.6em;line-height:1.3;text-wrap:balance;color:var(--ink)}
-.day ul{display:flex;flex-direction:column;gap:.3rem;margin:0;padding:0;align-self:start}
-.day li,.day li.x{color:var(--ink);font-weight:500;line-height:1.35;white-space:nowrap}
-.day li.x{display:flex;flex-direction:column;align-items:flex-start;gap:.2rem}
-.day .tag{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.01em;color:var(--wine);background:rgba(110,20,35,.08);border:1px solid rgba(110,20,35,.14);border-radius:999px;padding:.05rem .5rem;line-height:1.45;white-space:nowrap}
-.day.on{border:1px solid var(--wine);box-shadow:0 0 0 2px rgba(110,20,35,.18),0 10px 22px -16px rgba(110,20,35,.6)}
+/* rev9: This week strip, second pass: compact header (day + feast) over a hairline, natural heights (top-aligned),
+   special items inline on the time row (burgundy time + tiny tag), wraps under the time only when the card is narrow */
+.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;align-items:start;padding-top:.45rem}
+@media(min-width:760px){.days{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:1180px){.days{grid-template-columns:repeat(7,minmax(min-content,1fr))}}
+.day{position:relative;display:block;padding:.7rem .8rem .75rem}
+.day b{display:block;color:var(--gold);line-height:1.25}
+.day em{display:block;margin:.12rem 0 0;min-height:0;padding-bottom:.5rem;border-bottom:1px solid var(--line);line-height:1.28;text-wrap:balance;color:var(--ink);font-size:15px}
+.day ul{display:flex;flex-direction:column;gap:.22rem;margin:.5rem 0 0;padding:0}
+.day li{color:var(--ink);font-weight:500;font-size:15.5px;line-height:1.4;white-space:nowrap}
+.day li.x{display:flex;flex-wrap:wrap;align-items:center;column-gap:.4rem;row-gap:.1rem;white-space:normal}
+.day li.x .t{white-space:nowrap;color:var(--wine);font-weight:600}
+.day .tag{font-size:12.5px;font-weight:600;line-height:1.35;color:var(--wine);background:rgba(110,20,35,.07);border-radius:6px;padding:.05rem .38rem;white-space:nowrap}
+.day.on{border:1px solid var(--wine);box-shadow:0 0 0 2px rgba(110,20,35,.16),0 10px 22px -16px rgba(110,20,35,.55)}
 .day.on b{color:var(--wine)}
-.day.on::before{content:"Today";position:absolute;top:-.62rem;right:.7rem;background:var(--wine);color:#fbf5ea;font:600 12px/1 var(--bf);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .55rem;border-radius:999px}
+.day.on em{border-bottom-color:rgba(110,20,35,.25)}
+.day.on::before{content:"Today";position:absolute;top:-.6rem;right:.6rem;max-width:calc(100% - 1.2rem);background:var(--wine);color:#fbf5ea;font:600 11.5px/1 var(--bf);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .5rem;border-radius:999px;white-space:nowrap}
 html[lang=fr] .day.on::before{content:"Aujourd’hui"}
-.days{padding-top:.4rem}
-@media(max-width:759px){.days{grid-template-columns:repeat(2,minmax(0,1fr))}.day{padding:.8rem .75rem .85rem}.day .tag{max-width:100%;white-space:normal;text-wrap:balance;border-radius:9px;padding:.1rem .45rem}}
-.day .tag{font-size:12px;letter-spacing:0;padding:.05rem .42rem}
-@media(min-width:760px){.day{padding-left:.8rem;padding-right:.8rem}}
-.day .tag{max-width:100%;white-space:normal;text-wrap:balance;border-radius:9px;padding:.1rem .42rem;line-height:1.35}
+@media(max-width:759px){.day{padding:.7rem .7rem .75rem}.day .tag{white-space:normal;max-width:100%}}
+@media(min-width:1180px){.day li.x{flex-wrap:nowrap}}
+/* rev10: trims (Oct 16, 2026): one office line under the sacraments, 5 devotions balanced, 2 bulletin PDFs, livestream link */
+.scnote{margin-top:var(--blk);text-align:center;color:var(--mut);font-size:16px;text-wrap:balance}
+.scnote a{color:var(--wine);font-weight:600}
+@media(min-width:760px){.dev{grid-template-columns:repeat(6,minmax(0,1fr))}.dev>div{grid-column:span 2}.dev>div:nth-child(n+4){grid-column:span 3}}
+@media(min-width:900px){.bul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sunday .row a.lvl{color:inherit;text-decoration:underline;text-decoration-color:rgba(240,214,144,.7);text-underline-offset:3px}
+.sunday .row a.lvl:hover{color:#f0d690}
+/* rev10: Sunday card no longer has the livestream note/button; spread its three Masses over the card height instead of leaving a blank bottom */
+@media(min-width:900px){.sch .sunday{display:flex;flex-direction:column}.sch .sunday .row{flex:1 1 0;align-items:center}.sch .sunday .row:last-of-type{border-bottom:0}}
 </style></head><body>
 <a class="skip" href="#mass" data-fr="Aller à l’horaire des messes">Skip to Mass times</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -791,11 +801,9 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
    <div class="card sunday">
     <h3 data-fr="Dimanche">Sunday</h3>
     <div class="row"><b data-fr="8 h">8:00 am</b><span data-fr="Messe basse">Low Mass</span></div>
-    <div class="row"><b data-fr="10 h 30">10:30 am</b><span data-fr="Grand-messe · en direct">High Mass · livestreamed</span></div>
+    <div class="row"><b data-fr="10 h 30">10:30 am</b><span data-fr="Grand-messe · &lt;a class=&quot;lvl&quot; href=&quot;#watch&quot;&gt;en direct&lt;/a&gt;">High Mass · <a class="lvl" href="#watch">livestreamed</a></span></div>
     <div class="row"><b data-fr="17 h 30">5:30 pm</b><span data-fr="Messe basse">Low Mass</span></div>
-    <p class="note" style="color:rgba(255,255,255,.9)" data-fr="La <span class='nw'>grand-messe</span> de 10 h 30 et certaines grandes fêtes sont diffusées en direct sur YouTube.">The 10:30 High Mass and certain major feasts are livestreamed on YouTube.</p>
-    <a class="ytb" href="https://youtube.com/@st.clementsparishparoisses8409" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt-app"/></svg><span data-fr="En direct sur YouTube">Watch live on YouTube</span></a>
-   </div>
+       </div>
    <div class="card wk">
     <h3 data-fr="En semaine">Weekdays</h3>
     <div class="row" data-d="1"><b data-fr="Lundi">Monday</b><span data-fr="7 h · 9 h">7:00 am · 9:00 am</span></div>
@@ -821,7 +829,7 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
     <div class="day" data-date="2026-10-15"><b data-fr="Jeu 15">Thu 15</b><em data-fr="Ste Thérèse d’Avila">St. Teresa of Avila</em><ul><li data-fr="7 h">7:00 am</li></ul></div>
     <div class="day" data-date="2026-10-16"><b data-fr="Ven 16">Fri 16</b><em data-fr="Ste Hedwige">St. Hedwig</em><ul><li data-fr="7 h">7:00 am</li><li data-fr="19 h 30">7:30 pm</li></ul></div>
     <div class="day" data-date="2026-10-17"><b data-fr="Sam 17">Sat 17</b><em data-fr="Ste Marguerite-Marie">St. Margaret Mary</em><ul><li data-fr="7 h">7:00 am</li><li data-fr="9 h">9:00 am</li><li class="x"><span class="t" data-fr="15 h 30">3:30 pm</span><span class="tag" data-fr="Confessions">Confessions</span></li></ul></div>
-    <div class="day" data-date="2026-10-18"><b data-fr="Dim 18">Sun 18</b><em data-fr="21e dim. après la Pentecôte">21st Sunday after Pentecost</em><ul><li data-fr="8 h">8:00 am</li><li data-fr="10 h 30">10:30 am</li><li data-fr="17 h 30">5:30 pm</li></ul></div>
+    <div class="day" data-date="2026-10-18"><b data-fr="Dim 18">Sun 18</b><em data-fr="&lt;span class=&quot;nw&quot;&gt;21e dim.&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;après la Pentecôte&lt;/span&gt;"><span class="nw">21st Sunday</span> <span class="nw">after Pentecost</span></em><ul><li data-fr="8 h">8:00 am</li><li data-fr="10 h 30">10:30 am</li><li data-fr="17 h 30">5:30 pm</li></ul></div>
    </div>
   </div>
   <div class="dev">
@@ -830,8 +838,7 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
    <div><b data-fr="Premiers dimanches">First Sundays</b><span data-fr="Bénédiction immédiatement après la <span class='nw'>grand-messe</span> de 10 h 30.">Benediction immediately after the 10:30 High Mass.</span></div>
    <div><b data-fr="Dévotions de Fatima (mai à octobre)">Fatima devotions (May–October)</b><span data-fr="Rosaire en latin, anglais et français, avec exposition du Saint-Sacrement, autour du 13 du mois.">Rosary in Latin, English and French with Exposition of the Blessed Sacrament, on or near the 13th of the month.</span></div>
    <div><b data-fr="Dévotions au Précieux Sang">Precious Blood devotions</b><span data-fr="De janvier à juillet, à 15 h le 3e dimanche.">January to July, 3:00 pm on 3rd Sundays.</span></div>
-   <div><b data-fr="Baptêmes et mariages">Baptisms &amp; weddings</b><span data-fr="Veuillez contacter le bureau paroissial.">Please contact the parish office.</span></div>
-  </div>
+     </div>
  </div>
 </section>
 <section class="grounds" id="visit" aria-labelledby="since-h">
@@ -840,11 +847,9 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
   <div class="gr-c">
    <h2 id="since-h" class="since"><span data-fr="L’église Sainte-Anne &lt;b&gt;depuis 1873&lt;/b&gt;">St. Anne Church <b>since 1873</b></span><span data-fr="La paroisse Saint-Clément &lt;b&gt;depuis 1968&lt;/b&gt;">Saint Clement Parish <b>since 1968</b></span></h2>
    <span class="eb" data-fr="Nous trouver">Find us</span>
-   <p class="addr" data-fr="528, rue Old St. Patrick&lt;br&gt;Ottawa (Ontario) K1N 5L5">528 Old St. Patrick Street<br>Ottawa, ON K1N 5L5</p>
-   <p class="gnote" data-fr="Dans la Basse-Ville d’Ottawa. Bureau : &lt;span class=&quot;nw&quot;&gt;lun.–ven.,&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;de 9 h à 15 h.&lt;/span&gt;">In Ottawa’s Lower Town. Office: <span class="nw">Monday–Friday,</span> <span class="nw">9:00 am⁠–⁠3:00 pm.</span></p>
+      <p class="gnote" data-fr="Au cœur de la Basse-Ville d’Ottawa.">In the heart of Ottawa’s Lower Town.</p>
    <div class="ctas">
      <a class="btn bw" href="https://www.google.com/maps/dir/?api=1&amp;destination=Saint+Clement+Parish+(at+St.+Anne+Church),+528+Old+St.+Patrick+St,+Ottawa,+ON" target="_blank" rel="noopener"><svg class="ic"><use href="#i-gmap"/></svg><span data-fr="Itinéraire">Directions</span></a>
-     <a class="btn bl" href="tel:+16135659656"><svg class="ic"><use href="#i-phone"/></svg>(613) 565-9656</a>
     </div>
   </div>
  </div>
@@ -893,12 +898,13 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
   <div class="head"><span class="eb" data-fr="Sacrements">Sacraments</span><h2 data-fr="Tous les sacrements de l’Église">All the Sacraments of the Church</h2></div>
   <div class="sac">
    <div class="sc"><img class="simg" src="img/sac-confession-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A traditional carved wooden confessional with grilled doors" data-fr-alt="Un confessionnal traditionnel en bois sculpté, aux portes grillagées" title="Photo: Guerinf, CC BY-SA 4.0, via Wikimedia Commons"><span class="n" data-fr="Pénitence">Penance</span><h3 data-fr="Confession">Confession</h3><p data-fr="30 minutes avant chaque messe et le samedi de 15 h 30 à 16 h 30, ou sur rendez-vous.">30 minutes before every Mass and Saturdays 3:30⁠–⁠4:30 pm, or by appointment.</p></div>
-   <div class="sc"><img class="simg" src="img/sac-baptism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A marble baptismal font with a gilded cover in a Quebec church" data-fr-alt="Des fonts baptismaux en marbre au couvercle doré, dans une église du Québec" title="Photo: Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons"><span class="n" data-fr="Baptême et mariage">Baptism &amp; Matrimony</span><h3 data-fr="Baptêmes et mariages">Baptisms &amp; weddings</h3><p data-fr="Veuillez contacter le bureau paroissial : &lt;a href=&quot;tel:+16135659656,2&quot;&gt;(613) 565-9656, poste 2&lt;/a&gt;.">Please contact the parish office for information: <a href="tel:+16135659656,2">(613) 565-9656 ext. 2</a>.</p></div>
-   <div class="sc" id="confirmation"><img class="simg" src="img/sac-confirmation-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="The bishop confirming a kneeling confirmand with his sponsor at St. Anne Church, 2015" data-fr-alt="L’évêque confirme un confirmand agenouillé, avec son parrain, à l’église Sainte-Anne, 2015"><span class="n" data-fr="Confirmation">Confirmation</span><h3 data-fr="Confirmation des jeunes">Confirmation for youth</h3><p data-fr="Pour les paroissiens de la 6e année ou plus. Les inscriptions pour 2027 se terminaient le 4 octobre ; formulaires en anglais et en français au bureau paroissial.">For parishioners in grade 6 or older. Registration for the 2027 class closed October 4; forms in English and French are available from the parish office.</p></div>
-   <div class="sc"><img class="simg" src="img/sac-communion-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 55%" alt="First communicants in white with the altar servers, 2024" data-fr-alt="Les premiers communiants en blanc avec les servants, 2024"><span class="n" data-fr="Eucharistie">Holy Eucharist</span><h3 data-fr="Première communion">First Holy Communion</h3><p data-fr="Pour la préparation et les dates, veuillez contacter le bureau paroissial.">For preparation and dates, please contact the parish office.</p></div>
-   <div class="sc" id="catechism"><img class="simg" src="img/sac-catechism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 45%" alt="Young altar servers holding candles at the Easter Vigil" data-fr-alt="De jeunes servants tenant des cierges à la Vigile pascale"><span class="n" data-fr="Catéchèse">Catechesis</span><h3 data-fr="Catéchisme familial">Family catechism</h3><p data-fr="Série vidéo gratuite tirée du Catéchisme de Baltimore : Credo, Commandements, Sacrements et prière. Pour s’inscrire, contactez le bureau paroissial.">Free video series from the Baltimore Catechism: the Creed, Commandments, Sacraments and prayer. To register, contact the parish office.</p></div>
+   <div class="sc"><img class="simg" src="img/sac-baptism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="A marble baptismal font with a gilded cover in a Quebec church" data-fr-alt="Des fonts baptismaux en marbre au couvercle doré, dans une église du Québec" title="Photo: Dennis G. Jarvis, CC BY-SA 2.0, via Wikimedia Commons"><span class="n" data-fr="Baptême et mariage">Baptism &amp; Matrimony</span><h3 data-fr="Baptêmes et mariages">Baptisms &amp; weddings</h3><p data-fr="Célébrés selon le rite romain traditionnel ; prévoyez-les bien à l’avance.">Celebrated in the traditional Roman Rite; please arrange them well in advance.</p></div>
+   <div class="sc" id="confirmation"><img class="simg" src="img/sac-confirmation-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 50%" alt="The bishop confirming a kneeling confirmand with his sponsor at St. Anne Church, 2015" data-fr-alt="L’évêque confirme un confirmand agenouillé, avec son parrain, à l’église Sainte-Anne, 2015"><span class="n" data-fr="Confirmation">Confirmation</span><h3 data-fr="Confirmation des jeunes">Confirmation for youth</h3><p data-fr="Pour les paroissiens de la 6e année ou plus. Les inscriptions pour 2027 (formulaires en anglais et en français) se terminaient le 4 octobre.">For parishioners in grade 6 or older. Registration for the 2027 class (forms in English and French) closed October 4.</p></div>
+   <div class="sc"><img class="simg" src="img/sac-communion-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 55%" alt="First communicants in white with the altar servers, 2024" data-fr-alt="Les premiers communiants en blanc avec les servants, 2024"><span class="n" data-fr="Eucharistie">Holy Eucharist</span><h3 data-fr="Première communion">First Holy Communion</h3><p data-fr="Préparation des enfants qui reçoivent l’Eucharistie pour la première fois.">Preparation for children receiving the Eucharist for the first time.</p></div>
+   <div class="sc" id="catechism"><img class="simg" src="img/sac-catechism-800.webp" width="800" height="400" loading="lazy" style="object-position:50% 45%" alt="Young altar servers holding candles at the Easter Vigil" data-fr-alt="De jeunes servants tenant des cierges à la Vigile pascale"><span class="n" data-fr="Catéchèse">Catechesis</span><h3 data-fr="Catéchisme familial">Family catechism</h3><p data-fr="Série vidéo gratuite tirée du Catéchisme de Baltimore : Credo, Commandements, Sacrements et prière.">Free video series from the Baltimore Catechism: the Creed, Commandments, Sacraments and prayer.</p></div>
    <div class="sc em"><span class="n" data-fr="Urgences sacramentelles">Sacramental emergencies</span><h3 data-fr="Derniers sacrements">Last Rites</h3><p data-fr="Pour appeler un prêtre auprès d’un malade ou d’un mourant :">To call a priest to the sick or dying:</p><a class="tel" href="tel:+16135659656,8" data-fr="(613) 565-9656, &lt;span class=&quot;nw&quot;&gt;poste 8&lt;/span&gt;">(613) 565-9656, <span class="nw">ext. 8</span></a></div>
   </div>
+  <p class="scnote" data-fr="Baptêmes, mariages, confirmation, première communion ou catéchisme : appelez le bureau paroissial au &lt;a href=&quot;tel:+16135659656,2&quot;&gt;&lt;span class=&quot;nw&quot;&gt;(613) 565-9656,&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;poste 2&lt;/span&gt;&lt;/a&gt;.">For baptisms, weddings, confirmation, First Communion or catechism, call the parish office at <a href="tel:+16135659656,2"><span class="nw">(613) 565-9656,</span> <span class="nw">ext. 2</span></a>.</p>
  </div>
 </section>
 <section id="life">
@@ -989,7 +995,7 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
   <div class="head"><span class="eb" data-fr="Soutenir la paroisse">Support the parish</span><h2 data-fr="Votre générosité fait vivre la paroisse">Your generosity keeps the lamps lit</h2>
   <figure class="gph"><img src="img/give-steeple-700.webp" srcset="img/give-steeple-700.webp 700w, img/give-steeple-1100.webp 1169w" sizes="(min-width:900px) 500px, 90vw" width="1169" height="877" loading="lazy" alt="The steeple and stone gable of St. Anne Church, with statues in their niches, at dusk" data-fr-alt="Le clocher et le pignon de pierre de l’église Sainte-Anne, avec les statues dans leurs niches, au crépuscule"></figure>
   <p class="lead" data-fr="L’électricité, le chauffage, les réparations et les assurances dépendent des quêtes régulières. Des reçus d’impôt sont émis.">Electricity, heating, repairs and insurance all depend on regular collections. Tax receipts are issued.</p>
-  <div class="ctas" style="margin-top:1.4rem"><a class="btn bw" href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener"><img class="ic bri" src="img/logos/canadahelps-64.webp" width="60" height="64" alt=""><span data-fr="Donner en ligne (CanaDon)">Donate online (CanadaHelps)</span></a><a class="btn bl" href="#ways" data-fr="Toutes les façons de donner ↓">All ways to give ↓</a></div></div>
+  <div class="ctas" style="margin-top:1.4rem"><a class="btn bw" href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener"><img class="ic bri" src="img/logos/canadahelps-64.webp" width="60" height="64" alt=""><span data-fr="Donner en ligne (CanaDon)">Donate online (CanadaHelps)</span></a></div></div>
   <div class="give" id="ways">
    <div class="gm">
     <div class="gc"><div class="gh"><span class="gi gib" aria-hidden="true"><img src="img/logos/interac-48.webp" width="48" height="48" alt=""></span><b data-fr="Virement Interac">Interac e-Transfer</b></div>
@@ -1026,7 +1032,7 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
   <div class="bul">
    <a class="bc" href="https://stclement-ottawa.org/wp-content/uploads/2026/10/2026-10-11-Dominica-Vicesima-post-Pentecosten_rasterized.pdf" target="_blank" rel="noopener"><span class="pdf">PDF</span><span><b data-fr="20e dimanche après la Pentecôte">20th Sunday after Pentecost</b><span data-fr="11 octobre 2026 · le plus récent">October 11, 2026 · latest</span></span></a>
    <a class="bc" href="https://stclement-ottawa.org/wp-content/uploads/2026/10/2026-10-04-Regina-Sacratissimi-Rosarii_rasterized.pdf" target="_blank" rel="noopener"><span class="pdf">PDF</span><span><b data-fr="Solennité du saint Rosaire">Solemnity of the Holy Rosary</b><span data-fr="4 octobre 2026">October 4, 2026</span></span></a>
-   <a class="bc" href="#stay"><span class="pdf" style="background:var(--gold)" data-fr="COURRIEL">EMAIL</span><span><b data-fr="Chaque semaine par courriel">Weekly by email</b><span data-fr="Abonnez-vous sur Flocknote">Subscribe on Flocknote</span></span></a>
+   
   </div>
   <div class="split rev sit" id="stay" style="margin-top:calc(var(--sec)*.6)">
    <div class="ph rv"><img src="img/missal-pad-900.webp" srcset="img/missal-pad-900.webp 900w, img/missal-pad-1400.webp 1400w" sizes="(min-width:900px) 400px, 90vw" width="900" height="694" alt="An open Missale Romanum with red ribbons" data-fr-alt="Un Missale Romanum ouvert, aux signets rouges" loading="lazy"></div>
@@ -1068,7 +1074,7 @@ html[lang=fr] .day.on::before{content:"Aujourd’hui"}
 <footer>
  <div class="w">
   <div class="fg">
-   <div><div class="flock"><img class="fshield" src="img/brand/stclement-160.png" width="45" height="52" alt="Saint Clement Parish coat of arms" data-fr-alt="Armoiries de la paroisse Saint-Clément" loading="lazy"><h4 data-fr="&lt;span class=&quot;l&quot;&gt;Paroisse Saint-Clément&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;à l’église Sainte-Anne&lt;/span&gt;"><span class="l">Saint Clement Parish</span> <span class="l">at St. Anne Church</span></h4></div><p class="fsince" data-fr="&lt;span class=&quot;nw&quot;&gt;L’église Sainte-Anne depuis 1873 ·&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;La paroisse Saint-Clément depuis 1968&lt;/span&gt;"><span class="nw">St. Anne Church since 1873 ·</span> <span class="nw">Saint Clement Parish since 1968</span></p><p data-fr="Messes et sacrements dans le rite romain traditionnel. Archidiocèse d’Ottawa-Cornwall. Desservie par les prêtres de la Fraternité Sacerdotale Saint-Pierre.">Masses and Sacraments in the traditional Roman Rite. Archdiocese of Ottawa-Cornwall. Served by priests of the Priestly Fraternity of St. Peter.</p>
+   <div><div class="flock"><img class="fshield" src="img/brand/stclement-160.png" width="45" height="52" alt="Saint Clement Parish coat of arms" data-fr-alt="Armoiries de la paroisse Saint-Clément" loading="lazy"><h4 data-fr="&lt;span class=&quot;l&quot;&gt;Paroisse Saint-Clément&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;à l’église Sainte-Anne&lt;/span&gt;"><span class="l">Saint Clement Parish</span> <span class="l">at St. Anne Church</span></h4></div><p class="fsince" data-fr="&lt;span class=&quot;nw&quot;&gt;L’église Sainte-Anne depuis 1873 ·&lt;/span&gt; &lt;span class=&quot;nw&quot;&gt;La paroisse Saint-Clément depuis 1968&lt;/span&gt;"><span class="nw">St. Anne Church since 1873 ·</span> <span class="nw">Saint Clement Parish since 1968</span></p><p class="ftag" data-fr="La messe latine traditionnelle au cœur d’Ottawa.">The Traditional Latin Mass in the heart of Ottawa.</p>
    <div class="soc"><a class="s-ig" href="https://www.instagram.com/stclement.fssp/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig-app"/></svg></a><a class="s-fb" href="https://www.facebook.com/stclementottawa/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fbc"/></svg></a><a class="s-yt" href="https://youtube.com/@st.clementsparishparoisses8409" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt-app"/></svg></a></div></div>
    <div><h4 data-fr="Visiter">Visit</h4><ul><li data-fr="528, rue Old St. Patrick">528 Old St. Patrick Street</li><li data-fr="Ottawa (Ontario) K1N 5L5">Ottawa, ON K1N 5L5</li><li><a href="tel:+16135659656">(613) 565-9656</a></li><li><a href="mailto:office.st.clement@rogers.com">office.st.clement@rogers.com</a></li></ul></div>
    <div><h4 data-fr="La paroisse">Parish</h4><ul><li><a href="#mass" data-fr="Horaire">Mass times</a></li><li><a href="#sacraments" data-fr="Sacrements">Sacraments</a></li><li><a href="#bulletin" data-fr="Feuillet">Bulletin</a></li><li><a href="https://www.canadahelps.org/en/charities/st-clements-parishla-paroisse-st-clement/" target="_blank" rel="noopener" data-fr="Faire un don">Donate</a></li></ul></div>
