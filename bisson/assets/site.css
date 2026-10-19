@@ -396,3 +396,4 @@ header{z-index:1100}
 .rprog{position:fixed;top:0;left:0;right:0;height:3px;z-index:1150;pointer-events:none}
 .rprog i{display:block;height:100%;background:linear-gradient(90deg,#1fa814,#27c819);transform:scaleX(0);transform-origin:0 50%;box-shadow:0 0 8px rgba(39,200,25,.55);will-change:transform}
 @media(prefers-reduced-motion:reduce){.rprog i{transition:none!important;box-shadow:none}}
+.head.stack h2:last-child{margin-bottom:0}
