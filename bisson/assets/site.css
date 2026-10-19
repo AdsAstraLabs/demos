@@ -32,7 +32,7 @@ section{padding:7rem 0}.lt{background:var(--cream)}.dk{background:var(--g);color
 /* services */
 .sv{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}.card{position:relative;border-radius:22px;overflow:hidden;min-height:440px;color:#fff;display:flex;align-items:flex-end;isolation:isolate;background:#222}
 .card video,.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s cubic-bezier(.2,.7,.2,1)}.card:hover video,.card:hover img{transform:scale(1.06)}
-.card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(6,12,8,.92) 0%,rgba(6,12,8,.35) 55%,rgba(6,12,8,.1))}.card .in{padding:1.8rem}.card .n{font-family:var(--hf);color:var(--lime);font-weight:800;font-size:.85rem;letter-spacing:.15em}
+.card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(6,12,8,.92) 0%,rgba(6,12,8,.35) 55%,rgba(6,12,8,.1))}.card .in{padding:1.8rem}
 .card h3{font-size:1.9rem;margin:.4rem 0 .6rem}.card p{color:rgba(255,255,255,.82);font-size:.95rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .4s}.card:hover p,.card:focus-within p{max-height:9rem;opacity:1}
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}.stat{padding:2.6rem 1.6rem;border-right:1px solid rgba(255,255,255,.12)}.stat:last-child{border:0}.stat b{display:block;font-family:var(--hf);font-stretch:80%;font-size:clamp(3rem,5.5vw,4.6rem);line-height:1;color:var(--lime)}.stat span{display:block;font-weight:600;margin-top:.5rem}.stat small{color:rgba(255,255,255,.5);font-size:.78rem}
@@ -245,7 +245,7 @@ nav a:after{background:var(--or)}
 summary:after{color:var(--or)}
 input:focus,select:focus,textarea:focus{border-color:var(--or);box-shadow:0 0 0 4px rgba(246,112,35,.18)}
 .chips input:checked+span{background:var(--g);border-color:var(--lime)}
-.card .n{color:var(--lime)}
+
 .ft a:hover{color:var(--lime)}
 .loc{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:#fff;text-decoration:underline;text-decoration-color:var(--lime);text-underline-offset:6px;text-decoration-thickness:2px}.loc svg{width:18px;height:18px;color:var(--or);flex:none}
 .prose a{color:var(--or-ink);text-decoration-color:var(--or)}
