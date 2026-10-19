@@ -279,7 +279,3 @@ a.card{color:#fff}
 /* stacked section header: eyebrow, heading, one tight line, left-aligned */
 .head.stack{display:block;margin-bottom:2.2rem}.head.stack h2{margin-bottom:.5rem}.head.stack p{max-width:60ch;color:var(--mut);margin:0}
 .lt .hl-or{color:var(--or-ink)}.dk .hl-or,.hx .hl-or{color:var(--or)}
-/* equipment / fleet section */
-.eqg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.eqg figure{margin:0;border-radius:18px;overflow:hidden;background:#1b2b20;border:1px solid rgba(255,255,255,.08)}
-.eqg img{width:100%;aspect-ratio:3/3.6;object-fit:cover;display:block}.eqg figcaption{padding:1rem 1.1rem 1.2rem;color:rgba(255,255,255,.78);font-size:.9rem}.eqg figcaption b{display:block;color:#fff;font-family:var(--hf);text-transform:uppercase;font-stretch:85%;font-size:1.1rem;margin-bottom:.3rem}
-@media(max-width:960px){.eqg{grid-template-columns:1fr 1fr;gap:.7rem}.eqg figcaption{font-size:.8rem;padding:.8rem}}
