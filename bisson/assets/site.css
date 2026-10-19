@@ -374,3 +374,12 @@ header{z-index:1100}
 .ci2 b.em2 span{display:inline-block}
 @media(max-width:960px){.ci2{grid-template-columns:1fr;row-gap:1rem}}
 @media(max-width:1180px){.trust .badges{flex:1 1 100%}}
+/* trust strip with 5 badges: tighter so it stays one row on desktop */
+.trust .w{gap:1.1rem}
+.trust .badges{gap:.55rem}
+.trust .cbadge{padding:.55rem .7rem}
+.bbb-seal{padding:.4rem .5rem}
+.bbb-seal img{height:40px!important}
+.trust .tp{gap:.75rem}
+.trust .tp .wsib-b img{height:34px}
+.trust .tp p{font-size:.84rem}
