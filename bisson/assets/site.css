@@ -279,3 +279,7 @@ a.card{color:#fff}
 /* stacked section header: eyebrow, heading, one tight line, left-aligned */
 .head.stack{display:block;margin-bottom:2.2rem}.head.stack h2{margin-bottom:.5rem}.head.stack p{max-width:60ch;color:var(--mut);margin:0}
 .lt .hl-or{color:var(--or-ink)}.dk .hl-or,.hx .hl-or{color:var(--or)}
+/* homepage service-area CTA link, ~1.5x */
+.loc.loc-xl{font-size:1.5rem;gap:.7rem;text-underline-offset:9px;text-decoration-thickness:3px}
+.loc.loc-xl svg{width:27px;height:27px}
+@media(max-width:960px){.loc.loc-xl{font-size:1.3rem}.loc.loc-xl svg{width:24px;height:24px}}
