@@ -320,3 +320,13 @@ a.card{color:#fff}
 .ci2{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
 .ci2 b.em2{font-size:1.02rem;word-break:normal;overflow-wrap:anywhere}
 @media(max-width:960px){#contact .qf .btn{letter-spacing:.12em;font-size:.76rem}.ci2{grid-template-columns:1fr}}
+/* WSIB Ontario mark: official SVG, unaltered, on a light badge for dark sections */
+.trust .tp{display:flex;align-items:center;gap:1rem;max-width:40rem}
+.trust .tp p{max-width:none;margin:0}
+.wsib-b{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;padding:.45rem .7rem;flex:none;line-height:0}
+.wsib-b img{display:block;height:38px;width:auto}
+.wsib-b.sm{padding:.3rem .5rem;border-radius:6px;margin-right:.7rem}
+.wsib-b.sm img{height:26px}
+.fbot .fr2{display:flex;align-items:center;justify-content:flex-end;text-align:right}
+@media(max-width:960px){.trust .tp{gap:.8rem}.wsib-b img{height:32px}.fbot .fr2{justify-content:flex-start;text-align:left}.wsib-b.sm img{height:24px}}
+.trust .tp{max-width:none}
