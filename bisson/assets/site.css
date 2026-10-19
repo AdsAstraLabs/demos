@@ -397,3 +397,11 @@ header{z-index:1100}
 .rprog i{display:block;height:100%;background:linear-gradient(90deg,#1fa814,#27c819);transform:scaleX(0);transform-origin:0 50%;box-shadow:0 0 8px rgba(39,200,25,.55);will-change:transform}
 @media(prefers-reduced-motion:reduce){.rprog i{transition:none!important;box-shadow:none}}
 .head.stack h2:last-child{margin-bottom:0}
+/* mobile drawer: solid, full-height below header, own scroll (WebKit / in-app browser safe) */
+header.s{-webkit-backdrop-filter:blur(12px)}
+header.mo,header.mo.s{background:#0d120e!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.mm.o{position:fixed;top:78px;left:0;right:0;bottom:auto;height:calc(100vh - 78px);height:calc(100dvh - 78px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:#0d120e!important;z-index:1090;border-top:1px solid rgba(255,255,255,.1)}
+.mm.o ul{padding:.8rem 0 calc(2rem + env(safe-area-inset-bottom))}
+html.mmo,html.mmo body{overflow:hidden;height:100%}
+html.mmo .sticky{display:none}
+header .mm .w{display:block;height:auto;align-items:initial}
