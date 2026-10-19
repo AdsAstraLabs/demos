@@ -330,3 +330,17 @@ a.card{color:#fff}
 .fbot .fr2{display:flex;align-items:center;justify-content:flex-end;text-align:right}
 @media(max-width:960px){.trust .tp{gap:.8rem}.wsib-b img{height:32px}.fbot .fr2{justify-content:flex-start;text-align:left}.wsib-b.sm img{height:24px}}
 .trust .tp{max-width:none}
+/* contact: calmer, matches the demo map card (Luke, Oct 19) */
+.ctbox{background:#0d140e;border:2px solid rgba(39,200,25,.55);border-radius:24px;box-shadow:none;padding:1.4rem 1.6rem;gap:1.4rem}
+.ctbox h3{color:#fff;font-weight:850;font-size:clamp(1.1rem,1.7vw,1.45rem)}
+.ctbox h3 em{color:var(--lime);text-decoration:none}
+.ctbox h3 span{color:rgba(255,255,255,.62);font:700 .66rem var(--bf);letter-spacing:.18em;margin-top:.55rem;text-transform:uppercase}
+#contact .qf{background:#0d140e;border:2px solid rgba(39,200,25,.55);border-radius:24px;box-shadow:none;padding:2rem 2.2rem}
+#contact .qf h3{color:#fff}
+#contact .qf .demo{border-radius:10px;border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.7)}
+#contact .qf label{color:rgba(255,255,255,.62);letter-spacing:.18em;font-size:.66rem}
+#contact .qf input:focus,#contact .qf select:focus,#contact .qf textarea:focus{border-bottom-color:var(--lime)}
+#contact .qf .chips span{border-radius:999px;border-color:rgba(255,255,255,.2)}
+#contact .qf .btn{border-radius:14px;box-shadow:none;letter-spacing:.14em;background:var(--lime)}
+#contact .qf .btn:hover{background:#3be02c}
+@media(max-width:960px){.ctbox{padding:1.1rem 1.2rem}#contact .qf{padding:1.3rem 1.1rem;margin-right:0;border-radius:20px}}
