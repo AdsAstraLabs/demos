@@ -383,3 +383,16 @@ header{z-index:1100}
 .trust .tp{gap:.75rem}
 .trust .tp .wsib-b img{height:34px}
 .trust .tp p{font-size:.84rem}
+/* trust statement: more prominent (Luke) */
+.trust .tp p{font-size:1.12rem;line-height:1.35;color:#fff;font-weight:600;letter-spacing:.005em}
+.trust .tp p strong{font-weight:700}
+.trust .tp p b{font-weight:800;color:#fff}
+.trust .tp p b.g5{color:#27c819}
+.trust .tp .wsib-b img{height:40px}
+.fbot .fr2{font-size:.86rem}
+.fbot .fr2 b{font-weight:700;color:#fff}
+@media(max-width:960px){.trust .tp p{font-size:1.02rem}}
+/* reading-progress bar (ported from St. Clement demo), live green; above the sticky header, no layout shift */
+.rprog{position:fixed;top:0;left:0;right:0;height:3px;z-index:1150;pointer-events:none}
+.rprog i{display:block;height:100%;background:linear-gradient(90deg,#1fa814,#27c819);transform:scaleX(0);transform-origin:0 50%;box-shadow:0 0 8px rgba(39,200,25,.55);will-change:transform}
+@media(prefers-reduced-motion:reduce){.rprog i{transition:none!important;box-shadow:none}}
