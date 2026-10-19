@@ -266,3 +266,16 @@ a.card{color:#fff}
 @media(max-width:560px){.ft .fg{grid-template-columns:1fr}}
 .ph-hero .ctas .btn{padding:.9rem 1.4rem}
 .ft nav{display:block!important;color:inherit;font-size:inherit}
+/* hero v6 (Luke, Oct 19): live-site hierarchy: big logo, "Professional Tree Service", orange service-area line, then buttons; no sub-paragraph */
+.hero .w.hv2{display:flex!important;flex-direction:column;align-items:center;text-align:center;padding:calc(78px + 3vh) 0 5vh}
+.hlogo2{display:block;width:min(900px,78vw);max-height:38vh;height:auto;object-fit:contain;margin:0 auto 2.4vh;filter:drop-shadow(0 0 2px rgba(0,0,0,.6)) drop-shadow(0 20px 50px rgba(0,0,0,.7))}
+.hero .hv2 h1{font-size:clamp(2.4rem,6.6vh,4.6rem)!important;max-width:none!important;margin:0 auto 3vh!important;line-height:.98}
+.hero .hv2 h1 em{display:block;font-style:normal;color:var(--or);font-size:.52em;letter-spacing:.06em;margin-top:.5em;line-height:1.15}
+.hero .hv2 .ctas{justify-content:center}.hero .hv2 .grt{margin-top:3vh}
+@media(max-width:960px){.hero .w.hv2{padding:84px 0 4svh}.hlogo2{width:92vw;max-height:30svh;margin-bottom:2svh}.hero .hv2 h1{font-size:clamp(1.9rem,8.6vw,2.6rem)!important;margin-bottom:2.4svh!important}.hero .hv2 h1 em{font-size:.56em}.hero .hv2 .ctas{width:100%}.hero .hv2 .grt{margin-top:2.2svh;font-size:.76rem}}
+/* services heading flows straight into the cards */
+.head.hd-tight{margin-bottom:2rem}.head.hd-tight h2{margin-bottom:0}
+@media(max-width:960px){.head.hd-tight{margin-bottom:1.4rem}}
+/* stacked section header: eyebrow, heading, one tight line, left-aligned */
+.head.stack{display:block;margin-bottom:2.2rem}.head.stack h2{margin-bottom:.5rem}.head.stack p{max-width:60ch;color:var(--mut);margin:0}
+.lt .hl-or{color:var(--or-ink)}.dk .hl-or,.hx .hl-or{color:var(--or)}
