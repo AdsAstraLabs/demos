@@ -283,3 +283,40 @@ a.card{color:#fff}
 .loc.loc-xl{font-size:1.5rem;gap:.7rem;text-underline-offset:9px;text-decoration-thickness:3px}
 .loc.loc-xl svg{width:27px;height:27px}
 @media(max-width:960px){.loc.loc-xl{font-size:1.3rem}.loc.loc-xl svg{width:24px;height:24px}}
+/* ===== contact/quote: ported from live bissonservices.ca branding ===== */
+#contact{background:#f6f1e7}
+#contact .qt{align-items:start}
+#contact h2 .hl{color:var(--or-ink)}
+.ci2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;margin:2rem 0 0}
+.ci2>a,.ci2>div{display:flex;align-items:flex-start;gap:.8rem;color:#13261a;font-weight:400}
+.ci2 .cico{color:#1f9e14;flex:none;margin-top:.15rem}
+.ci2 small{display:block;font:600 .68rem var(--bf);letter-spacing:.25em;text-transform:uppercase;color:var(--mut);margin:0 0 .25rem}
+.ci2 b{display:block;font-family:var(--hf);font-weight:800;font-size:1.45rem;line-height:1.1;text-transform:uppercase;font-stretch:85%;color:#13261a}
+.ci2 b.em2{font-size:1.1rem;text-transform:uppercase;word-break:break-all}
+.ci2 b.sm2{font-size:1.05rem}
+.ci2 em{display:block;font-style:normal;font-size:.8rem;color:var(--mut);margin-top:.2rem}
+.ci2 a:hover b{color:#c4500e}
+.ctbox{margin-top:2.2rem;background:#121412;border:2px solid #27c819;box-shadow:8px 8px 0 0 #f67023;padding:1.4rem 1.4rem 1.5rem;display:flex;align-items:center;gap:1.3rem}
+.ctbox img{width:clamp(110px,28%,170px);height:auto;flex:none;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+.ctbox h3{margin:0;color:#f6f1e7;font-family:var(--hf);font-size:clamp(1.15rem,2vw,1.6rem);line-height:1.05;text-transform:uppercase;font-stretch:85%}
+.ctbox h3 em{font-style:normal;color:#f67023;text-decoration:underline;text-decoration-color:#27c819;text-underline-offset:5px;text-decoration-thickness:2px}
+.ctbox h3 span{display:block;margin-top:.6rem;font:600 .68rem var(--bf);letter-spacing:.18em;color:rgba(246,241,231,.8)}
+#contact .qf{background:#121412;border:2px solid #27c819;border-radius:0;box-shadow:8px 8px 0 0 #f67023;padding:2rem 2.2rem;color:#f6f1e7}
+#contact .qf h3{color:#f6f1e7;font-family:var(--hf);text-transform:uppercase;font-stretch:85%;font-size:1.5rem;letter-spacing:.01em}
+#contact .qf .demo{background:transparent;border:1px solid rgba(246,112,35,.7);color:#ffb27f;border-radius:0}
+#contact .qf label{color:#27c819;font:700 .7rem var(--bf);letter-spacing:.16em;text-transform:uppercase}
+#contact .qf input,#contact .qf select,#contact .qf textarea{background:transparent;border:0;border-bottom:1px solid rgba(246,241,231,.3);border-radius:0;color:#f6f1e7;padding:.7rem .1rem;font:400 .95rem var(--bf);letter-spacing:0;text-transform:none;box-shadow:none}
+#contact .qf input::placeholder,#contact .qf textarea::placeholder{color:rgba(246,241,231,.4)}
+#contact .qf input:focus,#contact .qf select:focus,#contact .qf textarea:focus{outline:none;border-bottom-color:#27c819}
+#contact .qf select option{background:#121412;color:#f6f1e7}
+#contact .qf textarea{resize:none;height:70px}
+#contact .qf .chips span{border:1px solid rgba(246,241,231,.3);border-radius:0;color:#f6f1e7;background:transparent;font:500 .8rem var(--bf);letter-spacing:.02em;text-transform:none}
+#contact .qf .chips input:checked+span{background:#27c819;border-color:#27c819;color:#0b1a0d}
+#contact .qf .chips input:focus-visible+span{outline:2px solid #f67023;outline-offset:2px}
+#contact .qf .btn{width:100%;justify-content:center;background:#27c819;color:#0b1a0d;border-radius:0;font:800 .82rem var(--bf);letter-spacing:.22em;text-transform:uppercase;box-shadow:inset 0 0 0 2px #121412,inset 0 0 0 3px rgba(11,26,13,.55);padding:1rem 1.2rem}
+#contact .qf .btn:hover{background:#3be02c}
+@media(max-width:960px){.ci2{grid-template-columns:1fr;gap:1rem}.ci2 b{font-size:1.25rem}.ctbox{padding:1.1rem;gap:1rem}#contact .qf{padding:1.3rem 1.1rem;margin-right:8px}#contact .qf h3{font-size:1.2rem}}
+.ci2>a>div,.ci2>div>div{display:block}
+.ci2{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.ci2 b.em2{font-size:1.02rem;word-break:normal;overflow-wrap:anywhere}
+@media(max-width:960px){#contact .qf .btn{letter-spacing:.12em;font-size:.76rem}.ci2{grid-template-columns:1fr}}
