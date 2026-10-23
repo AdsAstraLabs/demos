@@ -655,6 +655,35 @@ summary{color:var(--b)}
 body.brand-tk .hero .hv2 h1{text-transform:uppercase!important;letter-spacing:-.01em!important;font-weight:900!important;text-shadow:0 2px 12px rgba(0,0,0,.35),0 2px 24px rgba(10,30,15,.7)!important}
 body.brand-tk .hero .hv2 h1 em{font-weight:800!important;color:var(--lime)!important;text-shadow:0 0 3px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.75),0 0 18px rgba(0,0,0,.55),0 2px 24px rgba(10,30,15,.7)!important}
 
+/* Luke 13:48: home service-area section mirrors the Hedge King layout in TK dress - text left (eyebrow, two-line headline, areas line, pin link), open map right (small caps heading + range, unframed Leaflet map, soft corners, TK badge marker). Stacked on <=960px with a full-width map. */
+#areas.k-ar2{padding:6.5rem 0 7rem}
+.k-ar2-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(2.5rem,5vw,5rem);align-items:center}
+.k-ar2 .k-ar2-t .k-h2{max-width:none!important;font-size:clamp(2.3rem,3.55vw,3.2rem)!important;line-height:1.04!important;text-wrap:initial}
+.k-ar2 .k-h2 .hl{text-decoration:underline;text-decoration-color:var(--lime,#8dd89e);text-decoration-thickness:.07em;text-underline-offset:.16em;text-decoration-skip-ink:none}
+.k-ar2 .k-ar2-t p{color:rgba(255,255,255,.92)!important;font-size:1.15rem;line-height:1.5;max-width:40ch;margin:1.5rem 0 0}
+.k-ar2 .k-ar2-t p.k-ar2-l{margin-top:1.9rem}
+.k-ar2-link{display:inline-flex;align-items:center;gap:.7rem;color:#fff!important;font:800 1.4rem/1.2 var(--hf);text-decoration:none}
+.k-ar2-link span{text-decoration:underline;text-decoration-color:var(--b70);text-decoration-thickness:3px;text-underline-offset:9px}
+.k-ar2-link svg{width:27px;height:27px;flex:none;color:var(--b70)}
+.k-ar2-link .k-arw{width:22px;height:22px;color:var(--b70);transition:transform .2s}
+.k-ar2-link:hover .k-arw{transform:translateX(4px)}
+.k-ar2-link:hover span{text-decoration-color:#fff}
+.k-ar2-mh{margin:0 0 clamp(1rem,1.6vw,1.4rem);font:800 clamp(1.05rem,1.6vw,1.45rem)/1.05 var(--hf);text-transform:uppercase;letter-spacing:.01em;color:#fff;text-wrap:balance}
+.k-ar2-mh em{font-style:normal;color:var(--b70)}
+.k-ar2-mh small{display:block;font:700 .72rem var(--bf,inherit);letter-spacing:.18em;color:rgba(255,255,255,.8);margin-top:.55rem}
+.k-ar2-map{position:relative;isolation:isolate;height:clamp(340px,48vh,460px);border-radius:20px;overflow:hidden;background:var(--b14);box-shadow:0 18px 44px rgba(4,14,6,.45),0 2px 6px rgba(4,14,6,.3)}
+.k-ar2-map #map{position:absolute!important;inset:0;z-index:1;width:100%;height:100%}
+.k-ar2-badge{position:absolute;left:50%;top:50%;z-index:500;width:clamp(9.5rem,27%,11.5rem);height:auto;transform:translate(-50%,-100%);pointer-events:none;filter:drop-shadow(0 6px 14px rgba(4,14,6,.38)) drop-shadow(0 1px 2px rgba(4,14,6,.3))}
+@media(max-width:960px){
+#areas.k-ar2{padding:4.5rem 0 5rem}
+.k-ar2-g{grid-template-columns:1fr;gap:2.4rem}
+.k-ar2 .k-ar2-t .k-h2{font-size:clamp(1.8rem,8.4vw,2.9rem)!important}
+.k-ar2-link{font-size:1.25rem}.k-ar2-link svg{width:24px;height:24px}
+.k-ar2-mh{font-size:1.15rem}
+.k-ar2-map{height:320px}
+}
+@media(max-width:600px){.k-ar2-m{margin-inline:calc(50% - 50vw)}.k-ar2-mh{padding-inline:5vw}.k-ar2-map{border-radius:0;height:340px}}
+
 /* ===== layout layer: tree-king ===== */
 /* ===== Tree King own layout below the hero (Luke 9:04: de-Bisson). Hero + header rules live in brand.css and are untouched. ===== */
 .k{--e:cubic-bezier(.2,.7,.2,1);position:relative;padding:6.5rem 0;background:#fff;color:var(--b8)}
