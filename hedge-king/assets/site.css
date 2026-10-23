@@ -1054,3 +1054,9 @@ body div#trust.trust .badges{container-type:inline-size}
 body div#trust.trust .cbadge{--trf:min(18px,calc((100cqw - 17.6px)*.0198));flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:.38em!important;height:51.2px!important;white-space:nowrap!important;font-size:var(--trf)!important;line-height:1!important;letter-spacing:0!important}
 body div#trust.trust .cbadge b{display:inline!important;font-size:calc(var(--trf)*1.2)!important;line-height:1!important}
 }
+
+/* Luke 13:24: desktop/tablet (>=961px, where the hedge video is an absolute box) - video bleeds full hero height to the right edge, no frame/radius/ledge, left edge feathered into the green via horizontal mask; mobile/stacked layout untouched */
+@media(min-width:961px){
+body section.hero-hk .hbg{top:0!important;bottom:0!important;right:0!important;left:34vw!important;border:0!important;border-radius:0!important;box-shadow:none!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.08) 8vw,rgba(0,0,0,.3) 19vw,rgba(0,0,0,.75) 26vw,#000 32vw);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.08) 8vw,rgba(0,0,0,.3) 19vw,rgba(0,0,0,.75) 26vw,#000 32vw)}
+body section.hero-hk .hbg:after{box-shadow:none!important;background:linear-gradient(90deg,rgba(19,52,24,.4) 0%,transparent 18%)!important}
+}
