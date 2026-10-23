@@ -1772,3 +1772,6 @@ html.rp-dock #hd>.rprog{position:absolute!important;top:100%!important;bottom:au
 #hd.mo .lg>img{opacity:0}
 #hd.mo .lg:after{opacity:1}
 @media(prefers-reduced-motion:reduce){#hd .lg>img,#hd .lg:after{transition:none}}
+/* Luke 08:35: arrow button ever so slightly higher (gap above notch floor line 14 -> 20px desktop, 10 -> 14px mobile) */
+body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 26px)!important}
+@media(max-width:760px){body section.hero-tk .scue{bottom:calc(var(--ov,52px) - 44px + 20px)!important}}
