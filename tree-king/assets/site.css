@@ -1808,3 +1808,133 @@ body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 26px)!important}
  .k-cr2 .k-cr2-bg video{left:-52vw!important}
  .k-cr2 .k-cr2-in{grid-template-columns:minmax(0,50vw)!important}
 }
+/* Luke 09:55 "too spread out and tall": crane card compacted (~40% shorter) at the same/narrower width so card + climber fit one laptop screen; all content kept */
+.k-cr2 .k-cr2-p{padding:2rem 2.3rem 2.1rem!important;clip-path:polygon(0 0,calc(100% - 46px) 0,100% 46px,100% 100%,0 100%)!important}
+.k-cr2 .k-cr2-p .k-eb{margin-bottom:.55rem!important}
+.k-cr2 .k-h2{font-size:clamp(2.4rem,3.7vw,3.6rem)!important;line-height:.98!important;margin:0!important}
+.k-cr2 .k-cr2-l{margin:.75rem 0 0!important;font-size:1.125rem!important;line-height:1.35!important}
+.k-cr2 .k-cr2-caps{display:flex!important;flex-wrap:wrap;gap:.35rem 1.4rem;margin:1rem 0 0!important;padding:.75rem 0 0!important;border-top:1px solid rgba(255,255,255,.16)}
+.k-cr2 .k-cr2-caps li{padding:0!important;border:0!important;gap:.55rem!important;font-size:1.02rem!important;line-height:1.3!important;white-space:nowrap}
+.k-cr2 .k-cr2-q{display:grid!important;grid-template-columns:auto 1fr;align-items:center;column-gap:.8rem;margin:1.1rem 0 1.25rem!important;padding-left:1rem!important;border-left-width:3px!important}
+.k-cr2 .k-cr2-q .k-gsig{grid-row:1;grid-column:1}
+.k-cr2 .k-cr2-q figcaption{grid-row:1;grid-column:2;margin:0!important;font-size:.85rem!important}
+.k-cr2 .k-cr2-q blockquote{grid-row:2;grid-column:1/-1;margin:.4rem 0 0!important}
+.k-cr2 .k-cr2-q p{font-size:1rem!important;line-height:1.42!important}
+.k-cr2 .k-cr2-p .k-btn{padding-top:.8rem!important;padding-bottom:.8rem!important}
+@media(min-width:1200px){.k-cr2.k-cr2{padding-top:clamp(6rem,8.5vw,8.5rem)!important;padding-bottom:clamp(3.5rem,5vw,5rem)!important}.k-cr2 .k-cr2-in{grid-template-columns:minmax(0,640px)!important}}
+@media(min-width:961px) and (max-width:1199px){.k-cr2.k-cr2{padding-top:21vw!important;padding-bottom:3.5rem!important}.k-cr2 .k-cr2-in{grid-template-columns:minmax(0,48vw)!important}}
+@media(max-width:960px){
+ .k-cr2 .k-cr2-p{padding:1.5rem 1.25rem 1.6rem!important;clip-path:polygon(0 0,calc(100% - 32px) 0,100% 32px,100% 100%,0 100%)!important}
+ .k-cr2 .k-h2{font-size:clamp(2.1rem,9vw,3rem)!important}
+ .k-cr2 .k-cr2-l{font-size:1.05rem!important}
+ .k-cr2 .k-cr2-caps{flex-direction:column;gap:.4rem}
+ .k-cr2 .k-cr2-caps li{white-space:normal;font-size:1rem!important}
+ .k-cr2 .k-cr2-q figcaption{font-size:.8rem!important}
+ .k-cr2 .k-cr2-q p{font-size:.97rem!important}
+ .k-cr2.k-cr2{padding-bottom:3rem!important}
+}
+/* Luke 10:05 "increase text size without changing the section size": crane card text v2, bigger type in the same card/section box (space from tighter padding/gaps + full card width) */
+.k-cr2 .k-cr2-p{padding:1.6rem 1.9rem 1.7rem!important}
+.k-cr2 .k-cr2-p .k-eb{margin-bottom:.35rem!important;font-size:1.15rem!important}
+.k-cr2 .k-h2{font-size:clamp(2.6rem,3.95vw,3.85rem)!important;line-height:.94!important}
+.k-cr2 .k-cr2-l{margin:.6rem 0 0!important;font-size:1.25rem!important;line-height:1.3!important}
+.k-cr2 .k-cr2-caps{gap:.3rem 1.2rem;margin:.8rem 0 0!important;padding:.65rem 0 0!important}
+.k-cr2 .k-cr2-caps li{font-size:1.125rem!important;gap:.5rem!important}
+.k-cr2 .k-cr2-q{margin:.9rem 0 1rem!important;padding-left:.9rem!important}
+.k-cr2 .k-cr2-q figcaption{font-size:.95rem!important}
+.k-cr2 .k-cr2-q blockquote{margin:.3rem 0 0!important}
+.k-cr2 .k-cr2-q p{font-size:1.125rem!important;line-height:1.38!important}
+.k-cr2 .k-cr2-p .k-btn{font-size:1rem!important;padding-top:.75rem!important;padding-bottom:.75rem!important}
+@media(max-width:960px){
+ .k-cr2 .k-cr2-p{padding:1.3rem 1.1rem 1.4rem!important}
+ .k-cr2 .k-h2{font-size:clamp(2.25rem,9.6vw,3.2rem)!important}
+ .k-cr2 .k-cr2-l{font-size:1.125rem!important}
+ .k-cr2 .k-cr2-caps li{font-size:1.06rem!important}
+ .k-cr2 .k-cr2-q figcaption{font-size:.85rem!important}
+ .k-cr2 .k-cr2-q p{font-size:1.03rem!important}
+}
+.k-cr2 .k-cr2-p .k-eb{margin-bottom:.2rem!important}
+.k-cr2 .k-cr2-caps{margin-top:.7rem!important}
+.k-cr2 .k-cr2-q{margin:.8rem 0 .85rem!important}
+@media(min-width:961px) and (max-width:1199px){.k-cr2 .k-cr2-l{font-size:1.17rem!important;letter-spacing:-.005em}}
+@media(max-width:960px){.k-cr2 .k-cr2-p .k-eb{font-size:1rem!important}.k-cr2 .k-cr2-q p{font-size:1.06rem!important}}
+@media(min-width:961px) and (max-width:1199px){.k-cr2 .k-h2{font-size:clamp(2.6rem,4.45vw,3.4rem)!important}.k-cr2 .k-cr2-caps li{font-size:1.17rem!important}.k-cr2 .k-cr2-q p{font-size:1.17rem!important}.k-cr2 .k-cr2-q figcaption{font-size:1rem!important}}
+@media(max-width:960px){.k-cr2 .k-h2{font-size:clamp(2.3rem,10.3vw,3.3rem)!important}.k-cr2 .k-cr2-l{font-size:1.17rem!important}.k-cr2 .k-cr2-caps li{font-size:1.1rem!important}.k-cr2 .k-cr2-q p{font-size:1.09rem!important}.k-cr2 .k-cr2-q figcaption{font-size:.9rem!important}}
+@media(min-width:961px) and (max-width:1199px){.k-cr2 .k-h2{font-size:clamp(2.7rem,4.75vw,3.55rem)!important}.k-cr2 .k-cr2-p{padding-top:1.8rem!important;padding-bottom:1.9rem!important}}
+@media(max-width:960px){.k-cr2 .k-cr2-p{padding-top:1.5rem!important;padding-bottom:1.6rem!important}}
+@media(min-width:1200px){.k-cr2 .k-cr2-p{padding-top:1.67rem!important;padding-bottom:1.78rem!important}}
+.k-cr2 .k-cr2-q p{text-wrap:pretty}
+/* Luke 10:16: FAQ in the quote band where the storm card was (same box: margin-top:auto + 2.2rem top pad), 2 pages x 4, one open at a time */
+.k-fq{margin-top:auto;padding-top:2.2rem}
+.k-fq-h{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.55rem}
+.k-fq-h .k-eb{margin:0}
+.k-fq-more{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem 0;background:none;border:0;color:var(--b32);font:800 .95rem/1.2 var(--hf);cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--b70)}
+.k-fq-more .k-arw{width:16px;height:16px;transition:transform .25s}
+.k-fq-more[aria-expanded="true"] .k-arw{transform:rotate(180deg)}
+.k-fq-more:hover{color:var(--b)}
+.k-fq-l{display:flex;flex-direction:column}
+.k-fq-pg{border-top:2px solid var(--b)}
+.k-fq-pg[hidden]{display:none}
+.k-fq-i{border-bottom:1px solid var(--b85)}
+.k-fq-i h3{margin:0;font:inherit}
+.k-fq-q{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;padding:.72rem 0;background:none;border:0;text-align:left;color:var(--b);font:800 1.08rem/1.25 var(--hf);letter-spacing:-.005em;cursor:pointer}
+.k-fq-q:hover span{color:var(--b32)}
+.k-fq-q:focus-visible{outline:3px solid var(--b70);outline-offset:2px}
+.k-fq-q i{position:relative;flex:none;width:26px;height:26px;background:var(--b95);clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);transition:background .25s}
+.k-fq-q i:before,.k-fq-q i:after{content:"";position:absolute;left:7px;right:7px;top:12px;height:2px;background:var(--b);transition:transform .3s}
+.k-fq-q i:after{transform:rotate(90deg)}
+.k-fq-i.is-open .k-fq-q i{background:var(--b70)}
+.k-fq-i.is-open .k-fq-q i:after{transform:rotate(0)}
+.k-fq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s ease,visibility .32s;visibility:hidden}
+.k-fq-a>div{overflow:hidden;min-height:0}
+.k-fq-a p{margin:0;padding:0 2.4rem .85rem 0;color:var(--b14,#1c2a1f);font-size:1rem;line-height:1.5}
+.k-fq-i.is-open .k-fq-a{grid-template-rows:1fr;visibility:visible}
+.k-fq-meas .k-fq-a{transition:none!important}
+@media (prefers-reduced-motion: reduce){.k-fq-a,.k-fq-q i,.k-fq-q i:after,.k-fq-more .k-arw{transition:none!important}}
+@media(max-width:960px){.k-fq{padding-top:1.8rem}.k-fq-q{font-size:1.04rem;padding:.7rem 0}.k-fq-a p{padding-right:.5rem}}
+/* Luke 10:16: emergency card as its own full-width section after services: photo | dark panel, same trimmed content */
+.k-em{background:#fff;padding:clamp(2.6rem,4.5vw,4rem) 0}
+.k-em-in{display:grid;grid-template-columns:1.25fr 1fr;min-height:clamp(260px,24vw,340px);clip-path:polygon(0 0,calc(100% - 30px) 0,100% 30px,100% 100%,30px 100%,0 calc(100% - 30px))}
+.k-em-ph{position:relative;overflow:hidden;min-height:220px}
+.k-em-ph picture,.k-em-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
+.k-em-ph .k-24{z-index:1}
+.k-em-b{background:var(--b8);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1.5rem;padding:clamp(1.8rem,3.4vw,3rem)}
+.k-em-b b{display:block;font:900 clamp(2rem,3.5vw,3.2rem)/1.02 var(--hf);letter-spacing:-.02em;color:#fff}
+.k-em-b b .hl{color:var(--b70)!important}
+@media(max-width:960px){.k-em-in{grid-template-columns:1fr;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}.k-em-ph{aspect-ratio:16/9;min-height:0}.k-em-b{padding:1.4rem 1.3rem 1.6rem;gap:1.1rem}.k-em-b b{font-size:clamp(1.9rem,8.4vw,2.4rem)}.k-em-b .k-storm-call{width:100%;justify-content:center}}
+.k-fq-i[hidden]{display:none}
+.k-fq-nav{display:inline-flex;align-items:center;gap:.8rem}.k-fq-nav[hidden]{display:none}
+.k-fq-n{font:700 .82rem/1 var(--bf,inherit);color:var(--b32);white-space:nowrap}
+.k-fq-more.is-back .k-arw{transform:rotate(180deg)}
+@media(max-width:960px){.k-fq{padding-top:1.4rem}.k-fq-q{padding:.62rem 0;font-size:1.03rem}.k-fq-a p{font-size:.98rem;line-height:1.45;padding-bottom:.75rem}.k-fq-h{margin-bottom:.45rem}}
+@media(min-width:961px) and (max-width:1199px){.k-fq{padding-top:1.6rem}.k-fq-q{font-size:1.02rem;padding:.62rem 0}.k-fq-a p{font-size:.97rem;line-height:1.45;padding-right:1rem;padding-bottom:.75rem}}
+@media(max-width:960px){.k-fq{padding-top:1.1rem}.k-fq-q{padding:.6rem 0}}
+@media(min-width:961px) and (max-width:1199px){.k-fq{padding-top:.95rem}}
+/* Luke 10:17: arrow button ever so slightly higher again (gap above notch floor 20 -> 26px desktop, 14 -> 18px mobile) */
+body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 32px)!important}
+@media(max-width:760px){body section.hero-tk .scue{bottom:calc(var(--ov,52px) - 44px + 24px)!important}}
+/* FAQ toggle label never wraps (keeps the header one line on every page) */
+.k-fq-more{white-space:nowrap}
+/* Luke 10:37 crane card v3: the review fits on 2 lines on desktop/tablet as a verbatim excerpt (full review stays in the DOM for screen readers + as the title tooltip); the freed line goes to bigger card text, same card + section size */
+.k-cr2 .k-q-full{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+@media(min-width:961px){
+ .k-cr2 .k-h2{font-size:clamp(2.8rem,4.35vw,4.2rem)!important}
+ .k-cr2 .k-cr2-p .k-eb{font-size:1.22rem!important}
+ .k-cr2 .k-cr2-l{font-size:1.375rem!important}
+ .k-cr2 .k-cr2-caps li{font-size:1.16rem!important}
+ .k-cr2 .k-cr2-q p{font-size:1.19rem!important}
+ .k-cr2 .k-cr2-q figcaption{font-size:1rem!important}
+ .k-cr2 .k-cr2-p .k-btn{font-size:1.08rem!important}
+}
+@media(min-width:961px) and (max-width:1199px){
+ .k-cr2 .k-h2{font-size:clamp(2.8rem,5.2vw,3.9rem)!important}
+ .k-cr2 .k-cr2-l{font-size:1.17rem!important}
+ .k-cr2 .k-cr2-caps li{font-size:1.17rem!important}
+ .k-cr2 .k-cr2-q p{font-size:1.17rem!important}
+ .k-cr2 .k-cr2-q figcaption{font-size:1rem!important}
+}
+@media(min-width:1200px){.k-cr2 .k-h2{font-size:clamp(2.8rem,4.45vw,4.3rem)!important}}
+@media(min-width:1200px) and (max-width:1365px){.k-cr2 .k-h2{font-size:clamp(2.8rem,4.55vw,4.3rem)!important}}
+@media(min-width:961px) and (max-width:1199px){.k-cr2 .k-h2{font-size:clamp(2.8rem,5.9vw,4.1rem)!important}}
+@media(max-width:960px){.k-cr2 .k-h2{font-size:clamp(2.3rem,11vw,3.5rem)!important}}
+@media(max-width:960px){.k-cr2 .k-h2{font-size:clamp(2.3rem,12.2vw,3.6rem)!important}.k-cr2 .k-cr2-p .k-eb{font-size:1.1rem!important}.k-cr2 .k-cr2-caps li{font-size:1.15rem!important}.k-cr2 .k-cr2-q p{font-size:1.15rem!important}.k-cr2 .k-cr2-p .k-btn{font-size:1.06rem!important}}
