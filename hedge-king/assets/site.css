@@ -990,3 +990,39 @@ body .ph img,body .ph2 img,body .pg figure img,body .story figure img,body .band
 .msr.msr-lg.ms-on .ms:after{animation:msShine2 4s cubic-bezier(.2,.7,.2,1) infinite;animation-delay:calc(var(--i,0)*90ms + 600ms)}
 @keyframes msShine2{0%{opacity:0}6%{opacity:.6}14%{opacity:0}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.msr .ms:after{animation:none!important;opacity:0!important}}
+/* Luke 10:09 "too boxed" + 10:10 "remove the caption row": open service-area map - no frame, no divider lines, heading on the section background, map soft-edged with a soft shadow */
+.mapbox,.inner-map .mapbox{border:0!important;background:none!important;border-radius:0!important;overflow:visible!important;gap:clamp(1rem,1.6vw,1.4rem)}
+.mapbox .mh{padding:0!important;border:0!important;text-align:left;font-size:clamp(1.15rem,1.75vw,1.6rem)}
+.mapbox .mh small{font-size:.72rem;opacity:.8;margin-top:.55rem}
+body .mapwrap{border-radius:var(--leafL)!important;overflow:hidden;height:clamp(340px,48vh,460px);box-shadow:0 18px 44px rgba(4,14,6,.45),0 2px 6px rgba(4,14,6,.3)}
+@media(max-width:960px){body .mapwrap{height:300px}.mapbox .mh{font-size:1.15rem}}
+/* Luke 10:11 map marker "fix": vector badge (img/map-badge.svg: white rounded badge + pointer tail + crisp logo), tail tip sits on the area centre, soft shadow */
+body .maplogo{background:none!important;padding:0!important;border-radius:0!important;width:clamp(8.5rem,21%,11.5rem)!important;transform:translate(-50%,-100%)!important;filter:drop-shadow(0 6px 14px rgba(4,14,6,.38)) drop-shadow(0 1px 2px rgba(4,14,6,.3))!important}
+.mapbox .mh{font-size:clamp(1.05rem,1.6vw,1.45rem)!important;text-wrap:balance}
+body .maplogo{width:clamp(9.5rem,27%,11.5rem)!important}
+/* Luke 10:24 "make like logo, white with dark green shadow highlight below" + "retain animation" (supersedes the 08:39 keep-gold note):
+   hero Call button = white face, logo-green text, deep-green ledge. Same depth/behaviour (6px rest, 8px hover lift, 3px press) and the same sliding fill, now a pale leaf tint */
+body .hero-hk .ctas .bp{background:#fff!important;color:var(--b)!important;border-color:#fff!important;--fill:var(--b92)}
+body .hero-hk .ctas .bp:hover{background:#fff!important;color:var(--b)!important}
+body section.hero-hk .ctas .bp{box-shadow:0 6px 0 var(--b8)!important}
+body section.hero-hk .ctas .bp:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--b8),0 16px 28px -12px rgba(0,0,0,.5)!important}
+body section.hero-hk .ctas .bp:active{transform:translateY(3px);box-shadow:0 3px 0 var(--b8)!important}
+/* Luke 10:27: the original site's hero line "Your Neighbors / Will Say WOW!" with WOW! circled by a hand-drawn crown-gold ring that draws itself in once (same Archivo 800 hero type).
+   The ring is sized in em off the word, so it scales with the headline at every breakpoint. */
+body section.hero-hk h1 .wow{position:relative;display:inline-block;white-space:nowrap;z-index:0;margin-left:.2em}
+.wow-ring{position:absolute;left:-.24em;right:-.3em;top:-.2em;bottom:-.16em;width:calc(100% + .54em);height:calc(100% + .36em);overflow:visible;pointer-events:none;z-index:-1;transform:rotate(-3deg)}
+.wow-ring path{fill:none;stroke:var(--gold);stroke-width:max(3px,.095em);stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1 1;stroke-dashoffset:0}
+.wow-js:not(.is-drawn) .wow-ring path{stroke-dashoffset:1}
+.wow-js.is-drawn .wow-ring path{transition:stroke-dashoffset 1s cubic-bezier(.22,.61,.36,1) .35s}
+@media(prefers-reduced-motion:reduce){.wow-ring path{transition:none!important;stroke-dashoffset:0!important}}
+/* Luke 10:45 (iPhone): Google rating visible in the first mobile screen without shrinking anything: a frosted glass badge docked in the bottom-right of the hedge video strip, linking to #reviews. Desktop keeps the in-panel pill only. */
+.hrev-m{display:none}
+@media(max-width:960px){
+ body .hero-hk .hrev-m{display:flex;align-items:center;gap:.45rem;position:absolute;z-index:3;right:12px;top:calc(74px + 30svh - 6px - 12px);transform:translateY(-100%);padding:.45rem .8rem .45rem .55rem;border-radius:0 14px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(10px) saturate(1.4);backdrop-filter:blur(10px) saturate(1.4);box-shadow:0 6px 18px -6px rgba(4,14,6,.55),inset 0 0 0 1px rgba(255,255,255,.6);color:var(--b8);font:700 .82rem/1 var(--hf);text-decoration:none;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+ body .hero-hk .hrev-m .gg{width:20px;height:20px;flex:none}
+ body .hero-hk .hrev-m b{font:800 1.12rem/1 var(--hf);color:var(--b8)}
+ body .hero-hk .hrev-m .st{font-size:.98rem;line-height:1;letter-spacing:0;display:inline-flex}
+ body .hero-hk .hrev-m .hrev-n{color:var(--b)}
+ body .hero-hk .hrev-m:active{transform:translateY(calc(-100% + 1px))}
+ body .hero-hk .hrev-m:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+}
