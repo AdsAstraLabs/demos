@@ -938,3 +938,8 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 .bt-pin span{display:none}
 @media (min-width:961px){.jb{padding-bottom:250px}.sq figcaption{min-height:2.9em}}
 .og .bt:nth-child(n){margin-top:0}
+/* Luke 6:52: one unbroken line on phones/tablets: bridge segments for the sections whose desktop line is hidden */
+.thw.th-mm,.thw.th-mt{display:none}
+@media (max-width:960px){.thw.th-mm{display:block}.fq2#faq{padding-bottom:150px}}
+@media (min-width:961px) and (max-width:1100px){.thw.th-mt{display:block}}
+.js .th path{transition:none}

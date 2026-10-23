@@ -14,7 +14,7 @@
 <link rel="icon" href="../favicon.ico" sizes="48x48"><link rel="icon" href="../img/icon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/PlayfairDisplay-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/fonts.css?v=6076170629">
-<link rel="stylesheet" href="../assets/site.css?v=60ac3c59ff">
+<link rel="stylesheet" href="../assets/site.css?v=716ceee68e">
 <!-- ===== LAUNCH BLOCK (disabled on this demo; enable only at launch on www.bisontree.ca, after Luke approves) =====
  1. Robots: swap the noindex meta above for
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -66,11 +66,11 @@ var rv=D.querySelectorAll('.rv');if('IntersectionObserver' in window&&!rm){var i
 /* gold thread: drawn with the scroll; line-art sprouts grow where it has reached, and fold back on the way up */
 (function(){var W=[].slice.call(D.querySelectorAll('.thw'));if(!W.length)return;
 function prep(w){var p=w.querySelector('path'),h=w.offsetHeight;if(!h||getComputedStyle(w).display=='none')return 0;if(w.ok)return 1;var L=p.getTotalLength(),N=160,m=-1e9;w.L=L;w.cm=[];
-var sx=w.offsetWidth/1000,sy=h/1000,S=0,pq=null;for(var i=0;i<=N;i++){var q=p.getPointAtLength(L*i/N);m=Math.max(m,q.y);w.cm.push(m);if(pq)S+=Math.hypot((q.x-pq.x)*sx,(q.y-pq.y)*sy);pq=q}w.S=S+2;p.style.strokeDasharray=w.S+'px '+w.S+'px';
+var sx=w.offsetWidth/1000,sy=h/1000,S=0,pq=null;w.cl=[];for(var i=0;i<=N;i++){var q=p.getPointAtLength(L*i/N);m=Math.max(m,q.y);w.cm.push(m);if(pq)S+=Math.hypot((q.x-pq.x)*sx,(q.y-pq.y)*sy);w.cl.push(S);pq=q}w.S=S+2;p.style.strokeDasharray=w.S+'px '+w.S+'px';
 w.sp=[].slice.call(w.querySelectorAll('.spr')).map(function(s){var t=+s.dataset.t,q=p.getPointAtLength(L*t);s.style.left=q.x/10+'%';s.style.top=q.y/10+'%';return [s,t]});w.ok=1;return 1}
 function run(){W.forEach(function(w){if(!prep(w))return;var t=1;if(!rm){var r=w.getBoundingClientRect(),yv=(innerHeight*.72-r.top)/r.height*1000,c=w.cm,n=c.length-1,i=0;while(i<n&&c[i+1]<=yv)i++;t=yv<c[0]?0:i/n}
-if(w.t===t)return;w.t=t;w.querySelector('path').style.strokeDashoffset=(w.S*(1-t))+'px';w.sp.forEach(function(a){a[0].classList.toggle('on',t>=a[1])})})}
-var f=0;function q(){if(!f)f=requestAnimationFrame(function(){f=0;run()})}addEventListener('scroll',q,{passive:true});addEventListener('resize',function(){W.forEach(function(w){w.ok=0;w.t=-1});q()});addEventListener('load',q);run()})();
+if(w.t===t)return;w.t=t;w.querySelector('path').style.strokeDashoffset=(t>=1?0:t<=0?w.S:w.S-w.cl[Math.round(t*(w.cl.length-1))])+'px';w.sp.forEach(function(a){a[0].classList.toggle('on',t>=a[1])})})}
+/* redraw every frame while the page moves (covers iOS momentum + visualViewport), stop after it settles */var f=0,ly=-1,st=0;function tick(){var y=scrollY;if(y!==ly){ly=y;st=0;run()}else st++;f=st<20?requestAnimationFrame(tick):0}function q(){st=0;if(!f)f=requestAnimationFrame(tick)}function rs(){W.forEach(function(w){w.ok=0;w.t=-1});ly=-1;q()}addEventListener('scroll',q,{passive:true});addEventListener('touchmove',q,{passive:true});addEventListener('touchend',q,{passive:true});if(window.visualViewport){visualViewport.addEventListener('scroll',q);visualViewport.addEventListener('resize',rs)}addEventListener('resize',rs);addEventListener('load',rs);if('ResizeObserver' in window){var ro=new ResizeObserver(function(){rs()});W.forEach(function(w){ro.observe(w)})}run()})();
 /* sticky call bar: phones only, after the hero, and never on top of another button */
 var sb=D.getElementById('sbar'),hero=D.querySelector('.hero,.ph'),raf=0;function bt(){raf=0;if(innerWidth>960){sb.classList.remove('on');return}
 var past=!hero||hero.getBoundingClientRect().bottom<0,show=past;if(show){var top=innerHeight-sb.offsetHeight-6;D.querySelectorAll('.btn,button,summary,input,select,textarea,.soc').forEach(function(el){if(!show||sb.contains(el)||mm.contains(el))return;var r=el.getBoundingClientRect();if(r.height&&r.bottom>top&&r.top<innerHeight)show=false})}
