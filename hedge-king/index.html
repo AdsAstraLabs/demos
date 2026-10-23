@@ -112,6 +112,9 @@ var c=document.querySelector('.gsum b');if(c){var to=parseFloat(c.textContent);i
    a soft shine sweeps across the row every ~4s via staggered opacity only, only while the row is on screen; reduced motion = static metal */
 (function(){var rows=[].slice.call(document.querySelectorAll('.st,.hst,.k-stars')).filter(function(e){return !e.children.length&&/^★+$/.test(e.textContent.trim())});
 rows.forEach(function(e){var n=e.textContent.trim().length,h='';for(var i=0;i<n;i++)h+='<i class="ms" aria-hidden="true" style="--i:'+i+'">★</i>';e.innerHTML=h;e.classList.add('msr')});
+/* 09:19: msr-lg (star >= 28px) keeps the subtle shine; msr-w = light background behind the row -> stronger grey lift */
+function lt(e){for(var x=e;x&&x.nodeType==1;x=x.parentElement){var c=getComputedStyle(x).backgroundColor.match(/[\d.]+/g);if(c&&(c.length<4||+c[3]>.5))return (.299*c[0]+.587*c[1]+.114*c[2])>170}return true}
+function sz(){rows.forEach(function(e){var m=e.firstChild;e.classList.toggle('msr-lg',!!m&&m.getBoundingClientRect().width>=27.5);e.classList.toggle('msr-w',lt(e))})}sz();var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(sz,150)});
 if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
 var io=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle('ms-on',x.isIntersecting)})});rows.forEach(function(e){io.observe(e)})})();
 </script></body></html>
