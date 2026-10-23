@@ -684,6 +684,15 @@ body.brand-tk .hero .hv2 h1 em{font-weight:800!important;color:var(--lime)!impor
 }
 @media(max-width:600px){.k-ar2-m{margin-inline:calc(50% - 50vw)}.k-ar2-mh{padding-inline:5vw}.k-ar2-map{border-radius:0;height:340px}}
 
+/* Luke 14:12 areas v3: "Not listed?" note + range line moved to the left column under "Every community we serve" (same white + leaf-green, small caps range); map fully open - no frame, radius, shadow or panel - and fills the right column. Mobile: text stack, then map. Nothing shrunk. */
+.k-ar2 .k-ar2-t p.k-ar2-mh{margin:2.6rem 0 0;max-width:none;color:#fff!important;font:800 clamp(1.05rem,1.6vw,1.45rem)/1.15 var(--hf);text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+.k-ar2 .k-ar2-t p.k-ar2-mh small{margin-top:.7rem;line-height:1.5;text-wrap:balance}
+.k-ar2-m{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.k-ar2-map{width:100%;height:clamp(420px,38vw,560px);border:0!important;border-radius:0!important;box-shadow:none!important;background:none!important;outline:0}
+.k-ar2-map .leaflet-container{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+@media(max-width:960px){.k-ar2 .k-ar2-t p.k-ar2-mh{font-size:1.15rem;margin-top:2.2rem}.k-ar2-map{height:360px}}
+@media(max-width:600px){.k-ar2 .k-ar2-t p.k-ar2-mh{padding-inline:0}.k-ar2-map{height:360px;border-radius:0!important}}
+
 /* ===== layout layer: tree-king ===== */
 /* ===== Tree King own layout below the hero (Luke 9:04: de-Bisson). Hero + header rules live in brand.css and are untouched. ===== */
 .k{--e:cubic-bezier(.2,.7,.2,1);position:relative;padding:6.5rem 0;background:#fff;color:var(--b8)}
