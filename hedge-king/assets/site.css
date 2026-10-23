@@ -1048,3 +1048,9 @@ body section.hero-hk .hv2 h1{--hf0:clamp(2.4rem,6.6vh,4.6rem);--hf1:max(var(--hf
 @media(min-width:961px){body section.hero-hk h1 .wow{margin-right:-.2em}}
 /* Luke 12:31: mobile/tablet (<=960px) hero shows exactly one rating, the frosted .hrev-m badge on the video; the white .grt card is desktop-only (it had been showing twice since bc3c0c2) */
 @media(max-width:960px){body section.hero-hk .grt{display:none!important}}
+/* Luke 13:12: trust badges on tablet/desktop (>=761px) read on one line: bold caps label + regular rest, scaled to the card width (all three share one size, capped at 18px/21.6px), centred. Card height 51.2px, band height and ledge unchanged; mobile untouched. */
+@media(min-width:761px){
+body div#trust.trust .badges{container-type:inline-size}
+body div#trust.trust .cbadge{--trf:min(18px,calc((100cqw - 17.6px)*.0198));flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:.38em!important;height:51.2px!important;white-space:nowrap!important;font-size:var(--trf)!important;line-height:1!important;letter-spacing:0!important}
+body div#trust.trust .cbadge b{display:inline!important;font-size:calc(var(--trf)*1.2)!important;line-height:1!important}
+}
