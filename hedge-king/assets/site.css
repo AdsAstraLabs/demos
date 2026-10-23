@@ -1079,3 +1079,21 @@ body section.hero-hk .ctas{margin-top:0!important;gap:10px!important;margin-bott
 body section.hero-hk .scue{bottom:calc(16px + env(safe-area-inset-bottom,0px))!important}
 }
 @media(max-width:760px){body section.hero-hk{padding-bottom:calc(10px + 48px + 16px + env(safe-area-inset-bottom,0px))!important}}
+/* Luke 14:25: every Google review carries the G logo + five metallic stars - "How we trim" quote gets the same signature row as the review cards (24px G, 1.5rem stars) */
+.quote .hq-gs{display:flex;align-items:center;gap:.6rem;margin:0 0 .8rem}
+body.brand-hk .quote img.hq-g{width:24px!important;height:24px!important;flex:none;border-radius:0!important;object-fit:contain}
+.quote .hq-gs .hst{font-size:1.5rem;letter-spacing:.03em;line-height:1;-webkit-text-stroke:0;white-space:nowrap;font-style:normal}
+/* Luke 14:38: hero headline as large as fits - width-bound on every viewport ('Your Neighbours' = 7.18em; WOW! ring is em-based so it scales with it, 2s draw kept). Tagline under it keeps its previous size. Space comes from the thinner rating card; nothing else shrinks. */
+@media(max-width:960px){
+body section.hero-hk .hv2 h1{font-size:clamp(1.9rem,calc((90vw - 39px)/7.45),3.6rem)!important}
+body section.hero-hk .hv2 h1 em{font-size:calc(clamp(1.9rem,8.6vw,2.6rem)*.5)!important}
+}
+@media(min-width:961px){
+body section.hero-hk .hv2 h1{--hf1:max(var(--hf0),min(var(--hf0) + 18px + max(0px,(100vh - 770px)*.146),(52vw - max(5vw,(100vw - 1200px)/2) - 2.5rem)/7.5));--hfo:max(var(--hf0),min(var(--hf0) + 10.29px + max(0px,(100vh - 770px)*.146),(52vw - max(5vw,(100vw - 1200px)/2) - 2.5rem)/7.95))}
+body section.hero-hk .hv2 h1 em{font-size:calc(var(--hfo)*.5)!important}
+}
+/* Luke 14:38: rating card thinner - vertical padding only (G, 4.9, stars and text unchanged, gold ledge kept) */
+@media(max-width:960px){body section.hero-hk .hv2>.grt{padding-top:3px!important;padding-bottom:3px!important}}
+@media(min-width:961px){body section.hero-hk .grt{padding-top:4px!important;padding-bottom:4px!important}}
+/* Luke 14:38/14:39: hero logo card - card stays exactly the same size; logo drawn centred (both axes) and ~8% larger into the side padding, nothing clipped */
+body section.hero-hk .hcrest .hlogo3{object-position:center!important;transform:scale(1.08);transform-origin:50% 50%}
