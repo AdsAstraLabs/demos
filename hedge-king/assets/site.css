@@ -963,3 +963,13 @@ body div#trust.trust{background:radial-gradient(70% 140% at 82% 115%,rgba(57,157
 body div#trust.trust+.mq{background:#133418!important;box-shadow:0 16px 0 0 #133418,0 -16px 0 0 #133418!important}
 body div#trust.trust+.mq i{color:#a9e4b2!important;opacity:.85}
 body.brand-hk div#trust.trust+.mq+#services{background:radial-gradient(ellipse 55% 45% at 88% 26%,rgba(57,157,73,.3),transparent 62%),radial-gradient(ellipse 50% 60% at 0% 100%,rgba(11,30,14,.5),transparent 60%),linear-gradient(180deg,#183f1e 0,#1b4823 220px,#1c4d24 420px)!important}
+/* Luke 08:47: (1) desktop scroll-arrow box anchored to the first viewport, not the hero bottom: on short windows the hero
+   grows past the viewport and the box was cut off. Box bottom = min(hero bottom, viewport bottom) - 32px, on two-column desktops >=1181px; tablet/small-laptop and mobile unchanged (no room beside the reviews pill / CTAs there).
+   (2) hero subline square bullet: crown gold -> leaf green. */
+@media(min-width:1181px){body section.hero-hk .scue{bottom:auto!important;top:calc(min(100%,100vh) - 56px - 32px)!important;top:calc(min(100%,100svh) - 56px - 32px)!important}}
+body section.hero-hk h1 em:before{background:#a9e4b2!important}
+/* Luke 08:49: gold scroll progress bar = exactly the 4px light-green header line (same thickness + position) at every breakpoint */
+.rprog{height:4px!important}
+html.rp-dock #hd>.rprog{top:calc(100% + 4px)!important;height:4px!important}
+/* Luke 08:49 photo hardening: a photo frame is never blank white while its image is still loading */
+body .ph img,body .ph2 img,body .pg figure img,body .story figure img,body .band-strip figure img{background-color:#dcebdc}
