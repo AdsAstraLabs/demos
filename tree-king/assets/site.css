@@ -1801,3 +1801,10 @@ body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 26px)!important}
 /* Luke 09:17 crane: no green tint over the crane video (natural colour, climber clear); keep only a green fade at the bottom into the next section. Copy stays on its solid green panel. */
 .k-cr2 .k-cr2-bg:after{background:linear-gradient(180deg,rgba(14,42,21,0) 0%,rgba(14,42,21,0) 66%,rgba(14,42,21,.55) 86%,#0e2a15 100%)!important}
 @media(max-width:1199px){.k-cr2 .k-cr2-bg:after{background:linear-gradient(180deg,rgba(14,42,21,0) 0%,rgba(14,42,21,0) 64%,rgba(14,42,21,.6) 88%,#0e2a15 100%)!important}}
+/* Luke 09:33 "on the job could be higher up": crane card raised on desktop/tablet so it no longer sits under empty sky; climber stays clear of the card; bottom green fade unchanged; <=960px untouched */
+@media(min-width:1200px){.k-cr2.k-cr2{padding-top:clamp(9rem,13vw,13rem)!important}}
+@media(min-width:961px) and (max-width:1199px){
+ .k-cr2.k-cr2{padding-top:30vw!important}
+ .k-cr2 .k-cr2-bg video{left:-52vw!important}
+ .k-cr2 .k-cr2-in{grid-template-columns:minmax(0,50vw)!important}
+}
