@@ -909,3 +909,25 @@ body.brand-hk #about{position:relative;z-index:2}
  body.brand-hk #how.hk-how .pg figure{box-shadow:0 26px 50px -20px rgba(0,0,0,.55)}
  body.brand-hk #about .ph{margin-top:-150px}
 }
+/* scroll progress v1 (Luke 00:15): crown gold, visible above the sticky header */
+.rprog{z-index:1300!important;height:4px!important;pointer-events:none!important}
+.rprog i{background:#f6b900!important;box-shadow:none!important}
+html.mmo .rprog{opacity:0}
+/* hero fit v1 (Luke 00:20): hero grows with its content; scroll button gets its own clear row above the bottom edge */
+body section.hero-hk{height:auto!important;padding-bottom:76px!important;box-sizing:border-box}
+body section.hero-hk .scue{bottom:30px!important}
+@media(max-width:760px){body section.hero-hk{padding-bottom:70px!important}body section.hero-hk .scue{bottom:26px!important}}
+/* seam specks fix (Luke 00:22): ragged edges overlap 16px (teeth are 13px deep) and the strip behind extends under them, so no page background shows through */
+section.dk.hx,.trust,.ft,.cta2,body.brand-hk #services{margin-top:-16px!important}
+section.dk.hx+section.dk.hx{margin-top:0!important}
+.mq{position:relative;box-shadow:0 16px 0 0 var(--b8),0 -16px 0 0 var(--b8)}
+.hero-hk+.trust,.hero-hk+section{box-shadow:none}
+/* heading highlight v2 (Luke 00:23): one gold underline that follows the phrase across line wraps; no second bar */
+body.brand-hk h1 .hl,body.brand-hk h2 .hl{background:none!important;padding-bottom:0!important;text-decoration:underline!important;text-decoration-color:#f6b900!important;text-decoration-thickness:4px!important;text-underline-offset:.16em!important;text-decoration-skip-ink:none!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+body.brand-hk h2:has(.hl):after{display:none!important}
+/* how we trim v2 (Luke 00:23): photo pair centred against the copy, no pull-up crop */
+@media(min-width:961px){
+ body.brand-hk #how.hk-how .story{align-items:center!important}
+ body.brand-hk #how.hk-how .pg{margin-top:0!important;align-self:center!important}
+ body.brand-hk #how.hk-how figure.tall{margin-top:0!important}
+}
