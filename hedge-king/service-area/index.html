@@ -80,4 +80,11 @@ var gs=[].slice.call(document.querySelectorAll('section.dk'));gs.forEach(functio
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;x.target.classList.add('in');io.unobserve(x.target)})},{rootMargin:'0px 0px -10% 0px'});fr.concat(gs).forEach(function(e){io.observe(e)});
 var c=document.querySelector('.gsum b');if(c){var to=parseFloat(c.textContent);if(to){var o2=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o2.disconnect();var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/600),e=1-Math.pow(1-k,3);c.textContent=(to*e).toFixed(1);if(k<1)requestAnimationFrame(f)})(t0)},{threshold:.6});o2.observe(c)}}
 })();
+</script><script>
+/* Luke 09:01: metallic Google stars (TK + HK only). Each star row is split into per-star glyphs (row keeps its role/aria-label or aria-hidden);
+   a soft shine sweeps across the row every ~4s via staggered opacity only, only while the row is on screen; reduced motion = static metal */
+(function(){var rows=[].slice.call(document.querySelectorAll('.st,.hst,.k-stars')).filter(function(e){return !e.children.length&&/^★+$/.test(e.textContent.trim())});
+rows.forEach(function(e){var n=e.textContent.trim().length,h='';for(var i=0;i<n;i++)h+='<i class="ms" aria-hidden="true" style="--i:'+i+'">★</i>';e.innerHTML=h;e.classList.add('msr')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle('ms-on',x.isIntersecting)})});rows.forEach(function(e){io.observe(e)})})();
 </script></body></html>

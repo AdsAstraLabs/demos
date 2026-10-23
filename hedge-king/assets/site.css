@@ -973,3 +973,10 @@ body section.hero-hk h1 em:before{background:#a9e4b2!important}
 html.rp-dock #hd>.rprog{top:calc(100% + 4px)!important;height:4px!important}
 /* Luke 08:49 photo hardening: a photo frame is never blank white while its image is still loading */
 body .ph img,body .ph2 img,body .pg figure img,body .story figure img,body .band-strip figure img{background-color:#dcebdc}
+
+/* Luke 09:01: metallic Google stars - gold gradient fill (highlight -> rich gold -> deep amber), bevel via drop-shadows, soft shine sweep (opacity only, in view only, off for reduced motion). Glyph size/spacing unchanged */
+.msr .ms{position:relative;display:inline-block;font-style:normal;color:#f5b301;background:linear-gradient(172deg,#fff4c2 0%,#ffd84d 26%,#f6b400 50%,#d99500 72%,#a86a00 88%,#e9b13a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 .5px 0 rgba(255,250,225,.55)) drop-shadow(0 1px .4px rgba(92,52,0,.5))}
+.msr .ms:after{content:"\2605";position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;background:linear-gradient(118deg,transparent 30%,rgba(255,255,255,.95) 48%,rgba(255,248,214,.85) 54%,transparent 70%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:0}
+.msr.ms-on .ms:after{animation:msShine 4s cubic-bezier(.2,.7,.2,1) infinite;animation-delay:calc(var(--i,0)*90ms + 600ms)}
+@keyframes msShine{0%{opacity:0}6%{opacity:1}14%{opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.msr .ms:after{animation:none!important;opacity:0!important}}
