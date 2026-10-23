@@ -933,3 +933,7 @@ body.brand-hk h2:has(.hl):after{display:none!important}
 }
 /* Luke 07:32: thicker scroll progress bar, matched to Tree King (4px -> 8px) */
 .rprog{height:8px!important}
+/* Luke 07:39: progress bar docked under the sticky header, overlaying the 4px light-green line below the dark-green border (no more top-of-viewport bar) */
+html.rp-dock #hd>.rprog{position:absolute!important;top:calc(100% + 4px)!important;bottom:auto!important;left:0!important;right:0!important;height:8px!important;z-index:5!important;margin:0!important}
+/* Luke 07:41: big-jobs box is never empty: poster frame painted behind the clip (shows if iOS blocks/fails the video) */
+body .em .ph2:has(> video){background:#123a1a url(../media/bigjobs-poster.jpg) 50% 50%/cover no-repeat}

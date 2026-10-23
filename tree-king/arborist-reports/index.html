@@ -76,6 +76,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&
 L.polygon(A,{color:'#174321',weight:10,opacity:1,fillColor:'#174321',fillOpacity:.25}).addTo(m);L.polygon(A,{color:'#54c46e',weight:4,opacity:1,fill:false}).addTo(m);
 function fit(){m.invalidateSize();m.fitBounds(B,{padding:[16,16]})}fit();setTimeout(fit,250);new ResizeObserver(fit).observe(el);el.dataset.ready=1};document.body.appendChild(s)},{rootMargin:'400px'}).observe(el)})();
 </script><script>
+/* Luke 07:39: dock the scroll progress bar onto the light-green line under the sticky header (moves with the header at any height) */
+(function(){var p=document.querySelector('.rprog'),h=document.getElementById('hd');if(p&&h&&p.parentNode!==h){h.appendChild(p);document.documentElement.classList.add('rp-dock')}})();
+/* Luke 07:41: iOS safety net for every looping/hero video: if the clip errors or never advances 4s after 'playing', drop the source so the poster frame stays visible */
+(function(){[].forEach.call(document.querySelectorAll('video[poster]'),function(v){var t=0,done=0;function back(){if(done)return;done=1;try{v.pause();[].forEach.call(v.querySelectorAll('source'),function(s){s.parentNode.removeChild(s)});v.removeAttribute('src');v.load()}catch(e){}v.classList.add('vfb')}v.addEventListener('playing',function(){clearTimeout(t);t=setTimeout(function(){if(!(v.currentTime>0))back()},4000)});v.addEventListener('error',back);var s=v.querySelector('source');if(s)s.addEventListener('error',back)})})();
 /* Tree King motion: IntersectionObserver, each element animates once; reduced motion = no animation */
 (function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,els=[].slice.call(document.querySelectorAll('.k-rv,.k-wipe,.k-frame,.k-seam,.k-zoom'));
 if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}else{
