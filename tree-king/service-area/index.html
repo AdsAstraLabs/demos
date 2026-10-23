@@ -72,6 +72,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&
 L.polygon(A,{color:'#174321',weight:10,opacity:1,fillColor:'#174321',fillOpacity:.25}).addTo(m);L.polygon(A,{color:'#54c46e',weight:4,opacity:1,fill:false}).addTo(m);
 function fit(){m.invalidateSize();m.fitBounds(B,{padding:[16,16]})}fit();setTimeout(fit,250);new ResizeObserver(fit).observe(el);el.dataset.ready=1};document.body.appendChild(s)},{rootMargin:'400px'}).observe(el)})();
 </script><script>
+/* Luke 08:05: services on phones/tablets - name only until the card's text reaches mid-viewport, then description + link slide up (once). Reduced motion or no IO = shown */
+(function(){var cs=[].slice.call(document.querySelectorAll('.k-mosaic>a'));if(!cs.length)return;var de=document.documentElement;de.classList.add('svc-sr');function on(a){a.classList.add('sv-in')}if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){cs.forEach(on);return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting||e.boundingClientRect.bottom<=0){on(e.target.parentNode);io.unobserve(e.target)}})},{rootMargin:'0px 0px -45% 0px'});cs.forEach(function(c){io.observe(c.querySelector('.k-tile-in,.k-feat-in')||c)})})();
 /* Luke 07:39: dock the scroll progress bar onto the light-green line under the sticky header (moves with the header at any height) */
 (function(){var p=document.querySelector('.rprog'),h=document.getElementById('hd');if(p&&h&&p.parentNode!==h){h.appendChild(p);document.documentElement.classList.add('rp-dock')}})();
 /* Luke 07:41: iOS safety net for every looping/hero video: if the clip errors or never advances 4s after 'playing', drop the source so the poster frame stays visible */
