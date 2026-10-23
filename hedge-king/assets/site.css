@@ -948,3 +948,18 @@ body .em .ph2:has(> video){background:#123a1a url(../media/bigjobs-poster.jpg) 5
 #hd.mo .lg>img{opacity:0}
 #hd.mo .lg:after{opacity:1}
 @media(prefers-reduced-motion:reduce){#hd .lg>img,#hd .lg:after{transition:none}}
+/* ===== Luke 08:22 + 08:39 approval: divider + arrow keyline gold -> green (Call button stays original gold per Luke 08:39) ===== */
+/* (1) mobile divider between hero video and panel: leaf green instead of crown gold */
+@media(max-width:960px){body section.hero-hk .hbg{border-bottom-color:#a9e4b2!important}}
+/* scroll cue keyline follows the yellow->green swap */
+body section.hero-hk .scue{box-shadow:inset 0 0 0 2px #a9e4b2,0 10px 22px -10px rgba(0,0,0,.55)!important}
+
+/* ===== Luke 08:23/08:25 (approved 08:39): hero bottom -> trust -> marquee -> services as one tonal run =====
+   Before: hero bottom ~#133418, trust #1c4d24 with a bright highlight right at its rag, marquee near-black #0b1e0e,
+   services #1c4d24 with a bright highlight right under the marquee. Now: trust starts at the hero's own bottom tone and
+   lifts gently, the marquee is a deep brand green (#133418, palette --b14) one step below, services starts from that tone and opens up
+   to logo green; radial lighting kept but moved off the seams. Rags, overlap and marquee motion unchanged. */
+body div#trust.trust{background:radial-gradient(70% 140% at 82% 115%,rgba(57,157,73,.22),transparent 65%),radial-gradient(55% 120% at 6% 120%,rgba(11,30,14,.28),transparent 65%),linear-gradient(180deg,#143819 0,#183f1e 55%,#19421f 100%)!important}
+body div#trust.trust+.mq{background:#133418!important;box-shadow:0 16px 0 0 #133418,0 -16px 0 0 #133418!important}
+body div#trust.trust+.mq i{color:#a9e4b2!important;opacity:.85}
+body.brand-hk div#trust.trust+.mq+#services{background:radial-gradient(ellipse 55% 45% at 88% 26%,rgba(57,157,73,.3),transparent 62%),radial-gradient(ellipse 50% 60% at 0% 100%,rgba(11,30,14,.5),transparent 60%),linear-gradient(180deg,#183f1e 0,#1b4823 220px,#1c4d24 420px)!important}
