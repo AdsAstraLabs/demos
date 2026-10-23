@@ -940,6 +940,12 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 .og .bt:nth-child(n){margin-top:0}
 /* Luke 6:52: one unbroken line on phones/tablets: bridge segments for the sections whose desktop line is hidden */
 .thw.th-mm,.thw.th-mt{display:none}
-@media (max-width:960px){.thw.th-mm{display:block}.fq2#faq{padding-bottom:150px}}
+@media (max-width:960px){.thw.th-mm{display:block}.thw.th-mx{display:none}}
 @media (min-width:961px) and (max-width:1100px){.thw.th-mt{display:block}}
 .js .th path{transition:none}
+.thw.th-pd{display:block}
+@media (max-width:960px){.thw.th-pd{display:none}}
+.thw.th-ta{bottom:auto;height:200px}.thw.th-tb{top:200px}
+@media (max-width:960px){.thw.th-st{display:none!important}.thw.th-stm{display:block!important}}
+@media (max-width:960px){.sv2{padding-bottom:230px}}
+@media (max-width:960px){.jb{padding-bottom:310px}}
