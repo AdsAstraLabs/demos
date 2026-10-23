@@ -1069,3 +1069,13 @@ body div#trust.trust .cbadge b{display:inline!important;font-size:calc(var(--trf
 body section.hero-hk .hbg{top:0!important;bottom:0!important;right:0!important;left:34vw!important;border:0!important;border-radius:0!important;box-shadow:none!important;-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.08) 8vw,rgba(0,0,0,.3) 19vw,rgba(0,0,0,.75) 26vw,#000 32vw);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.08) 8vw,rgba(0,0,0,.3) 19vw,rgba(0,0,0,.75) 26vw,#000 32vw)}
 body section.hero-hk .hbg:after{box-shadow:none!important;background:linear-gradient(90deg,rgba(19,52,24,.4) 0%,transparent 18%)!important}
 }
+/* Luke 13:56 + 13:59: mobile hero fits one small-viewport screen (100svh) so the scroll arrow clears iOS Safari's bottom bar; logo card + content lifted ~50px further onto the hedge video; gaps tightened, nothing shrunk */
+@media(max-width:960px){
+body section.hero-hk{min-height:100vh!important;min-height:100svh!important;padding-bottom:calc(10px + 56px + 16px + env(safe-area-inset-bottom,0px))!important}
+body section.hero-hk .hv2{margin-top:-200px!important;padding-bottom:0!important}
+body section.hero-hk .hv2 .hcrest{margin-bottom:10px!important}
+body section.hero-hk h1{margin-bottom:12px!important}
+body section.hero-hk .ctas{margin-top:0!important;gap:10px!important;margin-bottom:10px!important}
+body section.hero-hk .scue{bottom:calc(16px + env(safe-area-inset-bottom,0px))!important}
+}
+@media(max-width:760px){body section.hero-hk{padding-bottom:calc(10px + 48px + 16px + env(safe-area-inset-bottom,0px))!important}}
