@@ -947,5 +947,6 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 @media (max-width:960px){.thw.th-pd{display:none}}
 .thw.th-ta{bottom:auto;height:200px}.thw.th-tb{top:200px}
 @media (max-width:960px){.thw.th-st{display:none!important}.thw.th-stm{display:block!important}}
-@media (max-width:960px){.sv2{padding-bottom:230px}}
-@media (max-width:960px){.jb{padding-bottom:310px}}
+@media (max-width:960px){.sv2{padding-bottom:214px}}
+@media (max-width:960px){.jb{padding-bottom:220px}}
+@media (min-width:961px) and (max-width:1100px){.th-ow .spr{display:none}}
