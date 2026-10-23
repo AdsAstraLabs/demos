@@ -931,3 +931,5 @@ body.brand-hk h2:has(.hl):after{display:none!important}
  body.brand-hk #how.hk-how .pg{margin-top:0!important;align-self:center!important}
  body.brand-hk #how.hk-how figure.tall{margin-top:0!important}
 }
+/* Luke 07:32: thicker scroll progress bar, matched to Tree King (4px -> 8px) */
+.rprog{height:8px!important}

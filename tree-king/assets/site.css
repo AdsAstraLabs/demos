@@ -1721,3 +1721,8 @@ html.mmo .rprog{opacity:0}
  .k-cr2 .k-cr2-bg:after{background:linear-gradient(180deg,rgba(14,42,21,0) 0%,rgba(14,42,21,.08) 55%,rgba(14,42,21,.7) 86%,#0e2a15 100%)!important}
  .k-cr2 .k-cr2-in{grid-template-columns:minmax(0,700px)!important}
 }
+/* Luke 07:32: thicker scroll progress bar (4px -> 8px) + scroll arrow floats above the notch floor line (gap 14px desktop / 10px mobile) */
+.rprog{height:8px!important}
+.rprog i{clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 20px)!important}
+@media(max-width:760px){body section.hero-tk .scue{bottom:calc(var(--ov,52px) - 44px + 16px)!important}}
