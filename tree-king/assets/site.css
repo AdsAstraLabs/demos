@@ -1615,3 +1615,15 @@ a.kft-callbtn,a.kft-callbtn *{cursor:pointer}
 @media(prefers-reduced-motion:reduce){.kcb-ic:before,.kcb-ic:after,.kcb-go .k-arw{animation:none!important;opacity:0}a.kft-callbtn:hover{transform:none!important}a.kft-callbtn:hover .kcb-go .k-arw{transform:none}}
 /* ring pulse: chamfered ring matching the tile (global sharp rule kills radius) */
 .kcb-ic:before,.kcb-ic:after{border:0!important;background:#0f2a16;clip-path:polygon(evenodd,8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px,8px 0,8.83px 2px,2px 8.83px,2px calc(100% - 2px),calc(100% - 8.83px) calc(100% - 2px),calc(100% - 2px) calc(100% - 8.83px),calc(100% - 2px) 2px,8.83px 2px)}
+/* ===== ISA badge v3 (Luke 00:08): compact card that hangs off the photo's bottom edge, keeps Jerome clear ===== */
+.k-crew .k-crew-ph .bdg.isa.has-l{right:-1.6rem!important;left:auto!important;bottom:-10px!important;top:auto!important;padding:.55rem 1rem .55rem .55rem!important;gap:.75rem!important;border-width:2px!important;border-bottom-width:5px!important;box-shadow:0 20px 34px -18px rgba(0,0,0,.55)!important}
+.k-crew .k-crew-ph .bdg.isa.has-l .isa-l{height:68px!important;padding:3px!important}
+.k-crew .k-crew-ph .bdg.isa.has-l .isa-n{font-size:1.15rem!important}
+.k-crew .k-crew-ph .bdg.isa.has-l small{font-size:.86rem!important;line-height:1.15!important}
+@media(max-width:960px){
+ .k-crew .k-crew-ph{margin-bottom:1.6rem}
+ .k-crew .k-crew-ph .bdg.isa.has-l{right:-.5rem!important;bottom:-22px!important;padding:.45rem .8rem .45rem .45rem!important;gap:.6rem!important}
+ .k-crew .k-crew-ph .bdg.isa.has-l .isa-l{height:56px!important;padding:2px!important}
+ .k-crew .k-crew-ph .bdg.isa.has-l .isa-n{font-size:1rem!important}
+ .k-crew .k-crew-ph .bdg.isa.has-l small{font-size:.8rem!important}
+}
