@@ -1046,8 +1046,17 @@ body section.hero-hk .hv2 h1{--hf0:clamp(2.4rem,6.6vh,4.6rem);--hf1:max(var(--hf
 @media(min-width:961px) and (max-width:1100px){body section.hero-hk .grt{gap:.5rem!important;padding:9px 12px 9px 11px!important}}
 /* keep the line box of 'Will Say WOW!' identical to live on desktop so the wider ring margin (.4em) never wraps WOW! onto its own line in narrow/tall viewports (ring is absolutely positioned) */
 @media(min-width:961px){body section.hero-hk h1 .wow{margin-right:-.2em}}
-/* Luke 12:31: mobile/tablet (<=960px) hero shows exactly one rating, the frosted .hrev-m badge on the video; the white .grt card is desktop-only (it had been showing twice since bc3c0c2) */
-@media(max-width:960px){body section.hero-hk .grt{display:none!important}}
+/* Luke 13:40: mobile/tablet (<=960px) hero - video extends down and fades into the green (top stays a clean cut under the header), logo card sits on the lower part of the video, white Google rating card returns below the CTAs (exactly one rating; the frosted .hrev-m badge markup is no longer emitted). Headline/buttons/rating not shrunk. */
+@media(max-width:960px){
+body section.hero-hk .hbg{height:calc(30svh + 64px)!important;border-bottom:0!important;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 calc(100% - 104px),rgba(0,0,0,.55) calc(100% - 52px),transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 calc(100% - 104px),rgba(0,0,0,.55) calc(100% - 52px),transparent 100%)}
+body section.hero-hk .hbg:after{box-shadow:none!important;background:none!important}
+body section.hero-hk .hv2{margin-top:-150px!important}
+body section.hero-hk .ctas{margin-bottom:12px!important}
+body section.hero-hk .hv2>.grt{display:inline-flex!important;margin-top:0!important;padding:8px 12px 8px 10px!important;gap:.45rem!important;line-height:1.15!important}
+body section.hero-hk .grt .st{letter-spacing:0!important}
+}
+@media(min-width:481px) and (max-width:960px){body section.hero-hk .hv2>.grt{width:max-content!important;max-width:none!important;white-space:nowrap!important}}
+@media(max-width:380px){body section.hero-hk .hv2>.grt{width:calc(100% + 24px)!important;max-width:calc(100% + 24px)!important;margin-left:-12px!important;margin-right:-12px!important}}
 /* Luke 13:12: trust badges on tablet/desktop (>=761px) read on one line: bold caps label + regular rest, scaled to the card width (all three share one size, capped at 18px/21.6px), centred. Card height 51.2px, band height and ledge unchanged; mobile untouched. */
 @media(min-width:761px){
 body div#trust.trust .badges{container-type:inline-size}
