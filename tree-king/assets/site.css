@@ -651,6 +651,9 @@ summary{color:var(--b)}
 .ph .bdg.isa small{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .5rem;margin-top:.4rem;font:600 .72rem/1.2 var(--bf);color:var(--b)!important;letter-spacing:.02em}
 .ph .bdg.isa .isa-id{border:1px dashed var(--b);padding:.1rem .4rem}
 @media(max-width:760px){.ph .bdg.isa{right:.9rem;bottom:1rem;padding:.65rem 1rem .65rem .8rem}.ph .bdg.isa .isa-t b{font-size:.92rem}}
+/* Luke 12:49/12:53/12:54: home hero headline in caps (source text/SEO title unchanged), all white, one step heavier (Figtree 800->900), caps tracking -0.01em, soft crisp shadow over the video. Same font-size. The subline 'Crane-ready arborists across Ottawa' takes the leaf green of 'start to stump.' with a soft dark shadow for contrast over the video. */
+body.brand-tk .hero .hv2 h1{text-transform:uppercase!important;letter-spacing:-.01em!important;font-weight:900!important;text-shadow:0 2px 12px rgba(0,0,0,.35),0 2px 24px rgba(10,30,15,.7)!important}
+body.brand-tk .hero .hv2 h1 em{font-weight:800!important;color:var(--lime)!important;text-shadow:0 0 3px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.75),0 0 18px rgba(0,0,0,.55),0 2px 24px rgba(10,30,15,.7)!important}
 
 /* ===== layout layer: tree-king ===== */
 /* ===== Tree King own layout below the hero (Luke 9:04: de-Bisson). Hero + header rules live in brand.css and are untouched. ===== */
