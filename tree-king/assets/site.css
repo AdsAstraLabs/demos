@@ -1775,3 +1775,5 @@ html.rp-dock #hd>.rprog{position:absolute!important;top:100%!important;bottom:au
 /* Luke 08:35: arrow button ever so slightly higher (gap above notch floor line 14 -> 20px desktop, 10 -> 14px mobile) */
 body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 26px)!important}
 @media(max-width:760px){body section.hero-tk .scue{bottom:calc(var(--ov,52px) - 44px + 20px)!important}}
+/* Luke 08:40 quote section: left column much higher, form panel level with it (one shared top line); form no longer rises into the dark band. Desktop only; mobile stacking unchanged. */
+@media(min-width:961px){#contact.k-cb-f{padding-top:48px!important}#contact.k-cb-f .k-cb-in{align-items:start!important}#contact.k-cb-f .k-form{margin-top:0!important;align-self:start!important}}
