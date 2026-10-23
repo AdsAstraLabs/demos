@@ -1026,3 +1026,20 @@ body section.hero-hk h1 .wow{position:relative;display:inline-block;white-space:
  body .hero-hk .hrev-m:active{transform:translateY(calc(-100% + 1px))}
  body .hero-hk .hrev-m:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 }
+/* Luke 11:32: ring enlarged (~+15% w/h) so it fully circles WOW! with breathing room; 11:33: slower 2s ease-in-out draw-in, once */
+body section.hero-hk h1 .wow{margin-left:.4em}
+.wow-ring{left:-.46em;right:-.5em;top:-.24em;bottom:-.32em;width:calc(100% + .96em);height:calc(100% + .56em);transform:rotate(-2.5deg)}
+.wow-js.is-drawn .wow-ring path{transition:stroke-dashoffset 2s cubic-bezier(.45,.05,.35,1) .35s}
+/* Luke 11:33/11:54: trust row contents spread across the full container on tablet/desktop (>=761px): three equal-width badges, sentence pushed to the right edge on one-row widths. Same padding, type, badge height and band height as before; mobile (<=760px) untouched */
+@media(min-width:761px){body div#trust.trust .badges{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))}body div#trust.trust .cbadge{min-width:0}}
+@media(min-width:1181px){body div#trust.trust .badges{flex:1 1 0;min-width:0}body div#trust.trust .tp{flex:0 1 auto}}
+/* Luke 11:59: desktop/tablet (>=961px) hero rating card ~20% smaller (logo, 4.9, stars, text, padding: 76px -> 61.6px tall); the freed 14.4px goes to the h1 font-size (+4.94px; h1 block = 2.914em) so hero content height is unchanged. Growth is capped so the headline never gains a line in narrow/tall viewports (column max-width / 7.95em); any un-used remainder stays under the h1 so the card, arrow and fold never move. Mobile (<=960px) hero + frosted badge untouched */
+@media(min-width:961px){
+body section.hero-hk .grt{gap:.72rem!important;padding:.8rem 1.28rem .8rem .92rem!important;font-size:.864rem!important;border-radius:0 14px!important}
+body section.hero-hk .grt .gg{width:32px!important;height:32px!important}
+body section.hero-hk .grt b{font-size:2rem!important}
+body section.hero-hk .grt .st{font-size:1.56rem!important}
+body section.hero-hk .hv2 h1{--hf0:clamp(2.4rem,6.6vh,4.6rem);--hf1:max(var(--hf0),min(var(--hf0) + 4.94px,(52vw - max(5vw,(100vw - 1200px)/2) - 2.5rem)/7.95));font-size:var(--hf1)!important;padding-bottom:max(0px,calc(14.4px - 2.914*(var(--hf1) - var(--hf0))))!important}
+}
+/* keep the line box of 'Will Say WOW!' identical to live on desktop so the wider ring margin (.4em) never wraps WOW! onto its own line in narrow/tall viewports (ring is absolutely positioned) */
+@media(min-width:961px){body section.hero-hk h1 .wow{margin-right:-.2em}}
