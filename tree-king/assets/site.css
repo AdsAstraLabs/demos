@@ -1788,3 +1788,6 @@ body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 26px)!important}
 .k-storm-b{padding:1.45rem 1.8rem 1.6rem}
 .k-storm-b b{margin:0 0 1.05rem}
 @media(max-width:960px){.k-storm-b{padding:1.2rem 1.3rem 1.35rem}.k-storm-b b{margin-bottom:.95rem}}
+/* Luke 09:17 crane: no green tint over the crane video (natural colour, climber clear); keep only a green fade at the bottom into the next section. Copy stays on its solid green panel. */
+.k-cr2 .k-cr2-bg:after{background:linear-gradient(180deg,rgba(14,42,21,0) 0%,rgba(14,42,21,0) 66%,rgba(14,42,21,.55) 86%,#0e2a15 100%)!important}
+@media(max-width:1199px){.k-cr2 .k-cr2-bg:after{background:linear-gradient(180deg,rgba(14,42,21,0) 0%,rgba(14,42,21,0) 64%,rgba(14,42,21,.6) 88%,#0e2a15 100%)!important}}
