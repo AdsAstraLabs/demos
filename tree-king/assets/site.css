@@ -1763,3 +1763,12 @@ html.rp-dock #hd>.rprog{position:absolute!important;top:100%!important;bottom:au
  html.svc-sr .k-mosaic .k-go{transition-delay:.06s}
 }
 @media(max-width:960px) and (prefers-reduced-motion:reduce){html.svc-sr .k-mosaic .k-tile-s,html.svc-sr .k-mosaic .k-feat-in>span:not(.k-go),html.svc-sr .k-mosaic .k-go{transition:none!important;transform:none!important}}
+/* Luke 08:19 logo fix: the open-menu header goes #0a1e0f, where the light-bg header logo's green artwork vanishes.
+   While the drawer is open, cross-fade to the hero/footer keyline logo at the exact same box (offsets = keyline viewBox
+   85.3 38.8 1193.47 439.6 vs logo 89 42 1187 433). Closed state unchanged. */
+#hd .lg{position:relative}
+#hd .lg>img{transition:opacity .3s cubic-bezier(.2,.7,.2,1)}
+#hd .lg:after{content:"";position:absolute;left:-.3117%;top:-.739%;width:100.5451%;height:101.5242%;background:url(../img/logo-keyline.svg) 0 0/100% 100% no-repeat;opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.2,.7,.2,1)}
+#hd.mo .lg>img{opacity:0}
+#hd.mo .lg:after{opacity:1}
+@media(prefers-reduced-motion:reduce){#hd .lg>img,#hd .lg:after{transition:none}}

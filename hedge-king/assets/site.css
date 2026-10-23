@@ -939,3 +939,12 @@ html.rp-dock #hd>.rprog{position:absolute!important;top:calc(100% + 4px)!importa
 body .em .ph2:has(> video){background:#123a1a url(../media/bigjobs-poster.jpg) 50% 50%/cover no-repeat}
 /* Luke 08:07: thinner docked bar on phones (8px -> 4px, still exactly covers the 4px light-green line); desktop stays 8px */
 @media(max-width:760px){html.rp-dock #hd>.rprog{height:4px!important}}
+/* Luke 08:19 logo fix: same dark-on-dark issue in the open-menu header (#0b1e0e) - "King" + crown are logo green.
+   While open, cross-fade to HK's own logo with a white keyline (img/logo-keyline.svg, logos/hk_keyline.py: original
+   paths untouched, outline drawn underneath; viewBox -13 -13 1946 486.33 vs 0 0 1920 460.33). Closed state unchanged. */
+#hd .lg{position:relative}
+#hd .lg>img{transition:opacity .3s cubic-bezier(.2,.7,.2,1)}
+#hd .lg:after{content:"";position:absolute;left:-.6771%;top:-2.8241%;width:101.3542%;height:105.6481%;background:url(../img/logo-keyline.svg) 0 0/100% 100% no-repeat;opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.2,.7,.2,1)}
+#hd.mo .lg>img{opacity:0}
+#hd.mo .lg:after{opacity:1}
+@media(prefers-reduced-motion:reduce){#hd .lg>img,#hd .lg:after{transition:none}}
