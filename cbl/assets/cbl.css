@@ -534,3 +534,14 @@ h2:after{content:"";display:block;width:92px;height:18px;margin-top:16px;backgro
 .wk-pn .wk-lede{font-size:20px;font-weight:600;line-height:1.45;margin:0;max-width:22em}
 @media (max-width:760px){.wk-pn{padding:26px 22px 24px;margin-bottom:30px}.wk-pn .wk-lede{font-size:18px}}
 .map-at{display:inline-block;background:#143a0d;color:#fff;padding:5px 10px;font-weight:600}
+
+/* m6b: no awkward wraps (keep "Permit to clean-up." together; balanced ledes) */
+.nw{white-space:nowrap}
+@media (max-width:420px){.intro h2{font-size:35px}}
+@media (max-width:380px){.intro h2{font-size:31px}}
+.lede,.lede2,.svc-lede,.wk-lede,.chk span,.hero-sub{text-wrap:balance}
+
+/* m6c: hero logo ~20% smaller on all sizes (still prominent; halo scales with it) */
+.hero-logo{width:min(496px,80%)}
+@media (max-width:760px){.hero-logo{width:min(69vw,320px)}}
+@media (max-height:700px) and (max-width:760px){.hero-logo{width:min(56vw,240px)}}
