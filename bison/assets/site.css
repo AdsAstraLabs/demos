@@ -981,3 +981,13 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 @media (min-width:961px){.spr-bison{width:104px;height:68px}}
 /* Luke 8:28: FAQ accordion (one open at a time), smooth */
 .fq details{overflow:hidden}.fq details.cl summary svg{transform:none}.fq summary:focus-visible{outline-offset:-3px}
+/* Luke 8:37: "clean." pops - brighter gold gradient, dark plate hides the bison outline behind it, swoosh clear of the letters */
+.hero h1 em{isolation:isolate;display:inline-block}
+.hero h1 em::before{content:"";position:absolute;z-index:-1;left:-.03em;right:-.04em;top:.06em;bottom:-.3em;border-radius:.2em;background:rgba(10,25,18,.92)}
+.hero h1 .cw{background:linear-gradient(180deg,#ffd66b 8%,#e8a93a 92%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#ffd66b;filter:drop-shadow(0 2px 2px rgba(0,0,0,.5))}
+.hero h1 .uln{bottom:-.2em}
+/* Luke 8:39: contrast audit fixes */
+.qs .eb{color:var(--leaf)}
+.bt::before{background:linear-gradient(180deg,rgba(10,25,18,0) 18%,rgba(10,25,18,.78) 55%,rgba(10,25,18,.93) 100%)}
+.bt h3,.bt-t p{text-shadow:0 1px 3px rgba(0,0,0,.6)}
+input::placeholder,textarea::placeholder{color:#595959;opacity:1}
