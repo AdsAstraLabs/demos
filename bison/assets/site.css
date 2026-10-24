@@ -991,3 +991,17 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 .bt::before{background:linear-gradient(180deg,rgba(10,25,18,0) 18%,rgba(10,25,18,.78) 55%,rgba(10,25,18,.93) 100%)}
 .bt h3,.bt-t p{text-shadow:0 1px 3px rgba(0,0,0,.6)}
 input::placeholder,textarea::placeholder{color:#595959;opacity:1}
+
+/* map marker: hero bison, floating (Luke 9:04 PM) */
+.bt-bz{background:none;border:0}
+.bt-bz .bz-b{position:absolute;left:50%;top:0;width:92px;height:auto;margin-left:-46px;overflow:visible;filter:drop-shadow(0 1px 2px rgba(10,25,18,.45));animation:bzf 3.4s ease-in-out infinite}
+.bt-bz .bz-s{position:absolute;left:50%;bottom:6px;width:64px;height:12px;margin-left:-32px;border-radius:50%;background:radial-gradient(closest-side,rgba(10,25,18,.62),rgba(10,25,18,.28) 55%,rgba(10,25,18,0));animation:bzs 3.4s ease-in-out infinite}
+@keyframes bzf{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes bzs{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(.72);opacity:.6}}
+@media (max-width:600px){.bt-bz .bz-b{width:76px;margin-left:-38px}.bt-bz .bz-s{width:52px;margin-left:-26px}}
+@media (prefers-reduced-motion:reduce){.bt-bz .bz-b,.bt-bz .bz-s{animation:none}}
+
+/* chip truck stands square on the gold line: rotated to the local tangent (set in JS) */
+.spr-truck{transform:translate(-50%,-97%) rotate(var(--rot,0deg)) scale(.4)}.spr-truck.on{transform:translate(-50%,-97%) rotate(var(--rot,0deg)) scale(1)}
+html:not(.js) .spr-truck{transform:translate(-50%,-97%)}
+@media (prefers-reduced-motion:reduce){.spr-truck,.spr-truck.on{transform:translate(-50%,-97%) rotate(var(--rot,0deg))!important}}
