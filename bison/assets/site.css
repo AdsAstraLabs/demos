@@ -1005,3 +1005,6 @@ input::placeholder,textarea::placeholder{color:#595959;opacity:1}
 .spr-truck{transform:translate(-50%,-97%) rotate(var(--rot,0deg)) scale(.4)}.spr-truck.on{transform:translate(-50%,-97%) rotate(var(--rot,0deg)) scale(1)}
 html:not(.js) .spr-truck{transform:translate(-50%,-97%)}
 @media (prefers-reduced-motion:reduce){.spr-truck,.spr-truck.on{transform:translate(-50%,-97%) rotate(var(--rot,0deg))!important}}
+/* quote junction line: always on, sized by JS to end inside the GET IN TOUCH dash */
+.thw.th-qj{display:block!important;z-index:3}
+.thw.th-qj{inset:0 0 auto 0}
