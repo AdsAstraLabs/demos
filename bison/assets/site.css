@@ -953,4 +953,4 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
 /* Luke 7:43: 5 phone crossings, sprout-fit gaps */
 .sv2,.ow2,.fq2{--xb:200px}
 @media (max-width:960px){.sv2{--xb:170px;padding-bottom:184px}.jb{padding-top:60px}.ow2{--xb:150px;padding-bottom:150px}#faq{--xb:128px;padding-bottom:138px}}
-.spr-truck{width:140px;height:49px}.spr-truck.on path{transition-duration:1s}
+.spr-truck{width:144px;height:49px}.spr-truck.on path{transition-duration:1s}
