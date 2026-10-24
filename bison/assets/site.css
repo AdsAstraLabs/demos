@@ -969,3 +969,15 @@ section.sv2 .sv2-h>p:not(.eb),.qs-t>p:not(.eb),.ow2-t>p:not(.eb),.area-p,.sec-p,
  .area-h{--xd:190px;padding-bottom:190px}
 }
 @media (min-width:961px) and (min-height:761px) and (max-height:860px){.hero-bz{bottom:0}}
+/* Luke 8:26: shorter subline that pops; bison outline + swoosh kept off it */
+.hero h1 .uln{bottom:.02em}
+.hero .lede{color:#fff;font-weight:600;font-size:1.25rem;line-height:1.45;max-width:34ch;width:fit-content;position:relative;z-index:2;padding:4px 10px;margin-left:-10px;border-radius:8px;background:rgba(13,32,22,.8);box-shadow:0 0 12px 4px rgba(13,32,22,.8);text-shadow:0 1px 3px rgba(0,0,0,.55)}
+@media (max-width:960px){.hero .lede{font-size:1.0625rem}}
+@media (min-width:961px) and (max-height:640px){.hero .lede{font-size:1.125rem;max-width:44ch}}
+@media (min-width:961px) and (max-height:520px){.hero .lede{font-size:1.0625rem;max-width:74ch}}
+/* Luke 8:28: bison <-> chip truck swapped on desktop/tablet; phones (<=600) unchanged */
+@media (min-width:601px){.spr.xph{display:none}}
+@media (max-width:600px){.spr.xtb{display:none}}
+@media (min-width:961px){.spr-bison{width:104px;height:68px}}
+/* Luke 8:28: FAQ accordion (one open at a time), smooth */
+.fq details{overflow:hidden}.fq details.cl summary svg{transform:none}.fq summary:focus-visible{outline-offset:-3px}
