@@ -43,6 +43,6 @@ jobs:
           # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
           # prompt: 'Update the pull request description to include a summary of changes.'
 
-          # Allow the tools Claude needs to build demos (git, python, playwright, node, gh pr).
+          # Let Claude run shell commands (pipes, && and /tmp scratch work) so it can build demos on the throwaway runner.
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          claude_args: '--allowedTools "Bash(git fetch:*),Bash(git show:*),Bash(git archive:*),Bash(git checkout:*),Bash(git switch:*),Bash(git branch:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(pip install:*),Bash(pip3 install:*),Bash(python:*),Bash(python3:*),Bash(npx playwright:*),Bash(playwright install:*),Bash(curl:*),Bash(ls:*),Bash(mkdir:*),Bash(cp:*),Bash(mv:*),Bash(rm:*),Bash(cat:*),Bash(node:*),Bash(npm:*),Bash(gh pr:*)"'
+          claude_args: '--max-turns 200 --allowedTools "Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,WebSearch"'
