@@ -1,7 +1,7 @@
 @font-face{font-family:"Noticia Text";src:url(fonts/NoticiaText-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Noticia Text";src:url(fonts/NoticiaText-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
 @font-face{font-family:"Libre Caslon Text";src:url(fonts/caslon.woff2) format("woff2");font-weight:400 700;font-display:swap}
-:root{--brand:#fe8500;--brand-dark:#8a4700;--ink:#303030;--black:#000;--paper:#fff;--tint:#eef2f4;--hh:68px;--cut:44px;
+:root{--brand:#fe8500;--brand-dark:#8a4700;--ink:#303030;--black:#000;--paper:#fff;--tint:#eef2f4;--hh:80px;--cut:44px;
 --serif:"Libre Caslon Text",Georgia,serif;--sans:"Noticia Text",Georgia,serif;
 --h2:clamp(2rem,1.4rem + 2.4vw,3.2rem);--lede:clamp(1.1rem,1rem + .5vw,1.35rem)}
 *{box-sizing:border-box}
@@ -25,7 +25,8 @@ section{scroll-margin-top:var(--hh)}
 .rope i::after{content:"";position:absolute;left:0;bottom:-14px;width:14px;height:14px;background:var(--black);border:3px solid var(--brand)}
 /* header */
 .site-head{position:sticky;top:0;z-index:50;height:var(--hh);background:var(--black);display:flex;align-items:center;gap:20px;padding:0 clamp(20px,4vw,40px) 0 clamp(20px,4vw,40px)}
-.brand img{height:56px;width:auto;margin-left:14px}
+.brand img{height:64px;width:auto;margin-left:14px}
+@media(min-width:1001px){:root{--hh:96px}.brand img{height:78px}}
 .nav{display:flex;gap:6px;margin-left:auto;align-items:center}
 .nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:10px 12px;border-bottom:3px solid transparent}
 .nav a[aria-current]{border-bottom-color:var(--brand)}
@@ -41,7 +42,7 @@ section{scroll-margin-top:var(--hh)}
  .nav a[aria-current]{border-bottom:3px solid var(--brand)}
  .nav-call{display:block;background:var(--brand);color:var(--black)!important;margin-top:14px;text-align:center;border:0!important}
 }
-@media(max-width:420px){.head-call{display:none}.menu-btn{margin-left:auto}.brand img{height:48px}}
+@media(max-width:420px){.head-call{display:none}.menu-btn{margin-left:auto}.brand img{height:60px}:root{--hh:78px}}
 /* buttons */
 .btn{display:inline-block;font:700 1.05rem/1.2 var(--sans);text-decoration:none;padding:16px 24px;border:3px solid transparent;border-radius:0;min-height:52px}
 .btn-brand{background:var(--brand);color:var(--black)}
