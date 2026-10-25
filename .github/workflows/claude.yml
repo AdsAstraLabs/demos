@@ -18,6 +18,7 @@ jobs:
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
     runs-on: ubuntu-latest
+    timeout-minutes: 55
     permissions:
       contents: write
       pull-requests: write
@@ -45,4 +46,4 @@ jobs:
 
           # Let Claude run shell commands (pipes, && and /tmp scratch work) so it can build demos on the throwaway runner.
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          claude_args: '--max-turns 200 --allowedTools "Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,WebSearch"'
+          claude_args: '--max-turns 200 --allowedTools "Bash,Read,Write,Edit,MultiEdit,Glob,Gr
