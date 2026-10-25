@@ -100,9 +100,9 @@ section:not(.hero):not(.page-top){padding-bottom:84px}
 /* stats */
 .stats{background:var(--brand);z-index:3;color:var(--black)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stat b{display:block;font:700 clamp(2.2rem,1.4rem + 2.4vw,3.4rem)/1.1 var(--serif);color:var(--black);min-width:4ch}
+.stat b{display:block;font:700 clamp(2.2rem,1.4rem + 2.4vw,3.4rem)/1.1 var(--serif);color:var(--black);}
 .stat span{font-size:1.05rem;font-weight:700}
-@media(max-width:800px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:first-child{grid-column:1/-1}}
 /* reviews */
 .reviews{background:var(--tint);z-index:4}
 .rev-grid{columns:3 250px;column-gap:22px;margin:32px 0 16px}
