@@ -66,7 +66,9 @@ section{scroll-margin-top:var(--hh)}
 .star{filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
 .gleam{animation:gleam 4.5s ease-in-out infinite}
 @keyframes gleam{0%,60%{transform:skewX(-20deg) translateX(0)}100%{transform:skewX(-20deg) translateX(60px)}}
-.scroll-cue{position:absolute;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);color:#fff;width:44px;height:44px;display:grid;place-items:center;border:2px solid rgba(255,255,255,.8)}
+.scroll-cue{position:absolute;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translateX(-50%);color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 14px;font:700 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border:2px solid rgba(255,255,255,.8);background:rgba(0,0,0,.35)}
+.scroll-cue svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
 @media(max-width:700px){.scroll-cue{left:auto;right:20px;transform:none}}
 @media(max-height:760px){.hero-in{padding-bottom:84px}.hero h1{font-size:clamp(2.4rem,1rem + 4vw,4.2rem)}.hero-sub{margin-bottom:1em}}
 @media(max-height:640px){.eyebrow{display:none}.hero-sub{font-size:inherit}.btn{padding:12px 18px;min-height:46px}.hero-in{padding-bottom:70px}}
@@ -147,7 +149,8 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";float:right;font-size:1.5rem;line-height:1}
 details[open] summary::after{content:"\2212"}
 details p{padding:0 20px 18px;margin:0}
-.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:24px}
+.vids{display:grid;grid-template-columns:1fr;gap:24px;margin-top:24px}
+@media(min-width:700px){.vids{grid-template-columns:repeat(2,1fr)}}
 .vid{margin:0}.vid video{width:100%;aspect-ratio:16/9;background:#000}.vid figcaption{padding-top:8px;font-size:.95rem}
 .big-link{font:700 1.6rem var(--serif);text-decoration:none;color:var(--black);border-bottom:4px solid var(--brand)}
 .contact-list h2{font-size:1.6rem;margin-top:1em}
@@ -166,4 +169,4 @@ details p{padding:0 20px 18px;margin:0}
 .js .hero-in>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 .hero-in>:nth-child(2){animation-delay:.1s!important}.hero-in>:nth-child(3){animation-delay:.25s!important}.hero-in>:nth-child(4){animation-delay:.4s!important}.hero-in>:nth-child(5){animation-delay:.55s!important}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.gleam{animation:none}.js .hero-in>*{animation:none}html{scroll-behavior:auto}.rope i{transition:none}}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.gleam{animation:none}.scroll-cue svg{animation:none}.js .hero-in>*{animation:none}html{scroll-behavior:auto}.rope i{transition:none}}
