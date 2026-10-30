@@ -2001,3 +2001,8 @@ body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 32px)!important}
 .sticky.on.k-stk-off{transform:translateY(140%);pointer-events:none}
 /* hero green wash (Daniel 10-29: "eyes hurt"): even dark green scrim so the video sits back; text + logo unchanged */
 body section.hero-tk:after{background:linear-gradient(0deg,rgba(10,30,15,.72) 0%,rgba(10,30,15,.5) 45%,rgba(10,30,15,.42) 100%)!important}
+/* hero in-between (Luke 10-29): logo + headline halfway between the launch size and the calm draft; caps kept, weight and glow eased */
+body section.hero-tk .hlogo3{width:clamp(230px,34vw,510px)!important;max-height:20vh!important;filter:drop-shadow(0 2px 8px rgba(23,67,33,.3))!important}
+body.brand-tk section.hero-tk .hv2 h1{font-size:clamp(2.3rem,6.3vh,4.4rem)!important;font-weight:800!important;text-shadow:0 1px 4px rgba(0,0,0,.25),0 2px 16px rgba(10,30,15,.45)!important}
+body.brand-tk section.hero-tk .hv2 h1 em{font-weight:700!important;text-shadow:0 1px 3px rgba(0,0,0,.5),0 0 10px rgba(10,30,15,.5)!important}
+@media(max-width:760px){body section.hero-tk .hlogo3{width:66vw!important;max-height:14svh!important}body.brand-tk section.hero-tk .hv2 h1{font-size:clamp(1.8rem,8vw,2.4rem)!important}}
