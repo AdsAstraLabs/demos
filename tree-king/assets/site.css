@@ -1999,3 +1999,13 @@ body section.hero-tk .scue{bottom:calc(var(--ov,76px) - 64px + 32px)!important}
 @media(max-width:960px){.k-emx{padding:1.1rem 1.1rem 1.25rem}.k-emx .k-storm-call{width:100%;justify-content:center}.k-emx-a{gap:.9rem}}
 /* Luke 11:21: sticky bar steps aside while a link/button/field is under it (JS adds .k-stk-off) */
 .sticky.on.k-stk-off{transform:translateY(140%);pointer-events:none}
+/* calm hero (Daniel 10-29: "too flashy, hero too bold, eyes hurt"): even dark scrim so the video sits back,
+   smaller logo with no glow, sentence-case H1 at a normal weight, quiet white subline */
+body section.hero-tk:after{background:linear-gradient(0deg,rgba(10,30,15,.72) 0%,rgba(10,30,15,.5) 45%,rgba(10,30,15,.42) 100%)!important}
+body section.hero-tk .hlogo3{width:clamp(200px,26vw,380px)!important;max-height:15vh!important;filter:none!important}
+body section.hero-tk .hcrest{margin:0 auto 3vh!important}
+body.brand-tk section.hero-tk .hv2 h1{text-transform:none!important;font-weight:700!important;font-stretch:100%!important;letter-spacing:-.01em!important;line-height:1.08!important;font-size:clamp(2rem,5vh,3.4rem)!important;text-shadow:0 1px 3px rgba(5,18,9,.35)!important;max-width:20ch!important}
+body.brand-tk section.hero-tk .hv2 h1 em{font-family:var(--bf)!important;text-transform:none!important;font-weight:500!important;font-stretch:100%!important;letter-spacing:0!important;font-size:.42em!important;color:rgba(255,255,255,.86)!important;margin-top:.9em!important}
+body section.hero-tk .grt{filter:none!important;background:rgba(10,30,15,.55)!important;margin-top:1.8rem!important}
+body section.hero-tk .grt b{font-size:1.35rem!important}
+@media(max-width:760px){body section.hero-tk .hlogo3{width:58vw!important;max-height:12svh!important}body.brand-tk section.hero-tk .hv2 h1{font-size:clamp(1.6rem,7.4vw,2rem)!important}body.brand-tk section.hero-tk .hv2 h1 em{font-size:.55em!important}}
