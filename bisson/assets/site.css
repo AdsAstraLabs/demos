@@ -134,7 +134,7 @@ header .hbrand{font-size:1.15rem;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}.
 @media(min-width:961px){.hero .w{display:flex!important;flex-direction:column;align-items:center;text-align:center}
 .hero .w>*{justify-self:auto}.hero .w>.hlogo,.hero .w>.hbrand{max-height:clamp(80px,21vh,240px)!important;max-width:min(620px,60vw)!important;margin:0 auto 2vh!important;width:auto!important}
 .hero .w>.hbrand{font-size:clamp(2.4rem,6vh,4.2rem)!important;max-height:none!important}
-.hero h1{max-width:22ch;margin-left:auto!important;margin-right:auto!important}.hero p{margin-left:auto;margin-right:auto;max-width:60ch}.ctas{justify-content:center}.hmeta{justify-content:center}}
+.hero h1{max-width:22ch;margin-left:auto!important;margin-right:auto!important}.hero p{margin-left:auto;margin-right:auto;max-width:60ch}.hero .ctas,.lt>.w>.ctas{justify-content:center}.hmeta{justify-content:center}}
 .hero .w{position:relative}.hero .w:before{content:"";position:absolute;left:50%;top:44%;width:min(900px,120%);height:80%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(10,8,5,.6),rgba(10,8,5,0));z-index:-1;pointer-events:none}
 .hlogo{filter:drop-shadow(0 0 2px rgba(0,0,0,.6)) drop-shadow(0 4px 24px rgba(0,0,0,.75))!important}
 .hero:after{background:linear-gradient(0deg,rgba(14,11,7,.75),rgba(14,11,7,.35) 60%,rgba(14,11,7,.55))!important}
@@ -405,3 +405,5 @@ header.mo,header.mo.s{background:#0d120e!important;-webkit-backdrop-filter:none!
 html.mmo,html.mmo body{overflow:hidden;height:100%}
 html.mmo .sticky{display:none}
 header .mm .w{display:block;height:auto;align-items:initial}
+/* 2026-11-16 visual QA: CTA rows in the closing card fit the card on phones (French labels overflowed it); sticky bar labels stay on one line */
+@media(max-width:960px){.cta2 .ctas{flex:1 1 100%;width:100%;min-width:0}.cta2 .ctas .btn{min-width:0;white-space:normal;text-align:center}.sticky a{padding-left:.5rem;padding-right:.5rem;white-space:nowrap}}
